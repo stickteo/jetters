@@ -1,0 +1,472 @@
+
+
+
+
+map data list: 81B5D24h
+- 64 entries
+
+1
+081B5D26
+いつものバトル
+itsumono batoru
+(normal / Classic)
+
+2
+081B5D62
+ぬりかえバトル
+nurikae batoru
+(coloring / Paint)
+
+3
+081B5D9E
+かわしてバトル
+kawashite batoru
+(Dodge Battle)
+
+4
+081B5DDA
+ぬけだしバトル
+nukedashi batoru
+(Escape Battle)
+
+5
+081B5E16
+バロムゲットバトル
+baromugeeto batoru
+(Barom Get Battle)
+
+6
+081B5E52
+1プレイヤー
+(Player 1)
+
+7
+081B5E82
+2プレイヤー
+
+8
+081B5EB2
+3プレイヤー
+
+9
+081B5EE2
+4プレイヤー
+
+10
+081B5F12
+にんげん
+ningen
+(Human)
+
+11
+081B5F36
+コンピュタ
+(Computer)
+
+12
+081B5F5A
+オフ
+(Off)
+
+13
+チーム
+chiimu
+(Team)
+
+14
+しょうぶすう
+shyoubu suu
+(Points)
+
+
+15
+タイム
+taimu
+(Time)
+
+16
+コンピュータ
+conpyuuta
+(Computer)
+
+17
+サドンデス
+sadon desu
+(Sudden Death)
+
+18
+ドクロ
+dokuro
+(Skulls)
+
+19
+ボンバーショット
+bonbaa shyooto
+(Bombershoot)
+(Bonus)
+
+20
+みそボン
+misobon
+(Revenge)
+(Retry Bomb)
+
+21
+シングル
+shinguru
+(Single)
+
+22
+チーム
+chiimu
+(Team)
+
+23
+1
+
+24
+2
+
+25
+3
+
+26
+4
+
+27
+5
+
+28
+1:00
+
+29
+2:00
+
+30
+3:00
+
+31
+5:00
+
+32
+(infinite)
+
+33
+よわい
+yowai
+(Weak)
+
+34
+ふつう
+futsuu
+(Normal)
+
+35
+つよい
+tsuyoi
+(Strong)
+
+36
+オン
+(On)
+
+37
+オフ
+(Off)
+
+38
+ランダム
+(Random)
+
+39
+もえる
+moeru
+(Burn)
+
+40
+もえない
+moenai
+(Unburnable / Stay)
+
+41
+スーパー
+(Super)
+
+42
+VS
+
+43
+(Player 1)
+
+44
+(Player 2)
+
+45
+(Player 3)
+
+46
+(Player 4)
+
+47 ??
+
+48
+スタンダード（ノーマル）
+sutandaado(nomaru)
+(Standard(Normal))
+
+49
+スタンダード（ワイド）
+sutandaado(waido)
+(Standard(Wide))
+
+50
+ゴーゴートロッコ
+go-go-torokko
+(Go-Go Trolley)
+
+51
+シーソーパーク
+shi-so-pa-ku
+(Seesaw Park)
+
+52
+ポッカリライト
+pokkari raito
+(Pokkari Light)
+
+53
+アイテム
+aitemu
+(Items Set)
+[!!] ROM:0801016C dword_801016C   DCD 0x40C
+
+54
+ハンデあり
+hande ari
+(Handicap Set)
+[!!] ROM:08010168 dword_8010168   DCD 0x42C
+
+55
+(L)アイテム
+aitemu
+(Item)
+
+56
+ハンデ(R)
+hande
+(Handicap)
+[!!] dword_8010150   DCD 0x4AE (offset for placement)
+     0x4AE = 1198 => 1198/2 = 599 = 18*32 + 23 => (y,x) = (18,23)
+
+57
+けってい
+kettei
+(Decide/Confirm)
+
+58
+[Heart Symbol]
+
+59
+[Empty]
+
+60
+ハンデせってい
+hande settei
+(Set Handicap)
+
+61/62
+このままのせっていであそびますか？
+kono haha no settei de asobimasu ka?
+(Play with these settings?)
+
+63
+Aボタン も おすと バトルスタート します
+A botan mo osu to batoru suta-to shimasu
+(A: Start Battle)
+
+64
+Bボタン も おすと まえにもどります
+B botan mo osu to maeni modorimasu
+(B: Go Back)
+
+65
+アイテムせってい
+aitemu settei
+(Set Items)
+
+66
+あり
+ari
+(Use/Set?/Enable)
+
+67
+あと|こ
+ato | ko
+(Remaining | Count)
+[!!] ROM:0800E8B2                 MOVS    R2, #0x20C
+
+68
+[Item Icons]
+
+69
+なし
+nashi
+(None/Off?/Disable)
+
+70
+A:ふやす B:へらす
+A:fuyasu B:herasu
+(A:Increase B:Decrease)
+[!!] ROM:0800E894                 MOVS    R2, #0x118 (items)
+[!!] ROM:0800E1A4                 ADDS    R1, #0x92 (handicap)
+
+71
+キャンセル
+kyanseru
+(Cancel)
+
+
+79
+ポイントマッチ
+pointo maachi
+(Match Points)
+
+80
+"1"
+
+81
+"2"
+
+82
+"3"
+
+83
+"4"
+
+84
+"5"
+
+85
+[Window Graphics]
+86
+[Window Graphics]
+87
+[Window Graphics]
+
+88
+"50"
+
+89
+"100"
+
+90
+"200"
+
+91
+"300"
+
+92
+"500"
+
+93
+しょうりポイント
+shyouri pointo
+(Victory Points)
+
+
+99
+081B77B2
+せつめい(R)
+setsumei
+(Info / Explanation)
+
+
+WriteMap_800C88C
+
+
+Misc
+----------------------
+Map for digits: 0x81B7D00
+
+
+
+
+
+Tile Data
+---------
+r0: 081B04D4   r1: 06000000 -> Main BG Stuff for battle
+r0: 081B5278   r1: 06008000 -> Text & Text Window
+r0: 081B4488   r1: 06010000 -> Sprites (Buttons)
+r0: 081B9064   r1: 06011000 -> Sprites (Classic Arena & Window Border)
+r0: 081B7E60   r1: 06012000 -> Sprites (Arena)
+r0: 081B93E8   r1: 06012000 -> Sprites (More Arena)
+
+
+
+
+r0: 081A4524   r1: 0600A800 -> Battle??
+r0: 0819FAA4   r1: 06015000 -> Pause ?? (Needs Translate)
+r0: 081A5774   r1: 06013000 -> Block Sprite
+r0: 0819FF18   r1: 06000000 -> Blocks
+r0: 0805A6EC   r1: 06010000 -> Player Sprites
+r0: 0805B534   r1: 06017800 -> Bomb Sprites
+r0: 0805B974   r1: 06017000 -> ?? Smoke Sprites
+r0: 0806027C   r1: 06017F80 -> Arrow Sprites
+r0: 081BA598   r1: 06008000 -> Flames/Items/Time/Etc (Needs Translate)
+r0: 0805C0DC   r1: 06012000 -> Louie Sprites
+
+
+r0: 081B4B70   r1: 06010000 -> Player Sprites (End Round)
+
+
+r0: 081A6C74   r1: 06004000 -> Victory BG
+r0: 081A77F8   r1: 06000000 -> Crowd BG
+r0: 081A8164   r1: 06010000 -> Sprite (Confetti)
+r0: 081A8204   r1: 06011000 -> Sprite (Stars)
+r0: 081A8304   r1: 06012000 -> Sprite Player Wave
+
+
+r0: 081A86C4   r1: 06000000 -> Bombershoot GUI
+r0: 081AAC30   r1: 06010000 -> Item Sprites
+r0: 0819FAA4   r1: 06015000 -> Pause??
+r0: 081AB620   r1: 06011000 -> Player Sprites
+r0: 081A8FF0   r1: 06001000 -> More GUI
+r0: 081AA1B4   r1: 06002000 -> More GUI
+r0: 081ABBE0   r1: 06015800 -> Text Sprite (!)
+
+Process
+-------
+process for extracting and editing BGs
+this is the general steps required
+
+once done, everything can be scripted
+(generally no need to extract twice but
+extraction can be scripted as well)
+
+1) Find Locations (Once)
+tile lzss addr -> extract (gbaMDC) -> tile.bin
+map.bin
+pal.bin
+
+2) Generate BMP & Meta (Automatic via tool)
+tile.bin
+map.bin   -> E1 -> jpn.bmp
+pal.bin            meta.txt
+
+3) Translate BMP (Once)
+jpn.bmp -> Usenti -> eng.bmp
+      + Artistic Sense
+
+4) Generate Tile and Map (Automatic via tool)
+eng.bmp -> grit -> map_eng_raw.bin
+                   tile_eng.bin
+
+5) Format Map Correctly (Some manual)
+map_eng_raw.bin -> C1 -> map.asm (asm required)
+meta.txt
+
+6) Compress Tile (Automatic)
+tile_eng.bin -> LZSS.exe -> tile_eng.lzss
+
+7) Some Manual ASM editing (Once)
+

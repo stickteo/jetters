@@ -1,0 +1,20 @@
+
+.gba
+
+.open "jetters.gba","jetters_eng.gba",0x8000000
+
+
+; Free Space
+.defineregion 0x8420000, 0xE0000, 0x00
+;.org 0x8420000 :: .region 0xE0000,0x00 :: .endregion
+
+; Battle Menu Tileset
+.org 0x81B04D4
+;.db 0x10, 0x08, 0x00, 0x00
+;.db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+.import "build\BattleMenuTile.bin"
+
+.include "build\BattleMenuMap.asm"
+.include "asm\BattleMenu.asm"
+
+.close

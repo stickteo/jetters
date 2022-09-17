@@ -1,0 +1,137 @@
+; entries = 100
+; width = 30
+; height = 310
+; entry #, x, y, w, h
+
+; BM_BG    , 0, 0, 16, 2
+
+; hack to set max width...
+; by setting w=30 and h=0
+BM_Null  , 0, 5, 30, 0
+
+BM_Normal, 0, 5, 14, 3
+BM_Color , 15, 5, 14, 3
+BM_Dodge , 0, 8, 14, 3
+BM_Escape, 15, 8, 14, 3
+BM_Barom , 0, 11, 14, 3
+
+BM_P1, 0, 15, 11, 3
+BM_P2, 12, 15, 11, 3
+BM_P3, 0, 19, 11, 3
+BM_P4, 12, 19, 11, 3
+
+BM_Human, 0, 23, 8, 2
+BM_Com  , 0, 25, 8, 2
+BM_Off  , 0, 27, 8, 2
+
+BM_Team   , 0, 29, 6, 2
+BM_Points , 0, 31, 8, 2
+BM_Time   , 0, 33, 5, 2
+BM_ComDif , 0, 35, 8, 2
+BM_Sudden , 0, 37, 10, 2
+BM_Skulls , 0, 39, 6, 2
+BM_Bonus  , 0, 41, 10, 2
+BM_Revenge, 11, 41, 8, 3
+
+BM_Solo, 0, 45, 6, 2
+BM_Team2, 0, 47, 6, 2
+
+BM_1, 0, 49, 6, 2
+BM_2, 0, 51, 6, 2
+BM_3, 0, 53, 6, 2
+BM_4, 0, 55, 6, 2
+BM_5, 0, 57, 6, 2
+
+BM_1m, 0, 59, 6, 2
+BM_2m, 0, 61, 6, 2
+BM_3m, 0, 63, 6, 2
+BM_5m, 0, 65, 6, 2
+BM_Inf, 0, 67, 6, 2
+
+BM_Weak   , 0, 69, 6, 2
+BM_Normal2, 0, 71, 6, 2
+BM_Strong , 0, 73, 6, 2
+
+BM_On    , 0, 75, 6, 2
+BM_Off2  , 0, 77, 6, 2
+BM_Random, 0, 79, 6, 2
+
+BM_Burn, 0, 81, 6, 2
+BM_Stay, 0, 83, 6, 2
+BM_Super, 0, 85, 6, 2
+
+BM_VS, 0, 87, 6, 6
+BM_VSP1, 0, 93, 9, 3
+BM_VSP2, 10, 93, 9, 3
+BM_VSP3, 0, 97, 9, 3
+BM_VSP4, 10, 97, 9, 3
+
+BM_Null2, 0, 101, 0, 0
+
+BM_StanNorm , 0, 101, 14, 3
+BM_StanWide , 15, 101, 14, 3
+BM_Trolley  , 0, 104, 14, 3
+BM_SeeSaw   , 15, 104, 14, 3
+BM_SpotLight, 0, 107, 14, 3
+
+BM_ItemSet , 0, 111, 6, 2
+BM_HandiSet, 0, 113, 6, 2
+BM_LItem , 0, 115, 6, 1
+BM_HandiR, 0, 116, 5, 1
+
+BM_Confirm, 0, 117, 6, 2
+BM_Heart  , 0, 119, 2, 2
+BM_NoHeart, 0, 121, 2, 2
+
+BM_SetHandi, 0, 123, 12, 2
+
+BM_Prompt, 0, 125, 17, 1
+BM_AStart, 0, 126, 18, 1
+BM_BBack , 0, 127, 16, 1
+
+BM_SetItems, 0, 128, 13, 2
+
+BM_Set, 0, 130, 4, 2
+BM_Left, 0, 132, 5, 4
+
+BM_ItemIcons, 0, 136, 15, 8
+
+BM_Off3, 0, 144, 4, 2
+
+BM_IncDec, 0, 146, 13, 2
+
+BM_Cancel, 0, 148, 6, 2
+
+;#72, 0, 147, 16, 5
+;#73, 0, 152, 10, 13
+;#74, 0, 165, 30, 32
+;#75, 0, 197, 5, 16
+;#76, 0, 213, 5, 16
+;#77, 0, 229, 5, 16
+;#78, 0, 245, 5, 16
+
+BM_PointMatch, 0, 264, 12, 2
+BM_M1, 0, 266, 2, 2
+BM_M2, 0, 268, 2, 2
+BM_M3, 0, 270, 2, 2
+BM_M4, 0, 272, 2, 2
+BM_M5, 0, 274, 2, 2
+
+BM_Win1, 0, 276, 20, 1
+BM_Win2, 0, 277, 20, 2
+BM_Win3, 0, 279, 20, 1
+
+BM_50, 0, 280, 5, 2
+BM_100, 0, 282, 5, 2
+BM_200, 0, 284, 5, 2
+BM_300, 0, 286, 5, 2
+BM_500, 0, 288, 5, 2
+BM_VictoryPoint, 0, 290, 10, 3
+
+;#94, 0, 292, 12, 7
+;#95, 0, 299, 12, 7
+;#96, 0, 306, 1, 2
+;#97, 0, 308, 1, 2
+;#98, 0, 310, 1, 2
+
+BM_InfoR, 0, 312, 6, 1
