@@ -1,0 +1,1512 @@
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #008 NAME:		8 Equipment, Karabon, and Item Descriptions; System Messages
+
+// --------------------------------------
+// Define a TABLE
+#VAR(Table, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/jetters_eng.tbl", Table)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($578000)
+// --------------------------------------
+
+//POINTER #0 @ $1CC818 - STRING #0 @ $1CA45C
+
+#WRITE(GBA,$1CC818)
+<NEXT>
+
+//POINTER #1 @ $1CC81C - STRING #1 @ $1CA45D
+
+#WRITE(GBA,$1CC81C)
+<NAME_CARD><$01>Fire Up explanation<NEXT>
+
+//POINTER #2 @ $1CC820 - STRING #2 @ $1CA46E
+
+#WRITE(GBA,$1CC820)
+<NAME_CARD><$02>Bomb Up explanation<NEXT>
+
+//POINTER #3 @ $1CC824 - STRING #3 @ $1CA47C
+
+#WRITE(GBA,$1CC824)
+<NAME_CARD><$03>Speedy Shoes explanation<NEXT>
+
+//POINTER #4 @ $1CC828 - STRING #4 @ $1CA48D
+
+#WRITE(GBA,$1CC828)
+<NAME_CARD><$04>Super Shoes explanation<NEXT>
+
+//POINTER #5 @ $1CC82C - STRING #5 @ $1CA49E
+
+#WRITE(GBA,$1CC82C)
+<NAME_CARD><$05>Hard Armor explanation<NEXT>
+
+//POINTER #6 @ $1CC830 - STRING #6 @ $1CA4AF
+
+#WRITE(GBA,$1CC830)
+<NAME_CARD><$06>Gold Armor explanation<NEXT>
+
+//POINTER #7 @ $1CC834 - STRING #7 @ $1CA4C0
+
+#WRITE(GBA,$1CC834)
+<NAME_CARD><$07>Heart explanation<NEXT>
+
+//POINTER #8 @ $1CC838 - STRING #8 @ $1CA4CC
+
+#WRITE(GBA,$1CC838)
+<NAME_CARD><$08>Bomb Kick explanation<NEXT>
+
+//POINTER #9 @ $1CC83C - STRING #9 @ $1CA4DA
+
+#WRITE(GBA,$1CC83C)
+<NAME_CARD><$09>Power Glove explanation<NEXT>
+
+//POINTER #10 @ $1CC840 - STRING #10 @ $1CA4EA
+
+#WRITE(GBA,$1CC840)
+<NAME_CARD><$0A>Displays the Karabons you have found.<LINE>
+Press the A Button to open and view.<NEXT>
+
+//POINTER #11 @ $1CC844 - STRING #11 @ $1CA514
+
+#WRITE(GBA,$1CC844)
+<NAME_CARD><$0B>Displays the Game Data you've found.<LINE>
+Press the A Button to open and view.<NEXT>
+
+//POINTER #12 @ $1CC848 - STRING #12 @ $1CA539
+
+#WRITE(GBA,$1CC848)
+<NAME_CARD><$0C>Radar explanation<NEXT>
+
+//POINTER #13 @ $1CC84C - STRING #13 @ $1CA546
+
+#WRITE(GBA,$1CC84C)
+<NAME_CARD><$0D>Coin explanation<NEXT>
+
+//POINTER #14 @ $1CC850 - STRING #14 @ $1CA552
+
+#WRITE(GBA,$1CC850)
+<NAME_CARD><$0E>Coin explanation<NEXT>
+
+//POINTER #15 @ $1CC854 - STRING #15 @ $1CA55E
+
+#WRITE(GBA,$1CC854)
+<NAME_CARD><$0F>Coin Bag explanation<NEXT>
+
+//POINTER #16 @ $1CC858 - STRING #16 @ $1CA56C
+
+#WRITE(GBA,$1CC858)
+<NAME_CARD><$10>Banana explanation<NEXT>
+
+//POINTER #17 @ $1CC85C - STRING #17 @ $1CA578
+
+#WRITE(GBA,$1CC85C)
+<NAME_CARD><$11>Strawberry explanation<NEXT>
+
+//POINTER #18 @ $1CC860 - STRING #18 @ $1CA584
+
+#WRITE(GBA,$1CC860)
+<NAME_CARD><$12>Melon explanation<NEXT>
+
+//POINTER #19 @ $1CC864 - STRING #19 @ $1CA590
+
+#WRITE(GBA,$1CC864)
+<NAME_CARD><$13>Restores a small amount of health.<LINE>
+Press the A Button to use.<NEXT>
+
+//POINTER #20 @ $1CC868 - STRING #20 @ $1CA5B6
+
+#WRITE(GBA,$1CC868)
+<NAME_CARD><$14>Restores health entirely.<LINE>
+Press the A Button to use.<NEXT>
+
+//POINTER #21 @ $1CC86C - STRING #21 @ $1CA5DC
+
+#WRITE(GBA,$1CC86C)
+<NAME_CARD><$15>Cures the skull poison status.<LINE>
+Press the A Button to use.<NEXT>
+
+//POINTER #22 @ $1CC870 - STRING #22 @ $1CA5FA
+
+#WRITE(GBA,$1CC870)
+<NAME_CARD><$16>Planet Nonbiri - Dig Site Dungeon<LINE>
+<NEXT>
+
+//POINTER #23 @ $1CC874 - STRING #23 @ $1CA618
+
+#WRITE(GBA,$1CC874)
+<NAME_CARD><$17>Planet Tokotoko - Experiment Base<LINE>
+<NEXT>
+
+//POINTER #24 @ $1CC878 - STRING #24 @ $1CA635
+
+#WRITE(GBA,$1CC878)
+<NAME_CARD><$18>Planet Sekaseka - Chronos Lab<LINE>
+<NEXT>
+
+//POINTER #25 @ $1CC87C - STRING #25 @ $1CA651
+
+#WRITE(GBA,$1CC87C)
+<NAME_CARD><$19>Ancient Nonbiri - Sun Temple<LINE>
+<NEXT>
+
+//POINTER #26 @ $1CC880 - STRING #26 @ $1CA673
+
+#WRITE(GBA,$1CC880)
+<NAME_CARD><$1A>Battleship - Armor Joe<LINE>
+<NEXT>
+
+//POINTER #27 @ $1CC884 - STRING #27 @ $1CA68E
+
+#WRITE(GBA,$1CC884)
+<NAME_CARD><$1B>Skull explanation<NEXT>
+
+//POINTER #28 @ $1CC888 - STRING #28 @ $1CA69A
+
+#WRITE(GBA,$1CC888)
+<NAME_CARD><$1C>Treasure Chest explanation<NEXT>
+
+//POINTER #29 @ $1CC88C - STRING #29 @ $1CA6A8
+
+#WRITE(GBA,$1CC88C)
+<NAME_CARD><$1D>A bomb with the properties of ice.<LINE>
+Has the ability to freeze water.<NEXT>
+
+//POINTER #30 @ $1CC890 - STRING #30 @ $1CA6C8
+
+#WRITE(GBA,$1CC890)
+<NAME_CARD><$1E>A bomb that releases a flash of light.<LINE>
+It can reveal invisible objects.<NEXT>
+
+//POINTER #31 @ $1CC894 - STRING #31 @ $1CA6EA
+
+#WRITE(GBA,$1CC894)
+<NAME_CARD><$1F>A bomb with the properties of water.<LINE>
+Has the ability to put out fire.<NEXT>
+
+//POINTER #32 @ $1CC898 - STRING #32 @ $1CA709
+
+#WRITE(GBA,$1CC898)
+<NAME_CARD><$20>A bomb that releases a gust of wind.<LINE>
+It can move turbines and leaves.<NEXT>
+
+//POINTER #33 @ $1CC89C - STRING #33 @ $1CA72F
+
+#WRITE(GBA,$1CC89C)
+<NAME_CARD><$21>Laugh with confidence! Contains<LINE>
+strategies for defeating the 1st boss.<NEXT>
+
+//POINTER #34 @ $1CC8A0 - STRING #34 @ $1CA75D
+
+#WRITE(GBA,$1CC8A0)
+<NAME_CARD><$22>Laugh with confidence! Contains<LINE>
+strategies for defeating the 2nd boss.<NEXT>
+
+//POINTER #35 @ $1CC8A4 - STRING #35 @ $1CA78B
+
+#WRITE(GBA,$1CC8A4)
+<NAME_CARD><$23>Laugh with confidence! Contains<LINE>
+strategies for defeating the 3rd boss.<NEXT>
+
+//POINTER #36 @ $1CC8A8 - STRING #36 @ $1CA7B9
+
+#WRITE(GBA,$1CC8A8)
+<NAME_CARD><$24>Laugh with confidence! Contains<LINE>
+strategies for defeating the 4th boss.<NEXT>
+
+//POINTER #37 @ $1CC8AC - STRING #37 @ $1CA7E7
+
+#WRITE(GBA,$1CC8AC)
+<NAME_CARD><$25>Laugh with confidence! Contains<LINE>
+strategies for defeating the 5th boss.<NEXT>
+
+//POINTER #38 @ $1CC8B0 - STRING #38 @ $1CA815
+
+#WRITE(GBA,$1CC8B0)
+<NAME_CARD><$26>Mysterious ice that refuses to melt.<LINE>
+Try combining it with Bomb Material.<NEXT>
+
+//POINTER #39 @ $1CC8B4 - STRING #39 @ $1CA83A
+
+#WRITE(GBA,$1CC8B4)
+<NAME_CARD><$27>Strange moss that glows in the dark.<LINE>
+Try combining it with Bomb Material.<NEXT>
+
+//POINTER #40 @ $1CC8B8 - STRING #40 @ $1CA863
+
+#WRITE(GBA,$1CC8B8)
+<NAME_CARD><$28>An odd waterdrop from Caldera Lake.<LINE>
+Try combining it with Bomb Material.<NEXT>
+
+//POINTER #41 @ $1CC8BC - STRING #41 @ $1CA887
+
+#WRITE(GBA,$1CC8BC)
+<NAME_CARD><$29>A mini tornado that keeps on spinning.<LINE>
+Try combining it with Bomb Material.<NEXT>
+
+//POINTER #42 @ $1CC8C0 - STRING #42 @ $1CA8AD
+
+#WRITE(GBA,$1CC8C0)
+<NAME_CARD><$2A>Incredibly sharp!<LINE>
+Deliver it to the carpenter.<NEXT>
+
+//POINTER #43 @ $1CC8C4 - STRING #43 @ $1CA8CB
+
+#WRITE(GBA,$1CC8C4)
+<NAME_CARD><$2B>A dull axe from the carpenter.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #44 @ $1CC8C8 - STRING #44 @ $1CA8F0
+
+#WRITE(GBA,$1CC8C8)
+<NAME_CARD><$2C>A glittering key.<LINE>
+Return it to the gatekeeper.<NEXT>
+
+//POINTER #45 @ $1CC8CC - STRING #45 @ $1CA912
+
+#WRITE(GBA,$1CC8CC)
+<NAME_CARD><$2D>If you combine this with something,<LINE>
+it may create a new type of bomb.<NEXT>
+
+//POINTER #46 @ $1CC8D0 - STRING #46 @ $1CA933
+
+#WRITE(GBA,$1CC8D0)
+<NAME_CARD><$2E>A Special mixture from the medicine<LINE>
+man. Give it to somebody who's sick.<NEXT>
+
+//POINTER #47 @ $1CC8D4 - STRING #47 @ $1CA95C
+
+#WRITE(GBA,$1CC8D4)
+<NAME_CARD><$2F>An empty bottle.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #48 @ $1CC8D8 - STRING #48 @ $1CA977
+
+#WRITE(GBA,$1CC8D8)
+<NAME_CARD><$30>The letter you were entrusted with.<LINE>
+Deliver it to the woman.<NEXT>
+
+//POINTER #49 @ $1CC8DC - STRING #49 @ $1CA997
+
+#WRITE(GBA,$1CC8DC)
+<NAME_CARD><$31>A reply from the woman.<LINE>
+Deliver it to the man.<NEXT>
+
+//POINTER #50 @ $1CC8E0 - STRING #50 @ $1CA9BA
+
+#WRITE(GBA,$1CC8E0)
+<NAME_CARD><$32>A beautiful ring. It is decorated with<LINE>
+a shining blue crystal.<NEXT>
+
+//POINTER #51 @ $1CC8E4 - STRING #51 @ $1CA9D6
+
+#WRITE(GBA,$1CC8E4)
+<NAME_CARD><$33>A substitute for a ring...?<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #52 @ $1CC8E8 - STRING #52 @ $1CA9FC
+
+#WRITE(GBA,$1CC8E8)
+<NAME_CARD><$34>Required for opening the gate outside<LINE>
+of Lava City.<NEXT>
+
+//POINTER #53 @ $1CC8EC - STRING #53 @ $1CAA15
+
+#WRITE(GBA,$1CC8EC)
+<NAME_CARD><$35>An autograph from Akane.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #54 @ $1CC8F0 - STRING #54 @ $1CAA34
+
+#WRITE(GBA,$1CC8F0)
+<NAME_CARD><$36>The location of a hidden inheritance.<LINE>
+Show it to their distant descendant.<NEXT>
+
+//POINTER #55 @ $1CC8F4 - STRING #55 @ $1CAA5C
+
+#WRITE(GBA,$1CC8F4)
+<NAME_CARD><$37>A very old coin.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #56 @ $1CC8F8 - STRING #56 @ $1CAA79
+
+#WRITE(GBA,$1CC8F8)
+<NAME_CARD><$38>A signpost made by Ibsy. Find<LINE>
+somewhere to place it! Only <NUMBER0> to go.<NEXT>
+
+//POINTER #57 @ $1CC8FC - STRING #57 @ $1CAAA3
+
+#WRITE(GBA,$1CC8FC)
+<NAME_CARD><$39>Reveals a signpost's true feelings.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #58 @ $1CC900 - STRING #58 @ $1CAACB
+
+#WRITE(GBA,$1CC900)
+<NAME_CARD><$3A>Prize from the Bomber Hall!<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #59 @ $1CC904 - STRING #59 @ $1CAAF2
+
+#WRITE(GBA,$1CC904)
+<NAME_CARD><$3B>Prize from the Bomber Hall!<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #60 @ $1CC908 - STRING #60 @ $1CAB19
+
+#WRITE(GBA,$1CC908)
+<NAME_CARD><$3C>Prize from the Bomber Hall!<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #61 @ $1CC90C - STRING #61 @ $1CAB40
+
+#WRITE(GBA,$1CC90C)
+<NAME_CARD><$3D>A beautiful red flower.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #62 @ $1CC910 - STRING #62 @ $1CAB5E
+
+#WRITE(GBA,$1CC910)
+<NAME_CARD><$3E>A fragrant blue flower.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #63 @ $1CC914 - STRING #63 @ $1CAB7D
+
+#WRITE(GBA,$1CC914)
+<NAME_CARD><$3F>An egg dropped by a chicken.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #64 @ $1CC918 - STRING #64 @ $1CAB9D
+
+#WRITE(GBA,$1CC918)
+<NAME_CARD><$40>A maraca dropped by a cactus.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #65 @ $1CC91C - STRING #65 @ $1CABBF
+
+#WRITE(GBA,$1CC91C)
+<NAME_CARD><$41>A burning lizard's tail.<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #66 @ $1CC920 - STRING #66 @ $1CABDD
+
+#WRITE(GBA,$1CC920)
+<NAME_CARD><$42>Ballom's...<LINE>
+Try combining it with something.<NEXT>
+
+//POINTER #67 @ $1CC924 - STRING #67 @ $1CABF8
+
+#WRITE(GBA,$1CC924)
+<NAME_CARD><$43>A bomb with an ordinary explosion.<LINE>
+Has the ability to melt ice.<NEXT>
+
+//POINTER #68 @ $1CC928 - STRING #68 @ $1CAC17
+
+#WRITE(GBA,$1CC928)
+<NAME_CARD_KARABON>Allows you to teleport to any Warp<LINE>
+Point that has been activated.<NEXT>
+
+//POINTER #69 @ $1CC92C - STRING #69 @ $1CAC35
+
+#WRITE(GBA,$1CC92C)
+<NAME_CARD_KARABON>Activates a shield that can defend<LINE>
+against projectiles from the front.<NEXT>
+
+//POINTER #70 @ $1CC930 - STRING #70 @ $1CAC59
+
+#WRITE(GBA,$1CC930)
+<NAME_CARD_KARABON>Has the ability to push certain blocks.<LINE>
+Works even when not selected.<NEXT>
+
+//POINTER #71 @ $1CC934 - STRING #71 @ $1CAC7E
+
+#WRITE(GBA,$1CC934)
+<NAME_CARD_KARABON>Can dash while the B Button is held.<LINE>
+Level up to dash faster.<NEXT>
+
+//POINTER #72 @ $1CC938 - STRING #72 @ $1CACA1
+
+#WRITE(GBA,$1CC938)
+<NAME_CARD_KARABON>Pressing the B Button will turn you<LINE>
+invisible for a brief moment.<NEXT>
+
+//POINTER #73 @ $1CC93C - STRING #73 @ $1CACC4
+
+#WRITE(GBA,$1CC93C)
+<NAME_CARD_KARABON>Places a Hasty Bomb that detonates<LINE>
+quicker than usual.<NEXT>
+
+//POINTER #74 @ $1CC940 - STRING #74 @ $1CACE3
+
+#WRITE(GBA,$1CC940)
+<NAME_CARD_KARABON>Places a Lazy Bomb that takes<LINE>
+longer to detonate than usual. <NEXT>
+
+//POINTER #75 @ $1CC944 - STRING #75 @ $1CAD03
+
+#WRITE(GBA,$1CC944)
+<NAME_CARD_KARABON>Deploys a Remote Control Bomb that<LINE>
+can be detonated at will.<NEXT>
+
+//POINTER #76 @ $1CC948 - STRING #76 @ $1CAD28
+
+#WRITE(GBA,$1CC948)
+<NEXT>
+
+//POINTER #77 @ $1CC94C - STRING #77 @ $1CAD29
+
+#WRITE(GBA,$1CC94C)
+<NEXT>
+
+//POINTER #78 @ $1CC950 - STRING #78 @ $1CAD2A
+
+#WRITE(GBA,$1CC950)
+<NEXT>
+
+//POINTER #79 @ $1CC954 - STRING #79 @ $1CAD2B
+
+#WRITE(GBA,$1CC954)
+<NEXT>
+
+//POINTER #80 @ $1CC958 - STRING #80 @ $1CAD2C
+
+#WRITE(GBA,$1CC958)
+<NEXT>
+
+//POINTER #81 @ $1CC95C - STRING #81 @ $1CAD2D
+
+#WRITE(GBA,$1CC95C)
+<NEXT>
+
+//POINTER #82 @ $1CC960 - STRING #82 @ $1CAD2E
+
+#WRITE(GBA,$1CC960)
+<NEXT>
+
+//POINTER #83 @ $1CC964 - STRING #83 @ $1CAD2F
+
+#WRITE(GBA,$1CC964)
+<NEXT>
+
+//POINTER #84 @ $1CC968 - STRING #84 @ $1CAD30
+
+#WRITE(GBA,$1CC968)
+<NEXT>
+
+//POINTER #85 @ $1CC96C - STRING #85 @ $1CAD31
+
+#WRITE(GBA,$1CC96C)
+<NEXT>
+
+//POINTER #86 @ $1CC970 - STRING #86 @ $1CAD32
+
+#WRITE(GBA,$1CC970)
+<NEXT>
+
+//POINTER #87 @ $1CC974 - STRING #87 @ $1CAD33
+
+#WRITE(GBA,$1CC974)
+<NEXT>
+
+//POINTER #88 @ $1CC978 - STRING #88 @ $1CAD34
+
+#WRITE(GBA,$1CC978)
+<NEXT>
+
+//POINTER #89 @ $1CC97C - STRING #89 @ $1CAD35
+
+#WRITE(GBA,$1CC97C)
+<NEXT>
+
+//POINTER #90 @ $1CC980 - STRING #90 @ $1CAD36
+
+#WRITE(GBA,$1CC980)
+<NEXT>
+
+//POINTER #91 @ $1CC984 - STRING #91 @ $1CAD37
+
+#WRITE(GBA,$1CC984)
+<NEXT>
+
+//POINTER #92 @ $1CC988 - STRING #92 @ $1CAD38
+
+#WRITE(GBA,$1CC988)
+<NEXT>
+
+//POINTER #93 @ $1CC98C - STRING #93 @ $1CAD39
+
+#WRITE(GBA,$1CC98C)
+<NEXT>
+
+//POINTER #94 @ $1CC990 - STRING #94 @ $1CAD3A
+
+#WRITE(GBA,$1CC990)
+<NEXT>
+
+//POINTER #95 @ $1CC994 - STRING #95 @ $1CAD3B
+
+#WRITE(GBA,$1CC994)
+<NEXT>
+
+//POINTER #96 @ $1CC998 - STRING #96 @ $1CAD3C
+
+#WRITE(GBA,$1CC998)
+<NAME_CARD><$21>Bomberman read CoroCoro Comic<LINE>
+Volume 1...<WAIT>
+The boss of Area 1 is Drill Mole.<LINE>
+A gigantic mole-type robotic enemy!<WAIT>
+When the battle begins, Drill Mole will<LINE>
+split into two and attack.<WAIT>
+The fake version won't take damage, so<LINE>
+be sure to focus only on the real one.<WAIT>
+If Drill Mole lines up with you<LINE>
+horizontally, it may charge at you!<WAIT>
+You can use the shield to defend<LINE>
+against the rapid fire energy attack.<END>
+
+//POINTER #97 @ $1CC99C - STRING #97 @ $1CAE0B
+
+#WRITE(GBA,$1CC99C)
+<NAME_CARD><$22>Bomberman read CoroCoro Comic<LINE>
+Volume 2...<WAIT>
+The boss of Area 2 is Net Spider.<LINE>
+A gigantic spider-type robotic enemy!<WAIT>
+When the fight begins, use Light Bombs<LINE>
+to reveal hidden blocks in the room.<WAIT>
+Touching the spider webs won't hurt<LINE>
+you, but they will slow you down.<WAIT>
+Defend against the homing missile<LINE>
+attack by using the shield!<WAIT>
+When Net Spider hangs from the <LINE>
+ceiling, use the shadow to figure out<WAIT>
+where the attack will be!<END>
+
+//POINTER #98 @ $1CC9A0 - STRING #98 @ $1CAEFC
+
+#WRITE(GBA,$1CC9A0)
+<NAME_CARD><$23>Bomberman read CoroCoro Comic<LINE>
+Volume 3...<WAIT>
+The boss of Area 3 is Blade Beetle.<LINE>
+A gigantic beetle-type robotic enemy!<WAIT>
+It attacks by detaching its horns and<LINE>
+throwing them like boomerangs.<WAIT>
+The shield can't defend against the<LINE>
+horns, so dodge them by dashing.<WAIT>
+When you are in Blade Beetle's line of<LINE>
+sight, it may suddenly charge at you!<END>
+
+//POINTER #99 @ $1CC9A4 - STRING #99 @ $1CAFA5
+
+#WRITE(GBA,$1CC9A4)
+<NAME_CARD><$24>Bomberman read CoroCoro Comic<LINE>
+Volume 4...<WAIT>
+The boss of Area 4 is Hammer Kong.<LINE>
+A huge gorilla-type robotic enemy!<WAIT>
+It attacks by swinging the iron balls<LINE>
+it wields in each hand.<WAIT>
+If the boss directly lines up with you,<LINE>
+it will use the iron ball yoyo attack.<WAIT>
+Dash at the right time to move out of<LINE>
+the way when it attacks.<WAIT>
+Every second time you damage the<LINE>
+boss, bombs will fall from the ceiling.<END>
+
+//POINTER #100 @ $1CC9A8 - STRING #100 @ $1CB079
+
+#WRITE(GBA,$1CC9A8)
+<NAME_CARD><$25>Bomberman read CoroCoro Comic<LINE>
+Volume 5...<WAIT>
+The boss of Area 5 is Machine Dragon.<LINE>
+A gigantic dragon-type robotic enemy!<WAIT>
+While it's flying above the ground,<LINE>
+bombs will have no effect on it.<WAIT>
+Only after Machine Dragon lands on the<LINE>
+ground will you be able to damage it.<WAIT>
+Carefully utilize the abilities of all<LINE>
+the Karabons you have met, and give<WAIT>
+the fight everything you've got!<END>
+
+//POINTER #101 @ $1CC9AC - STRING #101 @ $1CB133
+
+#WRITE(GBA,$1CC9AC)
+<NEXT>
+
+//POINTER #102 @ $1CC9B0 - STRING #102 @ $1CB134
+
+#WRITE(GBA,$1CC9B0)
+<NEXT>
+
+//POINTER #103 @ $1CC9B4 - STRING #103 @ $1CB135
+
+#WRITE(GBA,$1CC9B4)
+<NEXT>
+
+//POINTER #104 @ $1CC9B8 - STRING #104 @ $1CB136
+
+#WRITE(GBA,$1CC9B8)
+You don't have to use that now!<NEXT>
+
+//POINTER #105 @ $1CC9BC - STRING #105 @ $1CB14A
+
+#WRITE(GBA,$1CC9BC)
+<PLACE><NEXT>
+
+//POINTER #106 @ $1CC9C0 - STRING #106 @ $1CB14D
+
+#WRITE(GBA,$1CC9C0)
+<NEXT>
+
+//POINTER #107 @ $1CC9C4 - STRING #107 @ $1CB14E
+
+#WRITE(GBA,$1CC9C4)
+<NEXT>
+
+//POINTER #108 @ $1CC9C8 - STRING #108 @ $1CB14F
+
+#WRITE(GBA,$1CC9C8)
+<NEXT>
+
+//POINTER #109 @ $1CC9CC - STRING #109 @ $1CB150
+
+#WRITE(GBA,$1CC9CC)
+<NEXT>
+
+//POINTER #110 @ $1CC9D0 - STRING #110 @ $1CB151
+
+#WRITE(GBA,$1CC9D0)
+<NEXT>
+
+//POINTER #111 @ $1CC9D4 - STRING #111 @ $1CB152
+
+#WRITE(GBA,$1CC9D4)
+<NEXT>
+
+//POINTER #112 @ $1CC9D8 - STRING #112 @ $1CB153
+
+#WRITE(GBA,$1CC9D8)
+<PLACE><$00><WORLD><NEXT>
+
+//POINTER #113 @ $1CC9DC - STRING #113 @ $1CB159
+
+#WRITE(GBA,$1CC9DC)
+Press B to return to the game.<NEXT>
+
+//POINTER #114 @ $1CC9E0 - STRING #114 @ $1CB169
+
+#WRITE(GBA,$1CC9E0)
+Please select a warp point.<NEXT>
+
+//POINTER #115 @ $1CC9E4 - STRING #115 @ $1CB17B
+
+#WRITE(GBA,$1CC9E4)
+<PLACE><NEXT>
+
+//POINTER #116 @ $1CC9E8 - STRING #116 @ $1CB17E
+
+#WRITE(GBA,$1CC9E8)
+Warp to <PLACE>?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No<PROMPT_YES><$03><$02><$0C><$02><$08><$75><$08><$76>
+<END>
+
+//POINTER #117 @ $1CC9EC - STRING #117 @ $1CB1A5
+
+#WRITE(GBA,$1CC9EC)
+<SET_FLAG><$01><$F3><NEXT>
+
+//POINTER #118 @ $1CC9F0 - STRING #118 @ $1CB1AA
+
+#WRITE(GBA,$1CC9F0)
+<CLEAR_FLAG><$01><$F3><NEXT>
+
+//POINTER #119 @ $1CC9F4 - STRING #119 @ $1CB1AF
+
+#WRITE(GBA,$1CC9F4)
+Please select a destination.<NEXT>
+
+//POINTER #120 @ $1CC9F8 - STRING #120 @ $1CB1C1
+
+#WRITE(GBA,$1CC9F8)
+<NEXT>
+
+//POINTER #121 @ $1CC9FC - STRING #121 @ $1CB1C2
+
+#WRITE(GBA,$1CC9FC)
+<NEXT>
+
+//POINTER #122 @ $1CCA00 - STRING #122 @ $1CB1C3
+
+#WRITE(GBA,$1CCA00)
+<NEXT>
+
+//POINTER #123 @ $1CCA04 - STRING #123 @ $1CB1C4
+
+#WRITE(GBA,$1CCA04)
+<NEXT>
+
+//POINTER #124 @ $1CCA08 - STRING #124 @ $1CB1C5
+
+#WRITE(GBA,$1CCA08)
+<NEXT>
+
+//POINTER #125 @ $1CCA0C - STRING #125 @ $1CB1C6
+
+#WRITE(GBA,$1CCA0C)
+<NEXT>
+
+//POINTER #126 @ $1CCA10 - STRING #126 @ $1CB1C7
+
+#WRITE(GBA,$1CCA10)
+<NEXT>
+
+//POINTER #127 @ $1CCA14 - STRING #127 @ $1CB1C8
+
+#WRITE(GBA,$1CCA14)
+<NEXT>
+
+//POINTER #128 @ $1CCA18 - STRING #128 @ $1CB1C9
+
+#WRITE(GBA,$1CCA18)
+Has the ability to teleport to any<LINE>
+Warp Point that has been activated.<LINE>
+Can also teleport to a dungeon's<LINE>
+entrance when inside a dungeon.<NEXT>
+
+//POINTER #129 @ $1CCA1C - STRING #129 @ $1CB20E
+
+#WRITE(GBA,$1CCA1C)
+Uses its shell as a shield to protect<LINE>
+against projectiles form the front.<LINE>
+You can't move while using the shield,<LINE>
+but your direction can be changed.<NEXT>
+
+//POINTER #130 @ $1CCA20 - STRING #130 @ $1CB25F
+
+#WRITE(GBA,$1CCA20)
+Can push certain types of blocks at a<LINE>
+slow pace. Even when not selected<LINE>
+this ability can still be used.<NEXT>
+
+//POINTER #131 @ $1CCA24 - STRING #131 @ $1CB2A2
+
+#WRITE(GBA,$1CCA24)
+Holding the B Button will allow you<LINE>
+to dash. At this level the speed of the<LINE>
+dash is somewhat slow.<NEXT>
+
+//POINTER #132 @ $1CCA28 - STRING #132 @ $1CB2DA
+
+#WRITE(GBA,$1CCA28)
+Pressing the B Button will turn you<LINE>
+invisible for a brief moment.<LINE>
+You will still take damage while<LINE>
+invisible. Use it to stay out of sight.<NEXT>
+
+//POINTER #133 @ $1CCA2C - STRING #133 @ $1CB328
+
+#WRITE(GBA,$1CCA2C)
+While selected, bombs you place<LINE>
+will become Hasty Bombs.<LINE>
+Hasty Bombs detonate in half the time<LINE>
+bombs normally take to detonate.<NEXT>
+
+//POINTER #134 @ $1CCA30 - STRING #134 @ $1CB36C
+
+#WRITE(GBA,$1CCA30)
+While selected, bombs you place<LINE>
+will become Lazy Bombs.<LINE>
+Lazy Bombs take twice as long<LINE>
+to detonate.<NEXT>
+
+//POINTER #135 @ $1CCA34 - STRING #135 @ $1CB3AF
+//13440
+#WRITE(GBA,$1CCA34)
+While selected, bombs you place<LINE>
+will become Remote Bombs.<LINE>
+You can press the B Button to detonate<LINE>
+Remote Bombs whenever you wish!<NEXT>
+
+//POINTER #136 @ $1CCA38 - STRING #136 @ $1CB3F7
+
+#WRITE(GBA,$1CCA38)
+Bomberman<LINE>
+December 1985 - Famicom<LINE>
+The very first Bomberman game ever<LINE>
+released! The beginning of the series.<NEXT>
+
+//POINTER #137 @ $1CCA3C - STRING #137 @ $1CB437
+
+#WRITE(GBA,$1CCA3C)
+Bomber King<LINE>
+August 1987 - Famicom<LINE>
+Released as RoboWarrior on the NES in<LINE>
+North America and Europe.<NEXT>
+
+//POINTER #138 @ $1CCA40 - STRING #138 @ $1CB47C
+
+#WRITE(GBA,$1CCA40)
+Bomber Boy<LINE>
+August 1990 - Game Boy<LINE>
+Bomberman's first Game Boy game!<LINE>
+Introduced link-up battles.<NEXT>
+
+//POINTER #139 @ $1CCA44 - STRING #139 @ $1CB4BD
+
+#WRITE(GBA,$1CCA44)
+Bomberman 2<LINE>
+June 1991 - Famicom<LINE>
+Bomberman's second game on Famicom!<LINE>
+Introduced the Battle Mode.<NEXT>
+
+//POINTER #140 @ $1CCA48 - STRING #140 @ $1CB4F3
+
+#WRITE(GBA,$1CCA48)
+Super Bomberman<LINE>
+April 1993 - Super Famicom<LINE>
+Introduced the 2 Player Co-op Mode.<LINE>
+A completely new way to play!<NEXT>
+
+//POINTER #141 @ $1CCA4C - STRING #141 @ $1CB538
+
+#WRITE(GBA,$1CCA4C)
+Super Bomberman 2<LINE>
+April 1994 - Super Famicom<LINE>
+Introduced new battle rules such as<LINE>
+Sudden Death and Golden Bomber!<NEXT>
+
+//POINTER #142 @ $1CCA50 - STRING #142 @ $1CB584
+
+#WRITE(GBA,$1CCA50)
+Bomberman GB<LINE>
+August 1994 - Game Boy<LINE>
+Compatible with the Super Game Boy!<LINE>
+Also the Moto Bomber vehicle's debut.<NEXT>
+
+//POINTER #143 @ $1CCA54 - STRING #143 @ $1CB5CA
+
+#WRITE(GBA,$1CCA54)
+Super Bomberman - Panic Bomber W <LINE>
+March 1995 - Super Famicom<LINE>
+The first Bomberman falling-object<LINE>
+puzzle game! Included multiplayer.<NEXT>
+
+//POINTER #144 @ $1CCA58 - STRING #144 @ $1CB621
+
+#WRITE(GBA,$1CCA58)
+Super Bomberman 3<LINE>
+April 1995 - Super Famicom<LINE>
+Louie's first appearance! Also <LINE>
+introduced Bad Bomber battle option.<NEXT>
+
+//POINTER #145 @ $1CCA5C - STRING #145 @ $1CB66E
+
+#WRITE(GBA,$1CCA5C)
+Bomberman GB 2<LINE>
+August 1995 - Game Boy<LINE>
+Lesson Mode and White Bomber's<LINE>
+ancestor, Indy Bomber, are introduced.<NEXT>
+
+//POINTER #146 @ $1CCA60 - STRING #146 @ $1CB6B5
+
+#WRITE(GBA,$1CCA60)
+Super Bomberman 4<LINE>
+April 1996 - Super Famicom<LINE>
+New actions like throwing and pushing<LINE>
+are introduced along with Maniac Mode.<NEXT>
+
+//POINTER #147 @ $1CCA64 - STRING #147 @ $1CB701
+
+#WRITE(GBA,$1CCA64)
+Bomberman Collection<LINE>
+July 1996 - Game Boy<LINE>
+Bomberman's first game compilation!<LINE>
+Featured 3 different titles to enjoy.<NEXT>
+
+//POINTER #148 @ $1CCA68 - STRING #148 @ $1CB752
+
+#WRITE(GBA,$1CCA68)
+Bomberman B-Daman<LINE>
+December 1996 - Super Famicom<LINE>
+B-Daman's Super Famicom debut!<LINE>
+Came packaged with a B-Daman toy!<NEXT>
+
+//POINTER #149 @ $1CCA6C - STRING #149 @ $1CB79F
+
+#WRITE(GBA,$1CCA6C)
+Bomberman GB 3<LINE>
+December 1996 - Game Boy<LINE>
+Introduction of the Challenge Mode!<LINE>
+Your score determines your rank.<NEXT>
+
+//POINTER #150 @ $1CCA70 - STRING #150 @ $1CB7DF
+
+#WRITE(GBA,$1CCA70)
+Super Bomberman 5<LINE>
+February 1997 - Super Famicom<LINE>
+Featured multiple ways to reach the<LINE>
+end, with a total of 100 stages in all!<NEXT>
+
+//POINTER #151 @ $1CCA74 - STRING #151 @ $1CB82C
+
+#WRITE(GBA,$1CCA74)
+Panic Bomber<LINE>
+July 1997 - Virtual Boy<LINE>
+Bomberman's only Virtual Boy game.<LINE>
+A puzzle challenge with 3D effects.<NEXT>
+
+//POINTER #152 @ $1CCA78 - STRING #152 @ $1CB874
+
+#WRITE(GBA,$1CCA78)
+Bomberman 64<LINE>
+September 1997 - Nintendo 64<LINE>
+Bomberman makes the move to 3D,<LINE>
+allowing for more realistic gameplay!<NEXT>
+
+//POINTER #153 @ $1CCA7C - STRING #153 @ $1CB8B6
+
+#WRITE(GBA,$1CCA7C)
+Pocket Bomberman<LINE>
+December 1997 - Game Boy<LINE>
+Introduces jumping and platforming in<LINE>
+an all-new action adventure!<NEXT>
+
+//POINTER #154 @ $1CCA80 - STRING #154 @ $1CB8F2
+
+#WRITE(GBA,$1CCA80)
+Bomberman Hero<LINE>
+April 1998 - Nintendo 64<LINE>
+Bomberman could transform into 4<LINE>
+forms to overcome challenges!<NEXT>
+
+//POINTER #155 @ $1CCA84 - STRING #155 @ $1CB947
+
+#WRITE(GBA,$1CCA84)
+Bomberman Quest<LINE>
+December 1998 - Game Boy<LINE>
+Bomberman's first RPG! New bombs<LINE>
+could be created through synthesis.<NEXT>
+
+//POINTER #156 @ $1CCA88 - STRING #156 @ $1CB988
+
+#WRITE(GBA,$1CCA88)
+Bomberman 64: The Second Attack<LINE>
+December 1999 - Nintendo 64<LINE>
+Power up with 7 elemental abilities!<LINE>
+Features an expansive Battle Mode.<NEXT>
+
+//POINTER #157 @ $1CCA8C - STRING #157 @ $1CB9D1
+
+#WRITE(GBA,$1CCA8C)
+Bomberman Max: Blue Champion<LINE>
+December 1999 - Game Boy Color<LINE>
+Available in two different versions!<LINE>
+Link up to unlock more stages!<NEXT>
+
+//POINTER #158 @ $1CCA90 - STRING #158 @ $1CBA2F
+
+#WRITE(GBA,$1CCA90)
+Bomberman Max: Red Challenger<LINE>
+December 1999 - Game Boy Color<LINE>
+The grand debut of Karabons!<LINE>
+Collect, raise, and battle with them!<NEXT>
+
+//POINTER #159 @ $1CCA94 - STRING #159 @ $1CBA82
+
+#WRITE(GBA,$1CCA94)
+Bomberman Max: Ain Version<LINE>
+Not sold - Game Boy Color<LINE>
+Only given out to event participants.<LINE>
+Has the features of both games in one!<NEXT>
+
+//POINTER #160 @ $1CCA98 - STRING #160 @ $1CBADB
+
+#WRITE(GBA,$1CCA98)
+Bomberman Tournament<LINE>
+April 2001 - Game Boy Advance<LINE>
+An expansive Bomberman RPG quest!<LINE>
+Included single-pak multiplayer play.<NEXT>
+
+//POINTER #161 @ $1CCA9C - STRING #161 @ $1CBB28
+
+#WRITE(GBA,$1CCA9C)
+Bomberman 64 (Japan)<LINE>
+December 2001 - Nintendo 64<LINE>
+Japan exclusive release with various<LINE>
+minigames in a theme park setting.<NEXT>
+
+//POINTER #162 @ $1CCAA0 - STRING #162 @ $1CBB6F
+
+#WRITE(GBA,$1CCAA0)
+Bomberman Max 2: Blue Advance<LINE>
+February 2002 - Game Boy Advance<LINE>
+The continuation of the Max series!<LINE>
+Featured detailed 3D-style graphics!<NEXT>
+
+//POINTER #163 @ $1CCAA4 - STRING #163 @ $1CBBBF
+
+#WRITE(GBA,$1CCAA4)
+Bomberman Max 2: Red Advance<LINE>
+February 2002 - Game Boy Advance<LINE>
+Use the abilities of Karabons to<LINE>
+clear all of the stages!<NEXT>
+
+//POINTER #164 @ $1CCAA8 - STRING #164 @ $1CBC0F
+
+#WRITE(GBA,$1CCAA8)
+Please select a file to save to.<LINE>
+Press the B button to cancel.<NEXT>
+
+//POINTER #165 @ $1CCAAC - STRING #165 @ $1CBC33
+
+#WRITE(GBA,$1CCAAC)
+Save to File <NUMBER0>?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No<PROMPT_NO><$03><$02><$0C><$02><$08><$75><$08><$76>
+<END>
+
+//POINTER #166 @ $1CCAB0 - STRING #166 @ $1CBC5E
+
+#WRITE(GBA,$1CCAB0)
+Done saving to File <NUMBER0>.<LINE>
+<WAIT>
+<NEXT>
+
+//POINTER #167 @ $1CCAB4 - STRING #167 @ $1CBC70
+
+#WRITE(GBA,$1CCAB4)
+Quit and return to the title screen?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No<PROMPT_NO><$03><$02><$0C><$02><$08><$75><$08><$76>
+<END>
+
+//POINTER #168 @ $1CCAB8 - STRING #168 @ $1CBC9D
+
+#WRITE(GBA,$1CCAB8)
+Please select a file to load from.<LINE>
+Press the B button to cancel.<NEXT>
+
+//POINTER #169 @ $1CCABC - STRING #169 @ $1CBCC2
+
+#WRITE(GBA,$1CCABC)
+Load File <NUMBER0>?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No<PROMPT_YES><$03><$02><$0C><$02><$08><$75><$08><$76>
+<END>
+
+//POINTER #170 @ $1CCAC0 - STRING #170 @ $1CBCEC
+
+#WRITE(GBA,$1CCAC0)
+Done loading File <NUMBER0>.<END>
+
+//POINTER #171 @ $1CCAC4 - STRING #171 @ $1CBCFC
+
+#WRITE(GBA,$1CCAC4)
+<PLACE><NEXT>
+
+//POINTER #172 @ $1CCAC8 - STRING #172 @ $1CBCFF
+
+#WRITE(GBA,$1CCAC8)
+You can't save right now!<LINE>
+<WAIT>
+<NEXT>
+
+//POINTER #173 @ $1CCACC - STRING #173 @ $1CBD10
+
+#WRITE(GBA,$1CCACC)
+The attempt to save to File <NUMBER0> failed.<LINE>
+<WAIT>
+<NEXT>
+
+//POINTER #174 @ $1CCAD0 - STRING #174 @ $1CBD28
+
+#WRITE(GBA,$1CCAD0)
+The attempt to load File <NUMBER0> failed.<LINE>
+<WAIT>
+<NEXT>
+
+//POINTER #175 @ $1CCAD4 - STRING #175 @ $1CBD3F
+
+#WRITE(GBA,$1CCAD4)
+<NEXT>
+
+//POINTER #176 @ $1CCAD8 - STRING #176 @ $1CBD40
+
+#WRITE(GBA,$1CCAD8)
+This is Birdy. At last, it's time to<LINE>
+head towards Mujoe's battleship!<WAIT>
+Avoid the meteorites and obstacles,<LINE>
+and reach the battleship's entrance!<WAIT>
+The Jetters Badges will increase your<LINE>
+score, but you don't have to get them.<WAIT>
+We are also on our way to the Armor<LINE>
+Joe, but go on ahead without us!<END>
+
+//POINTER #177 @ $1CCADC - STRING #177 @ $1CBDE5
+
+#WRITE(GBA,$1CCADC)
+Listen to the minigame instructions?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No<PROMPT_NO><$03><$02><$0C><$02><$08><$75><$08><$76>
+<END>
+
+//POINTER #178 @ $1CCAE0 - STRING #178 @ $1CBE13
+
+#WRITE(GBA,$1CCAE0)
+Dodge the incoming obstacles and<LINE>
+head toward the Armor Joe.<WAIT>
+Picking up the Jetters badges will<LINE>
+increase your score.<WAIT>
+If you miss too many you won't set a<LINE>
+new record, so be careful!<WAIT>
+Well then, do your best!<END>
+
+//POINTER #179 @ $1CCAE4 - STRING #179 @ $1CBE7D
+
+#WRITE(GBA,$1CCAE4)
+Well then, do your best!<END>
+
+//POINTER #180 @ $1CCAE8 - STRING #180 @ $1CBE8C
+
+#WRITE(GBA,$1CCAE8)
+<NEXT>
+
+//POINTER #181 @ $1CCAEC - STRING #181 @ $1CBE8D
+
+#WRITE(GBA,$1CCAEC)
+<NEXT>
+
+//POINTER #182 @ $1CCAF0 - STRING #182 @ $1CBE8E
+
+#WRITE(GBA,$1CCAF0)
+<NEXT>
+
+//POINTER #183 @ $1CCAF4 - STRING #183 @ $1CBE8F
+
+#WRITE(GBA,$1CCAF4)
+<NEXT>
+
+//POINTER #184 @ $1CCAF8 - STRING #184 @ $1CBE90
+
+#WRITE(GBA,$1CCAF8)
+<NAME_CARD_KARABON>Has the ability to teleport to any<LINE>
+Warp Point that has been activated.<NEXT>
+
+//POINTER #185 @ $1CCAFC - STRING #185 @ $1CBEAE
+
+#WRITE(GBA,$1CCAFC)
+<NAME_CARD_KARABON>Has the ability to teleport to any<LINE>
+Warp Point that has been activated.<NEXT>
+
+//POINTER #186 @ $1CCB00 - STRING #186 @ $1CBECC
+
+#WRITE(GBA,$1CCB00)
+<NAME_CARD_KARABON>Has the ability to teleport to any<LINE>
+Warp Point that has been activated.<NEXT>
+
+//POINTER #187 @ $1CCB04 - STRING #187 @ $1CBEEA
+
+#WRITE(GBA,$1CCB04)
+<NAME_CARD_KARABON>Protects against projectiles from the<LINE>
+front. Allows for slow movement.<NEXT>
+
+//POINTER #188 @ $1CCB08 - STRING #188 @ $1CBF0D
+
+#WRITE(GBA,$1CCB08)
+<NAME_CARD_KARABON>Protects against projectiles from the<LINE>
+front. Allows for moderate movement.<NEXT>
+
+//POINTER #189 @ $1CCB0C - STRING #189 @ $1CBF2B
+
+#WRITE(GBA,$1CCB0C)
+<NAME_CARD_KARABON>Protects against projectiles from the<LINE>
+front, back, and sides.<NEXT>
+
+//POINTER #190 @ $1CCB10 - STRING #190 @ $1CBF53
+
+#WRITE(GBA,$1CCB10)
+<NAME_CARD_KARABON>Can push blocks at a moderate speed.<LINE>
+Works even when not selected.<NEXT>
+
+//POINTER #191 @ $1CCB14 - STRING #191 @ $1CBF7E
+
+#WRITE(GBA,$1CCB14)
+<NAME_CARD_KARABON>Can push blocks at a high speed.<LINE>
+Works even when not selected.<NEXT>
+
+//POINTER #192 @ $1CCB18 - STRING #192 @ $1CBFA6
+
+#WRITE(GBA,$1CCB18)
+<NAME_CARD_KARABON>Can push blocks at maximum speed.<LINE>
+Works even when not selected.<NEXT>
+
+//POINTER #193 @ $1CCB1C - STRING #193 @ $1CBFD1
+
+#WRITE(GBA,$1CCB1C)
+<NAME_CARD_KARABON>Can dash while the B Button is held.<LINE>
+Dashing speed is currently moderate.<NEXT>
+
+//POINTER #194 @ $1CCB20 - STRING #194 @ $1CBFFF
+
+#WRITE(GBA,$1CCB20)
+<NAME_CARD_KARABON>Can dash while the B Button is held.<LINE>
+Dashing speed is currently fast.<NEXT>
+
+//POINTER #195 @ $1CCB24 - STRING #195 @ $1CC029
+
+#WRITE(GBA,$1CCB24)
+<NAME_CARD_KARABON>Can dash while the B Button is held.<LINE>
+Dashing speed is maxed out!<NEXT>
+
+//POINTER #196 @ $1CCB28 - STRING #196 @ $1CC056
+
+#WRITE(GBA,$1CCB28)
+<NAME_CARD_KARABON>Pressing the B Button will turn you<LINE>
+invisible for a short length of time.<NEXT>
+
+//POINTER #197 @ $1CCB2C - STRING #197 @ $1CC084
+
+#WRITE(GBA,$1CCB2C)
+<NAME_CARD_KARABON>Pressing the B Button will turn you<LINE>
+invisible for a medium length of time.<NEXT>
+
+//POINTER #198 @ $1CCB30 - STRING #198 @ $1CC0AE
+
+#WRITE(GBA,$1CCB30)
+<NAME_CARD_KARABON>Pressing the B Button will turn you<LINE>
+invisible for a long period of time.<NEXT>
+
+//POINTER #199 @ $1CCB34 - STRING #199 @ $1CC0DB
+
+#WRITE(GBA,$1CCB34)
+<NAME_CARD_KARABON>Places a Hasty Bomb with firepower<LINE>
+that is slightly more powerful.<NEXT>
+
+//POINTER #200 @ $1CCB38 - STRING #200 @ $1CC0FF
+
+#WRITE(GBA,$1CCB38)
+<NAME_CARD_KARABON>Places a Hasty Bomb with firepower<LINE>
+that is much more powerful.<NEXT>
+
+//POINTER #201 @ $1CCB3C - STRING #201 @ $1CC11F
+
+#WRITE(GBA,$1CCB3C)
+<NAME_CARD_KARABON>Places a Hasty Bomb with firepower<LINE>
+that is extremely powerful.<NEXT>
+
+//POINTER #202 @ $1CCB40 - STRING #202 @ $1CC142
+
+#WRITE(GBA,$1CCB40)
+<NAME_CARD_KARABON>Places a Lazy Bomb with firepower<LINE>
+that is slightly more powerful.<NEXT>
+
+//POINTER #203 @ $1CCB44 - STRING #203 @ $1CC166
+
+#WRITE(GBA,$1CCB44)
+<NAME_CARD_KARABON>Places a Lazy Bomb with firepower<LINE>
+that is much more powerful.<NEXT>
+
+//POINTER #204 @ $1CCB48 - STRING #204 @ $1CC186
+
+#WRITE(GBA,$1CCB48)
+<NAME_CARD_KARABON>Places a Lazy Bomb with firepower<LINE>
+that is extremely powerful.<NEXT>
+
+//POINTER #205 @ $1CCB4C - STRING #205 @ $1CC1A9
+
+#WRITE(GBA,$1CCB4C)
+<NAME_CARD_KARABON>Places a Remote Bomb with firepower<LINE>
+that is slightly more powerful.<NEXT>
+
+//POINTER #206 @ $1CCB50 - STRING #206 @ $1CC1CD
+
+#WRITE(GBA,$1CCB50)
+<NAME_CARD_KARABON>Places a Remote Bomb with firepower<LINE>
+that is much more powerful.<NEXT>
+
+//POINTER #207 @ $1CCB54 - STRING #207 @ $1CC1ED
+
+#WRITE(GBA,$1CCB54)
+<NAME_CARD_KARABON>Places a Remote Bomb with firepower<LINE>
+that is extremely powerful.<NEXT>
+
+//POINTER #208 @ $1CCB58 - STRING #208 @ $1CC210
+
+#WRITE(GBA,$1CCB58)
+Has the ability to teleport to any<LINE>
+Warp Point that has been activated.<LINE>
+Can also teleport to a dungeon's<LINE>
+entrance when inside a dungeon.<NEXT>
+
+//POINTER #209 @ $1CCB5C - STRING #209 @ $1CC255
+
+#WRITE(GBA,$1CCB5C)
+Has the ability to teleport to any<LINE>
+Warp Point that has been activated.<LINE>
+Can also teleport to a dungeon's<LINE>
+entrance when inside a dungeon.<NEXT>
+
+//POINTER #210 @ $1CCB60 - STRING #210 @ $1CC29A
+
+#WRITE(GBA,$1CCB60)
+Has the ability to teleport to any<LINE>
+Warp Point that has been activated.<LINE>
+Can also teleport to a dungeon's<LINE>
+entrance when inside a dungeon.<NEXT>
+
+//POINTER #211 @ $1CCB64 - STRING #211 @ $1CC2DF
+
+#WRITE(GBA,$1CCB64)
+Uses its shell as a shield to protect<LINE>
+against projectiles form the front.<LINE>
+While using the shield you will be<LINE>
+able to move slowly.<NEXT>
+
+//POINTER #212 @ $1CCB68 - STRING #212 @ $1CC326
+
+#WRITE(GBA,$1CCB68)
+Uses its shell as a shield to protect<LINE>
+against projectiles form the front.<LINE>
+While using the shield you will be<LINE>
+able to move at a moderate rate.<NEXT>
+
+//POINTER #213 @ $1CCB6C - STRING #213 @ $1CC371
+
+#WRITE(GBA,$1CCB6C)
+Uses its shell as a shield to protect<LINE>
+against projectiles from all sides.<LINE>
+Movement is possible while shielding.<NEXT>
+
+//POINTER #214 @ $1CCB70 - STRING #214 @ $1CC3B1
+
+#WRITE(GBA,$1CCB70)
+Can push certain types of blocks at a<LINE>
+moderate pace. Even when not selected<LINE>
+this ability can still be used.<NEXT>
+<NEXT>
+
+//POINTER #215 @ $1CCB74 - STRING #215 @ $1CC3F9
+
+#WRITE(GBA,$1CCB74)
+Can push certain types of blocks at a<LINE>
+fast pace. Even when not selected<LINE>
+this ability can still be used.<NEXT>
+<NEXT>
+
+//POINTER #216 @ $1CCB78 - STRING #216 @ $1CC441
+
+#WRITE(GBA,$1CCB78)
+Can push certain types of blocks at<LINE>
+maximum speed. Even when not selected<LINE>
+this ability can still be used.<NEXT>
+
+//POINTER #217 @ $1CCB7C - STRING #217 @ $1CC486
+
+#WRITE(GBA,$1CCB7C)
+Holding the B Button will allow you<LINE>
+to dash. At this level the speed of the<LINE>
+dash is moderate.<LINE>
+<NEXT>
+
+//POINTER #218 @ $1CCB80 - STRING #218 @ $1CC4C0
+
+#WRITE(GBA,$1CCB80)
+Holding the B Button will allow you<LINE>
+to dash. At this level the speed of the<LINE>
+dash is fairly fast.<LINE>
+<NEXT>
+
+//POINTER #219 @ $1CCB84 - STRING #219 @ $1CC4FA
+
+#WRITE(GBA,$1CCB84)
+Holding the B Button will allow you<LINE>
+to dash. At this level you can dash<LINE>
+at maximum speed!<NEXT>
+
+//POINTER #220 @ $1CCB88 - STRING #220 @ $1CC530
+
+#WRITE(GBA,$1CCB88)
+Pressing the B Button will turn you<LINE>
+invisible for a short length of time.<LINE>
+At this level, the invisibility will<LINE>
+last a moderate length of time.<NEXT>
+
+//POINTER #221 @ $1CCB8C - STRING #221 @ $1CC570
+
+#WRITE(GBA,$1CCB8C)
+Pressing the B Button will turn you<LINE>
+invisible for a medium length of time.<LINE>
+At this level, the invisibility will<LINE>
+last a longer length of time.<NEXT>
+
+//POINTER #222 @ $1CCB90 - STRING #222 @ $1CC5B0
+
+#WRITE(GBA,$1CCB90)
+Pressing the B Button will turn you<LINE>
+invisible for a short period of time.<LINE>
+At this level, the invisibility will<LINE>
+last as long as possible.<NEXT>
+
+//POINTER #223 @ $1CCB94 - STRING #223 @ $1CC5F3
+#WRITE(GBA,$1CCB94)
+While selected, bombs you place<LINE>
+will become Hasty Bombs with<LINE>
+slightly higher explosion power.<NEXT>
+
+//POINTER #224 @ $1CCB98 - STRING #224 @ $1CC630
+
+#WRITE(GBA,$1CCB98)
+While selected, bombs you place<LINE>
+will become Hasty Bombs with<LINE>
+much higher explosion power.<NEXT>
+
+//POINTER #225 @ $1CCB9C - STRING #225 @ $1CC66D
+
+#WRITE(GBA,$1CCB9C)
+While selected, bombs you place<LINE>
+will become Hasty Bombs with<LINE>
+maximum explosion power.<NEXT>
+
+//POINTER #226 @ $1CCBA0 - STRING #226 @ $1CC6AA
+
+#WRITE(GBA,$1CCBA0)
+While selected, bombs you place<LINE>
+will become Lazy Bombs with<LINE>
+slightly higher explosion power.<NEXT>
+
+//POINTER #227 @ $1CCBA4 - STRING #227 @ $1CC6E7
+
+#WRITE(GBA,$1CCBA4)
+While selected, bombs you place<LINE>
+will become Lazy Bombs with<LINE>
+much higher explosion power.<NEXT>
+
+//POINTER #228 @ $1CCBA8 - STRING #228 @ $1CC724
+
+#WRITE(GBA,$1CCBA8)
+While selected, bombs you place<LINE>
+will become Lazy Bombs with<LINE>
+maximum explosion power.<NEXT>
+
+//POINTER #229 @ $1CCBAC - STRING #229 @ $1CC761
+
+#WRITE(GBA,$1CCBAC)
+While selected, bombs you place<LINE>
+will become Remote Bombs with<LINE>
+slightly higher explosion power.<NEXT>
+
+//POINTER #230 @ $1CCBB0 - STRING #230 @ $1CC79E
+
+#WRITE(GBA,$1CCBB0)
+While selected, bombs you place<LINE>
+will become Remote Bombs with<LINE>
+much higher explosion power.<NEXT>
+
+//POINTER #231 @ $1CCBB4 - STRING #231 @ $1CC7DB
+
+#WRITE(GBA,$1CCBB4)
+While selected, bombs you place<LINE>
+will become Remote Bombs with<LINE>
+maximum explosion power.<NEXT>
