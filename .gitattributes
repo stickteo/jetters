@@ -1,5 +1,5 @@
 
 * text=auto
 
-/script/*.txt text eol=crlf
+*.txt text eol=crlf
 
