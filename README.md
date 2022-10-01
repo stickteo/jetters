@@ -37,4 +37,4 @@ Original Translation Project: https://github.com/Normmatt/Bomberman-Jetters-GBA-
 * Mat | GBAmdc : https://www.romhacking.net/utilities/431/
 * Kingcom | armips : https://github.com/Kingcom/armips
 * Cue | lzss : https://www.romhacking.net/utilities/826/
-
+* Alcaro | Flips : https://www.romhacking.net/utilities/1040/
