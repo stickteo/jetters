@@ -1,0 +1,197 @@
+#GAME NAME: Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+#BLOCK NAME: 0
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1BD804
+#POINTER TABLE STOP:  $1BD820
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 1 Scenes
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1BDA90
+#POINTER TABLE STOP:  $1BDAE8
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 2 Karabon (Unused; Tournament)
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1BDC68
+#POINTER TABLE STOP:  $1BDD30
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 3 Ceedrun Minigame (Unused; Tournament)
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1BDE58
+#POINTER TABLE STOP:  $1BDE7C
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 4 Nonbiri
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1C1B3C
+#POINTER TABLE STOP:  $1C1E90
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 5
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1C51A8
+#POINTER TABLE STOP:  $1C54B4
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 6
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1C7664
+#POINTER TABLE STOP:  $1C780C
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 7
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1CA1F8
+#POINTER TABLE STOP:  $1CA45C
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 8 Equipment, Karabon, and Item Descriptions; System Messages
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1CC818
+#POINTER TABLE STOP:  $1CCBB8
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 9
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1CF708
+#POINTER TABLE STOP:  $1CF838
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 10
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1D29C0
+#POINTER TABLE STOP:  $1D2BA4
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 11 Items
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $1D2EA8
+#POINTER TABLE STOP:  $1D3048
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 12 Places
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $3027CC
+#POINTER TABLE STOP:  $30295C
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK
+
+#BLOCK NAME: 13 Karabon Names
+#TYPE:                NORMAL
+#METHOD:              POINTER_RELATIVE
+#POINTER ENDIAN:      LITTLE
+#POINTER TABLE START: $273104
+#POINTER TABLE STOP:  $273188
+#POINTER SIZE:        $04
+#POINTER SPACE:       $00
+#ATLAS PTRS:          Yes
+#BASE POINTER:        $F8000000
+#TABLE:               jetters.tbl
+#COMMENTS:            No
+#END BLOCK

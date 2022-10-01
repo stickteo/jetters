@@ -1,0 +1,345 @@
+
+----------------------------------
+notes on the jetters script engine
+----------------------------------
+
+
+** code E0 table
+----------------
+location: 0x81D3088
+size: 37 function pointers, absolute references
+
+E000 : <JUMP>, SCRIPT
+       jump to SCRIPT
+	   
+       SCRIPT = (A<<8) | B (2 bytes)
+	   upper byte A refers to a table of script tables
+	   lower byte B refers to a table of scripts
+
+E001 : <JUMP_FLAG_SET>, FLAG, SCRIPT
+       if FLAG, then jump to SCRIPT
+	   
+       FLAG = index to a certain flag (2 bytes)
+	   SCRIPT (2 bytes)
+
+E002 : <JUMP_FLAG_CLEAR>, FLAG, SCRIPT
+	   if !FLAG, then jump to SCRIPT
+
+E003 : <SET_FLAG>, FLAG
+
+E004 : <CLEAR_FLAG>, FLAG
+
+E005 : <???>, BYTE, BYTE, BYTE, BYTE, SCRIPT, SCRIPT
+       prompt ? after recieving kaiman, whether to set kaiman or not
+	   defaults no. prompt swap?
+	   first 4 bytes describe the cursor location
+
+E006 : <PROMPT_3>, BYTE, BYTE, BYTE, BYTE, BYTE, BYTE
+       prompts 3 options
+
+E007 : <NUMBER0>
+       just a number in general
+
+E008 : <NUMBER1> prints number
+
+E009 : <NUMBER2> prints number
+
+E00A : <???> map related / place text
+
+E00B : <???> map related / world text
+
+E00C : <???> map related / planet text ??
+
+E00D : <EQUIP_KARABON>, BYTE
+       Takes in one byte and writes to 0x203626C
+	   [0x2036272] |= 0x400
+	   Modifies BG map. Icons?
+	   Set karabon icon??
+	   <E00D><$01> Pommy
+	   <E00D><$02> Kaiman
+	   <E00D><$03> Elif
+	   <E00D_EQUIP_KARABON><$04> Pann
+	   <E00D_EQUIP_KARABON><$05> Eel
+	   <E00D_EQUIP_KARABON><$06> Dora
+	   <E00D_EQUIP_KARABON><$07> Puchira
+	   <E00D><$08> Poppo
+	   <E00D_EQUIP_KARABON><$0C> Pommy Beast
+	   <E00D_EQUIP_KARABON><$0D> Pteradon
+	   <E00D_EQUIP_KARABON><$0E> Dorako
+	   
+
+E00E : <???>, BYTE
+       Some sort of wait?
+
+E00F : <???>, BYTE
+       Some sort of wait?
+
+E010 : <???>, BYTE, BYTE, BYTE, BYTE
+       Similar to E005
+
+E011 : <???>
+       HEAL??
+	   <E011><SFX><$30>
+
+E012 : <SFX>, SFX
+       Plays SFX. (byte)
+
+E013 : <???>, BYTE
+       Graphics? Sprite Animation
+
+E014 : <SFX?>, SFX
+       Similar to E012.
+
+E015 : <ADD_GOLD>, AMOUNT
+       add AMOUNT(byte) to gold
+
+E016 : <???>, SCRIPT
+       Checks a value whether to print SCRIPT or not.
+	   Related to wait?
+	   <JUMP_FULL_HEALTH>, SCRIPT
+	   if full health??
+
+E017 : <PROMPT_YES>, BYTE, BYTE, BYTE, BYTE
+       prompt ? default to yes?
+
+E018 : <PROMPT_NO>, BYTE, BYTE, BYTE, BYTE
+       prompt ? default to no?
+
+//E019 : <???>, BYTE, STRING
+//       seems to render #BYTE tiles from string
+E019 : <NAME_CARD>, LEN, STRING
+
+E01A : <NAME>, INDEX
+       INDEX(byte) into a table of strings/scripts
+	   specifically table at off_81D2EA8
+
+E01B : <TITLE>, INDEX
+       LEN(byte) number of bytes to process in script
+       text window title, bomb types ? also item names
+
+E01C : <JUMP_GOLD>, AMOUNT, SCRIPT
+       jump to SCRIPT if gold is greater than or equal to AMOUNT
+
+E01D : <SUB_GOLD>, AMOUNT
+       subtract AMOUNT(byte) to gold
+
+E01E : <FUNC>, INDEX
+       runs a function at INDEX(byte) in table off_81BCA28
+	   128 possible functions
+	   <EVENT>, INDEX
+
+E01F : <CLEAR>
+       CLEAR the text box
+
+E020 : <JUMP_???>, SCRIPT
+       jump to SCRIPT if 10 certain flags are set
+	   specifically flags 0x235, 0x236, 0x237, 0x238, 0x239, 0x23A, 0x23B, 0x23C, 0x23D, 0x23E
+	   <JUMP_SIGNPOST>, SCRIPT
+
+E021 : <TITLE_2>, LEN, STRING
+       text window title, karabon name ?
+
+E022 : <???>, BYTE
+       karabon names? sfx related
+	   lose item??
+	   always precedes <SFX> command...
+	   <E022><$00><SFX><$5C>
+	   <E022><$00><SFX><$5C>
+
+E023 : <NUMBER1_2>
+       a 2 digit number, specifically dword_3007474
+	   shell minigame score
+	   
+E024 : <NUMBER2_2>
+       a 2 digit number, specifically dword_3007478
+	   
+** 0xF_ codes
+-------------
+
+F8 : <PAUSE>
+     a sort of terminator character...
+	 waits for press but doesn't close box
+	 used for shop interaction, fuse, or certain
+	 dialouge for the game to do certain things before
+	 returning back to text box...
+	 basically <NEXT> but waits for press (??)
+F9 : <HALF>
+     increments Y tile pos by 1 (8px)
+FA : <LINE>
+     increments Y tile pos by 2 (16px)
+FB : <WAIT>
+     wait for press before printing next lines
+FC : <NEXT>
+     doesn't wait for press...
+	 allows user to do other stuff while text is still up	 
+FD : <CLOSE>
+     doesn't wait for press
+     clears and close the text box
+	 used after certain prompts
+FF : <END>
+     waits for press before closing box
+
+** flags
+--------
+<SET_FLAG><$02><$3F> : heart up
+
+<SET_FLAG><$02><$41> : signpost guy
+
+
+
+** script table table
+---------------------
+off_81D3048
+
+contains 11 script tables
+
+** script tables
+----------------
+offset      : elements
+----------------------
+off_81BD804 :   7
+off_81BDA90 :  22
+off_81BDC68 :  50
+off_81BDE58 :   9
+off_81C1B3C : 213
+off_81C51A8 : 195
+off_81C7664 : 106
+off_81CA1F8 : 153
+off_81CC818 : 232
+off_81CF708 :  76
+off_81D29C0 : 121
+
+** strings
+----------
+ROM:081D2EA8 off_81D2EA8     DCD unk_81D2BA4,unk_81D2BAD,unk_81D2BB6,unk_81D2BBC; 0
+ROM:081D2EA8                                         ; DATA XREF: CodeE01A_8015C70:loc_8015C82↑o
+ROM:081D2EA8                                         ; ROM:off_8015C9C↑o ...
+ROM:081D2EA8                 DCD unk_81D2BC5,unk_81D2BCE,unk_81D2BD7,unk_81D2BE0; 4
+ROM:081D2EA8                 DCD unk_81D2BE4,unk_81D2BEA,unk_81D2BF2,unk_81D2BFB; 8
+ROM:081D2EA8                 DCD unk_81D2C04,unk_81D2C09,unk_81D2C11,unk_81D2C19; 12
+ROM:081D2EA8                 DCD unk_81D2C1F,unk_81D2C23,unk_81D2C27,unk_81D2C2B; 16
+ROM:081D2EA8                 DCD unk_81D2C33,unk_81D2C3B,unk_81D2C40,unk_81D2C48; 20
+ROM:081D2EA8                 DCD unk_81D2C50,unk_81D2C58,unk_81D2C60,unk_81D2C68; 24
+ROM:081D2EA8                 DCD unk_81D2C70,unk_81D2C76,unk_81D2C7C,unk_81D2C82; 28
+ROM:081D2EA8                 DCD unk_81D2C88,unk_81D2C90,unk_81D2C99,unk_81D2CA2; 32
+ROM:081D2EA8                 DCD unk_81D2CAB,unk_81D2CB4,unk_81D2CBD,unk_81D2CC5; 36
+ROM:081D2EA8                 DCD unk_81D2CCB,unk_81D2CD4,unk_81D2CDD,unk_81D2CE5; 40
+ROM:081D2EA8                 DCD unk_81D2CED,unk_81D2CF3,unk_81D2CF9,unk_81D2D01; 44
+ROM:081D2EA8                 DCD unk_81D2D06,unk_81D2D0A,unk_81D2D0E,unk_81D2D12; 48
+ROM:081D2EA8                 DCD unk_81D2D16,unk_81D2D1C,unk_81D2D24,unk_81D2D2C; 52
+ROM:081D2EA8                 DCD unk_81D2D34,unk_81D2D39,unk_81D2D41,unk_81D2D47; 56
+ROM:081D2EA8                 DCD unk_81D2D4D,unk_81D2D53,unk_81D2D59,unk_81D2D5F; 60
+ROM:081D2EA8                 DCD unk_81D2D63,unk_81D2D68,unk_81D2D70,unk_81D2D75; 64
+ROM:081D2EA8                 DCD unk_81D2D7C,unk_81D2D80,unk_81D2D84,unk_81D2D8A; 68
+ROM:081D2EA8                 DCD unk_81D2D93,unk_81D2D9A,unk_81D2D9E,unk_81D2DA4; 72
+ROM:081D2EA8                 DCD unk_81D2DA9,unk_81D2DB2,unk_81D2DBB,unk_81D2DC4; 76
+ROM:081D2EA8                 DCD unk_81D2DCD,unk_81D2DD6,unk_81D2DDF,unk_81D2DE8; 80
+ROM:081D2EA8                 DCD unk_81D2DF1,unk_81D2DFA,unk_81D2E03,unk_81D2E0C; 84
+ROM:081D2EA8                 DCD unk_81D2E15,unk_81D2E1E,unk_81D2E27,unk_81D2E30; 88
+ROM:081D2EA8                 DCD unk_81D2E39,unk_81D2E42,unk_81D2E4B,unk_81D2E54; 92
+ROM:081D2EA8                 DCD unk_81D2E5D,unk_81D2E66,unk_81D2E6F,unk_81D2E78; 96
+ROM:081D2EA8                 DCD unk_81D2E81,unk_81D2E8A,unk_81D2E93,unk_81D2E9C; 100
+
+** font
+-------
+Font_81BCD90
+
+---------
+variables
+---------
+variables for the script engine are around 0x3007470
+
+* saveSlot_3007470
+either 1 or 2
+
+* scriptCounter_3007494
+
+like a "Program Counter", stores absolute addr for the next character
+
+* dword_2036314, dword_2036394
+
+CodeE001, sub_8035588
+arrays of int32
+
+dword_2036314   % 0x4000 (0x1000 elements)
+
+--------
+etcetera
+--------
+
+* CodeE001_8015760 implementation is wrong??
+CodeE001_8015760
+PUSH    {R4,LR}
+LDR     R4, =unk_3007470
+LDR     R0, [R4,#(scriptCounter_3007494 - 0x3007470)]
+LDRB    R1, [R0]        ; a
+LSLS    R1, R1, #8
+LDRB    R0, [R0,#1]     ; b
+ORRS    R0, R1
+BL      GetBit_80355C0  ; bit = (r0>>16) & 0x1F
+                        ; index = r0 & 0xFFFF
+                        ;
+                        ; return [index] & (1<<bit)
+CMP     R0, #0          ; c
+BEQ     loc_801578C
+
+a and b just forms the index part, but the bit part is simply 0
+(lol, they just happen to get it working)
+
+* Table of Values
+ROM:0819D5C4 word_819D5C4    DCW     0,  200,    1,  201; 0
+ROM:0819D5C4                                         ; DATA XREF: sub_8003CDC+C↑o
+ROM:0819D5C4                                         ; sub_8003CDC:off_8003D00↑o
+ROM:0819D5C4                 DCW     2,  202,    3,  203; 4
+ROM:0819D5C4                 DCW     4,  204,    5,  205; 8
+ROM:0819D5C4                 DCW     6,  206,    7,  207; 12
+ROM:0819D5C4                 DCW     8,  208,    9,  209; 16
+ROM:0819D5C4                 DCW    10,  210,   11,  211; 20
+ROM:0819D5C4                 DCW    12,  212,   13,  213; 24
+ROM:0819D5C4                 DCW    14,  214,   15,  215; 28
+ROM:0819D5C4                 DCW    16,  216,   17,  217; 32
+ROM:0819D5C4                 DCW    18,  218,   19,  219; 36
+ROM:0819D5C4                 DCW    20,  220,   21,  221; 40
+ROM:0819D5C4                 DCW    22,  222,   23,  223; 44
+ROM:0819D5C4                 DCW    24,  224,   25,  225; 48
+ROM:0819D5C4                 DCW    26,  226,   27,  227; 52
+ROM:0819D5C4                 DCW    28,  228,   29,  229; 56
+ROM:0819D5C4                 DCW    30,  230,   31,  231; 60
+ROM:0819D5C4                 DCW    32,  232,   33,  233; 64
+ROM:0819D5C4                 DCW    34,  234,   35,  235; 68
+ROM:0819D5C4                 DCW    36,  236,   37,  237; 72
+ROM:0819D5C4                 DCW    38,  238,   39,  239; 76
+
+* Audio Related
+ROM:08307F10 stru_8307F10    struc_B <unk_3001C90, unk_3000030,    9,    0,      1>; 0
+ROM:08307F10                                         ; DATA XREF: InitSound_8058940+2E↑o
+ROM:08307F10                                         ; InitSound_8058940:loc_8058972↑r ...
+ROM:08307F10                 struc_B <unk_3001CD0, unk_3000300,    6,    0,      1>; 1
+ROM:08307F10                 struc_B <unk_3001D10, unk_30004E0,    2,    0,      1>; 2
+ROM:08307F10                 struc_B <unk_3001DA0, unk_3000580,    2,    0,      1>; 3
+ROM:08307F10                 struc_B <unk_3001D50, unk_3000620,    1,    0,      1>; 4
+ROM:08307F10                 struc_B <unk_3001C50, unk_3000670,    2,    0,      1>; 5
+
+ROM:08307F58 stru_8307F58    struc_A <unk_83086B0,      0,      0>; 0
+ROM:08307F58                                         ; DATA XREF: sub_80589C4+6↑o
+ROM:08307F58                                         ; ROM:off_80589EC↑o ...
+ROM:08307F58                 struc_A <unk_83B9EEC,      2,      2>; 1
+ROM:08307F58                 struc_A <unk_83B9F20,      2,      2>; 2
+ROM:08307F58                 struc_A <unk_83B9F48,      2,      2>; 3
+ROM:08307F58                 struc_A <unk_83B9FB8,      5,      5>; 4
+ROM:08307F58                 struc_A <unk_83B9FEC,      2,      2>; 5
+ROM:08307F58                 struc_A <unk_83BA018,      3,      3>; 6
+...
+...
+
+* PlaySound_80589C4
+
+* Function table dword_81BCA28
+
+* yet another function table
+ROM:0819D590 off_819D590     DCD sub_8003628+1,sub_8003650+1,loc_8003660+1,sub_8003664+1; 0
+ROM:0819D590                                         ; DATA XREF: sub_80036CC+8↑o
+ROM:0819D590                                         ; ROM:off_80036EC↑o
+ROM:0819D590                 DCD sub_80036BC+1       ; 4
+
+

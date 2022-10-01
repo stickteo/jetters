@@ -1,0 +1,218 @@
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #013 NAME:		13 Karabon Names
+
+// --------------------------------------
+// Define a TABLE
+#VAR(Table, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/jetters_eng.tbl", Table)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($620000)
+// --------------------------------------
+
+//POINTER #0 @ $273104 - STRING #0 @ $27303C
+
+#WRITE(GBA,$273104)
+//ポミュ<END>
+Pommy<END>
+
+//POINTER #1 @ $273108 - STRING #1 @ $273040
+
+#WRITE(GBA,$273108)
+//フライポミュ<END>
+Fly Pommy<END>
+
+//POINTER #2 @ $27310C - STRING #2 @ $273047
+
+#WRITE(GBA,$27310C)
+//ウイングポミュ<END>
+Wing Pommy<END>
+
+//POINTER #3 @ $273110 - STRING #3 @ $27304F
+
+#WRITE(GBA,$273110)
+//エンジェルポミュ<END>
+Angel Pommy<END>
+
+//POINTER #4 @ $273114 - STRING #4 @ $273058
+
+#WRITE(GBA,$273114)
+//シェル<END>
+<END>
+
+//POINTER #5 @ $273118 - STRING #5 @ $27305C
+
+#WRITE(GBA,$273118)
+//シングルシェル<END>
+<END>
+
+//POINTER #6 @ $27311C - STRING #6 @ $273064
+
+#WRITE(GBA,$27311C)
+//ツインシェル<END>
+<END>
+
+//POINTER #7 @ $273120 - STRING #7 @ $27306B
+
+#WRITE(GBA,$273120)
+//トリプルシェル<END>
+<END>
+
+//POINTER #8 @ $273124 - STRING #8 @ $273073
+
+#WRITE(GBA,$273124)
+//エレフ<END>
+<END>
+
+//POINTER #9 @ $273128 - STRING #9 @ $273077
+
+#WRITE(GBA,$273128)
+//エレファ<END>
+<END>
+
+//POINTER #10 @ $27312C - STRING #10 @ $27307C
+
+#WRITE(GBA,$27312C)
+//エレファン<END>
+<END>
+
+//POINTER #11 @ $273130 - STRING #11 @ $273082
+
+#WRITE(GBA,$273130)
+//ビッグエレファン<END>
+<END>
+
+//POINTER #12 @ $273134 - STRING #12 @ $27308B
+
+#WRITE(GBA,$273134)
+//パン<END>
+<END>
+
+//POINTER #13 @ $273138 - STRING #13 @ $27308E
+
+#WRITE(GBA,$273138)
+//パンサー<END>
+<END>
+
+//POINTER #14 @ $27313C - STRING #14 @ $273093
+
+#WRITE(GBA,$27313C)
+//パンサーファング<END>
+<END>
+
+//POINTER #15 @ $273140 - STRING #15 @ $27309C
+
+#WRITE(GBA,$273140)
+//ラピッドパンサー<END>
+<END>
+
+//POINTER #16 @ $273144 - STRING #16 @ $2730A5
+
+#WRITE(GBA,$273144)
+//イール<END>
+<END>
+
+//POINTER #17 @ $273148 - STRING #17 @ $2730A9
+
+#WRITE(GBA,$273148)
+//シーイール<END>
+<END>
+
+//POINTER #18 @ $27314C - STRING #18 @ $2730AF
+
+#WRITE(GBA,$27314C)
+//マリンイール<END>
+<END>
+
+//POINTER #19 @ $273150 - STRING #19 @ $2730B6
+
+#WRITE(GBA,$273150)
+//グレートイール<END>
+<END>
+
+//POINTER #20 @ $273154 - STRING #20 @ $2730BE
+
+#WRITE(GBA,$273154)
+//ドーラ<END>
+<END>
+
+//POINTER #21 @ $273158 - STRING #21 @ $2730C2
+
+#WRITE(GBA,$273158)
+//ドラン<END>
+<END>
+
+//POINTER #22 @ $27315C - STRING #22 @ $2730C6
+
+#WRITE(GBA,$27315C)
+//ドラコ<END>
+<END>
+
+//POINTER #23 @ $273160 - STRING #23 @ $2730CA
+
+#WRITE(GBA,$273160)
+//ドラゴーン<END>
+<END>
+
+//POINTER #24 @ $273164 - STRING #24 @ $2730D0
+
+#WRITE(GBA,$273164)
+//プチラ<END>
+<END>
+
+//POINTER #25 @ $273168 - STRING #25 @ $2730D4
+
+#WRITE(GBA,$273168)
+//プテラ<END>
+<END>
+
+//POINTER #26 @ $27316C - STRING #26 @ $2730D8
+
+#WRITE(GBA,$27316C)
+//プテラドン<END>
+<END>
+
+//POINTER #27 @ $273170 - STRING #27 @ $2730DE
+
+#WRITE(GBA,$273170)
+//プテラゴドン<END>
+<END>
+
+//POINTER #28 @ $273174 - STRING #28 @ $2730E5
+
+#WRITE(GBA,$273174)
+//ポッポ<END>
+<END>
+
+//POINTER #29 @ $273178 - STRING #29 @ $2730E9
+
+#WRITE(GBA,$273178)
+//ポック<END>
+<END>
+
+//POINTER #30 @ $27317C - STRING #30 @ $2730ED
+
+#WRITE(GBA,$27317C)
+//ポックス<END>
+<END>
+
+//POINTER #31 @ $273180 - STRING #31 @ $2730F2
+
+#WRITE(GBA,$273180)
+//エレックス<END>
+<END>
+
+//POINTER #32 @ $273184 - STRING #32 @ $2730F8
+
+#WRITE(GBA,$273184)
+//？？？？？？？？<END>
+????????<END>

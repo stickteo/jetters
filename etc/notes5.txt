@@ -1,0 +1,95 @@
+
+- axeman garbage text (script not included yet?)
+- lipstick terminal text
+- need to fix yes/no prompts
+- item names (script not included yet...)
+- "Synthesize items?" bad jump
+- prompts are glitchy...
+  - due to vwf patch... script is correct
+  - fixed
+- the "overflow" issue
+  - also caused when the text is printing
+  - and when swiching to another screen...
+  - or switching to another item...
+  - fixed
+- karabon encyclopedia needs graphics done...
+- karabon names in the menu
+  - just need to search for it...
+  - watch/w 0x300747C -> 0804141C
+  - karabonNames_8273104
+
+
+- textbox title cards done.
+- maybe there's a better way to reset overflow (instead of hooking...)
+  - looking at 0x30074A4 (context for keyinput)
+    - 0 normal printing, usually character by character...
+	- part of the init process? InitTextbox_801560C
+  - done
+
+- item synthesis text needs vwf
+  - watch/w 0x600f208 -> 08018FB6 -> sub_8015418
+  - done
+
+- map corruption on warp screen
+  - some overflow condition occurred...
+  - somehow the tile offset gets screwed up...
+  - leading to rendering at the wrong tile vram location...
+
+- script errors
+  - "Ho ho, isn't than an Ice Bomb?"
+  - "$5DDoctor Midori was"
+
+- radar text graphics
+  
+
+
+*** function table table
+------------------------
+off_80F6C84     DCD off_80F6A2C,off_80F6A78,off_80F6AF8,off_80F6B00
+
+
+
+*** textbox callers
+-------------------
+
+find via "b 0x8015648"
+
+* NormalDialogue_80169E0
+
+
+*** textbox struct
+------------------
+byte : desc
+ 0 : top-left loc
+ 2 : width
+ 4 : height
+ 6 : top-left text loc
+ 8 : text width
+10 : text height
+12 : tileOffset2
+14 : tileOffset3
+16 : palette
+18 : text color
+19 : bg color
+20 : top-left corner tile index
+22 : top border
+24 : top-right corner
+26 : left border
+28 : inside
+30 : right border
+32 : bottom-left corner
+34 : bottom border
+36 : bottom-right corner
+
+46 : title-card left
+48 : title-card right
+
+*** misc
+--------
+- ascii text at 0x80F6C94
+  - "TEST SELECT", "FIELD", "BATTLE SINGLE"
+  - "ONE CARTRIDGE", "MULTI CARTRIDGE", "SOUND TEST"
+  - "EPILOGUE", "OPENING", "ENDING", "DATA SAVE"
+  - "DATA LOAD", "BOBARUDERA", "TITLE DEMO"
+  - "MINIGAME4", "POWER ON", "STAFF ROLL", "FLAG SET"
+  - "GOLD SET"
