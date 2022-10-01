@@ -1,0 +1,187 @@
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #001 NAME:		1 Scenes
+
+// --------------------------------------
+// Define a TABLE
+#VAR(Table, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/jetters_eng.tbl", Table)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($550000)
+// --------------------------------------
+
+//POINTER #0 @ $1BDA90 - STRING #0 @ $1BD820
+
+#WRITE(GBA,$1BDA90)
+//こうせんほうか　なつかしいな‥‥<LINE>
+//たしか　このじけんのあと　ヤツは‥‥‥‥<NEXT>
+This Beam Cannon sure takes me back.<LINE>
+The one in charge of that mission...<NEXT>
+
+//POINTER #1 @ $1BDA94 - STRING #1 @ $1BD846
+
+#WRITE(GBA,$1BDA94)
+//マイティ‥‥<NEXT>
+Was Mighty...<NEXT>
+
+//POINTER #2 @ $1BDA98 - STRING #2 @ $1BD84D
+
+#WRITE(GBA,$1BDA98)
+//そうか‥‥　シャウトは　マイティに<LINE>
+//あったことが　なかったな<NEXT>
+Ah, that's right...<LINE>
+Shout never met Mighty.<NEXT>
+
+//POINTER #3 @ $1BDA9C - STRING #3 @ $1BD86C
+
+#WRITE(GBA,$1BDA9C)
+//マイティって　たしか　でんせつの<LINE>
+//ボンバーマンと　よばれた　ひとでしょ？<NEXT>
+Mighty was that legendary<LINE>
+Bomberman, right?<NEXT>
+
+//POINTER #4 @ $1BDAA0 - STRING #4 @ $1BD891
+
+#WRITE(GBA,$1BDAA0)
+//あぁ　そのとおりさ　やつは<LINE>
+//オレたち　ジェッターズの　メンバー‥‥<NEXT>
+Yeah. He was a member of Jetters.<LINE>
+Just like us...<NEXT>
+
+//POINTER #5 @ $1BDAA4 - STRING #5 @ $1BD8B3
+
+#WRITE(GBA,$1BDAA4)
+//それに　シロボンの<LINE>
+//じまんの　あにでもある<NEXT>
+And White Bomber's older brother.<NEXT>
+
+
+//POINTER #6 @ $1BDAA8 - STRING #6 @ $1BD8C9
+
+#WRITE(GBA,$1BDAA8)
+//ねぇ　きかせてよ！<LINE>
+//でんせつの　ボンバーマンの　こと！<NEXT>
+Please! Tell me about what happened<LINE>
+to that legendary Bomberman!<NEXT>
+
+//POINTER #7 @ $1BDAAC - STRING #7 @ $1BD8E5
+
+#WRITE(GBA,$1BDAAC)
+//わかった‥‥　あれは<LINE>
+//シャウトがはいるまえの　はなしだ‥‥‥‥<NEXT>
+I see. Well, this story happened before<LINE>
+you joined us...<NEXT>
+
+//POINTER #8 @ $1BDAB0 - STRING #8 @ $1BD905
+
+#WRITE(GBA,$1BDAB0)
+//しょくん！　ノンビリせいに<LINE>
+//しょうたいふめいの　うちゅうせんが　あらわれた！<NEXT>
+Attention! An unidentified spaceship<LINE>
+has landed on planet Nonbiri!<NEXT>
+
+//POINTER #9 @ $1BDAB4 - STRING #9 @ $1BD92C
+
+#WRITE(GBA,$1BDAB4)
+//ノンビリせいには　オレがいくぜ！！<NEXT>
+I'll go to Nonbiri and handle this!<NEXT>
+
+//POINTER #10 @ $1BDAB8 - STRING #10 @ $1BD93E
+
+#WRITE(GBA,$1BDAB8)
+//だめじゃ　まだ　ケガのなおっていない<LINE>
+//バーディには　いかせられんな<NEXT>
+No. You're still wounded, Birdy.<LINE>
+I can't ask you to go...<NEXT>
+
+//POINTER #11 @ $1BDABC - STRING #11 @ $1BD960
+
+#WRITE(GBA,$1BDABC)
+//おぉ　いってくれるか　マイティ！<NEXT>
+Ah, Mighty. You think that you can<LINE>
+handle this mission?<NEXT>
+
+//POINTER #12 @ $1BDAC0 - STRING #12 @ $1BD971
+
+#WRITE(GBA,$1BDAC0)
+//よし！　ただちに<LINE>
+//ノンビリせいに　むかってくれ！<NEXT>
+Okay then! Set course for Nonbiri.<LINE>
+We're counting on you!<NEXT>
+
+//POINTER #13 @ $1BDAC4 - STRING #13 @ $1BD98A
+
+#WRITE(GBA,$1BDAC4)
+//こちらバーディー　こちらバーディー<NEXT>
+Birdy to Mighty, Birdy to Mighty.<NEXT>
+
+//POINTER #14 @ $1BDAC8 - STRING #14 @ $1BD99C
+
+#WRITE(GBA,$1BDAC8)
+//マイティ　おうとうしろ！<LINE>
+//どうしたんだ！　マイティ！！<NEXT>
+Mighty, do you copy?<LINE>
+Why aren't you responding? Mighty!!<NEXT>
+
+//POINTER #15 @ $1BDACC - STRING #15 @ $1BD9B8
+
+#WRITE(GBA,$1BDACC)
+//あれいらい　マイティからの　れんらくは<LINE>
+//とだえた　ままだ‥‥‥‥<NEXT>
+And we haven't heard from Mighty<LINE>
+ever since...<NEXT>
+
+//POINTER #16 @ $1BDAD0 - STRING #16 @ $1BD9D9
+
+#WRITE(GBA,$1BDAD0)
+//ヒゲヒゲだんが　あらわれた！<LINE>
+//ジェッターズ　しゅつどうじゃ！！<NEXT>
+The Hige Hige Bandits have appeared!<LINE>
+Jetters, move out!<NEXT>
+
+//POINTER #17 @ $1BDAD4 - STRING #17 @ $1BD9F9
+
+#WRITE(GBA,$1BDAD4)
+//いくわよ！　みんな！！<NEXT>
+Let's go, everyone!<NEXT>
+
+//POINTER #18 @ $1BDAD8 - STRING #18 @ $1BDA05
+
+#WRITE(GBA,$1BDAD8)
+//でんせつの　ボンバーマンと　よばれた<LINE>
+//マイティに　おいつけるかな？　シロボン<NEXT>
+White Bomber... Can we count on you to<LINE>
+carry on Mighty's legacy?<NEXT>
+
+//POINTER #19 @ $1BDADC - STRING #19 @ $1BDA2C
+
+#WRITE(GBA,$1BDADC)
+//フフフ‥‥　これで　ボンバーマンの　データは<LINE>
+//すべて　コピーできた‥‥‥‥<NEXT>
+Mwahaha... I have finally obtained a<LINE>
+copy of a Bomberman's data...<NEXT>
+
+//POINTER #20 @ $1BDAE0 - STRING #20 @ $1BDA52
+
+#WRITE(GBA,$1BDAE0)
+//いよいよ　さいきょうの　せんし<LINE>
+//マックスが　たんじょうする‥‥<NEXT>
+With this I can at last create Max, the<LINE>
+world's strongest warrior...<NEXT>
+
+//POINTER #21 @ $1BDAE4 - STRING #21 @ $1BDA72
+
+#WRITE(GBA,$1BDAE4)
+//フッフッフッ‥‥‥‥<LINE>
+//ハーッハッハッハッハッハッ‥‥‥‥<NEXT>
+Mwa ha ha...<LINE>
+MWA HA HA HA HA HA...<NEXT>
