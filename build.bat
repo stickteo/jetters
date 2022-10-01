@@ -21,4 +21,8 @@ tools\Atlas jetters_eng.gba script\jetters_011.txt
 tools\Atlas jetters_eng.gba script\jetters_012.txt
 tools\Atlas jetters_eng.gba script\jetters_013.txt
 
+tools\flips --create --ips jetters.gba jetters_eng.gba jetters_eng.ips
+tools\flips --create --bps-linear jetters.gba jetters_eng.gba jetters_eng.bps
+tools\flips --create --bps-delta jetters.gba jetters_eng.gba jetters_eng_delta.bps
+
 pause
