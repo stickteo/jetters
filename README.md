@@ -7,6 +7,8 @@ To do anything, first place a copy of Bomberman Jetters as jetters.gba in the ro
 ### Build
 Run build.bat and jetters_eng.gba will be produced.
 
+You might need to install VC++ 10.0 to run Atlas: https://www.microsoft.com/en-us/download/details.aspx?id=26999
+
 ### Extract
 Run extract.bat and extracted files will appear in the extract folder.
 
