@@ -24,4 +24,6 @@
 .include "build\BattleMenuMap.asm"
 .include "asm\BattleMenu.asm"
 
+.include "asm\RMenu.asm"
+
 .close

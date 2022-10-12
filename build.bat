@@ -7,6 +7,14 @@ tools\c1.exe assets\BattleMenu.txt build\BattleMenuMap.bin build\BattleMenuMap.a
 
 tools\g2.exe assets\Font.bmp build\Font.bin
 
+tools\g4 build\RMenu_t.bin^
+ assets\RMenu_TextBox.bmp assets\RMenu_ExpBar2.bmp assets\RMenu_ExpBar1.bmp^
+ assets\RMenu_Numbers.bmp assets\RMenu_Nav.bmp assets\RMenu_Items.bmp^
+ assets\RMenu_Bombs.bmp assets\RMenu_Karabon.bmp assets\RMenu_Unequip1.bmp^
+ assets\RMenu_Unequip2.bmp assets\RMenu_Armor1.bmp assets\RMenu_Armor2.bmp^
+ assets\RMenu_Armor3.bmp assets\RMenu_Armor4.bmp
+tools\lzss -evo build\RMenu_t.bin
+
 ::
 
 
