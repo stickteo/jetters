@@ -64,7 +64,13 @@
 	lsl r1, r5, 4
 	add r0, r1
 	str r0, [r2,8]
-	
+
+	; busy loop
+@@wait:
+	ldr r0, [r2,8]
+	lsr r0, 31
+	cmp r0, 0
+	bne @@wait
 	
 	; write map entries
 	;  data

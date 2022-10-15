@@ -81,14 +81,7 @@
 	lsl r1, 31
 	add r0, r1
 	str r0, [r2,8]
-	
-	; busy loop
-@@wait:
-	ldr r0, [r2,8]
-	lsr r0, 31
-	cmp r0, 0
-	bne @@wait
-	
+		
 	; deallocate
 	;mov r0, r9
 	;lsl r0, 5
@@ -102,10 +95,17 @@
 	; set map entries
 	ldr r6, [r4,116]
 	mov r1, r8
-	mov r2, r9
-	add r2, r1
-	lsl r2, 1
+	mov r3, r9
+	add r3, r1
+	lsl r3, 1
 	lsl r1, 1
+	
+	; busy loop
+@@wait:
+	ldr r0, [r2,8]
+	lsr r0, 31
+	cmp r0, 0
+	bne @@wait
 	
 	; palette
 	ldr r0, [r4,120]
@@ -117,7 +117,7 @@
 	strh r0, [r6,r1]
 	add r1, 2
 	add r0, 1
-	cmp r1, r2
+	cmp r1, r3
 	blo @@loop
 
 	b 0x8015D70
@@ -183,14 +183,7 @@
 	lsl r1, r5, 4
 	add r0, r1
 	str r0, [r2,8]
-	
-	;  wait
-;@@wait:
-;	ldr r0, [r2,8]
-;	lsr r0, 31
-;	cmp r0, 0
-;	bne @@wait
-	
+		
 	; write map entries
 	;  get palette
 	ldr r0, [r4,120]
@@ -206,6 +199,13 @@
 	ldr r0, [r4,116]
 	lsl r1, r7, 1
 	add r1, r0
+	
+	;  dma3 wait
+@@wait:
+	ldr r0, [r2,8]
+	lsr r0, 31
+	cmp r0, 0
+	bne @@wait	
 	
 	mov r2, 0
 @@loop:

@@ -37,11 +37,11 @@
 ; ----------------------------------------
 .org 0x08016140 ; routine that puts a character to the map
 .area 0x08016154 - 0x08016140
-	;mov r2, #27
-	;add r2,r15
-	;mov r14, r2
+	mov r2, #27
+	add r2,r15
+	mov r14, r2
 	; less error prone... PC calculations are weird...
-	ldr r2, =0x8016156+1
+	;ldr r2, =0x8016156+1
 	mov r14, r2
     ldr r2, =putChar+1    ; r2 is best variable to use for jump
     bx r2
@@ -50,10 +50,10 @@
 
 .org 0x080164E4 ; routine that puts a number to the map
 .area 0x080164F8 - 0x080164E4
-	;mov r2, #27
-	;add r2,r15
-	;mov r14, r2
-    ldr r2, =0x80164FA+1
+	mov r2, #27
+	add r2,r15
+	mov r14, r2
+    ;ldr r2, =0x80164FA+1
 	mov r14, r2
 	ldr r2, =putChar+1    ; r2 is best variable to use for jump
     bx r2
@@ -62,10 +62,10 @@
 
 .org 0x0801655A ; routine that puts location on load/save screen
 .area 0x0801656E - 0x0801655A
-	;mov r2, #27
-	;add r2,r15
-	;mov r14, r2
-	ldr r2, =0x8016570+1
+	mov r2, #27
+	add r2,r15
+	mov r14, r2
+	;ldr r2, =0x8016570+1
 	mov r14, r2
     ldr r2, =putChar+1    ; r2 is best variable to use for jump
     bx r2 
