@@ -22,6 +22,7 @@ Original Translation Project: https://github.com/Normmatt/Bomberman-Jetters-GBA-
 * Higsby - Translation and editing
 * Lord Kuro - Translation
 * Pablitox - Insertion
+* Key Mace - Translation
 * DiscoGentleman - Translation
 * Rai - Initial script translation.
 
@@ -32,7 +33,12 @@ Original Translation Project: https://github.com/Normmatt/Bomberman-Jetters-GBA-
 
 ### Graphics Work
 * Teod
-* Gemini | Melissa 8 Font : https://www.romhacking.net/fonts/23/
+
+### Fonts
+* Gemini | Melissa 8 : https://www.romhacking.net/fonts/23/
+* Dragonsbrethren | Dragon Warrior VWF : https://www.romhacking.net/fonts/10/
+* Damian Yerrick | Base Seven : https://www.romhacking.net/fonts/142/
+
 
 ### Tools
 * Klarth | Atlas : https://www.romhacking.net/utilities/224/
