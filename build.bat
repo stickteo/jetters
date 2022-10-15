@@ -15,6 +15,13 @@ tools\g4 build\RMenu_t.bin^
  assets\RMenu_Armor3.bmp assets\RMenu_Armor4.bmp
 tools\lzss -evo build\RMenu_t.bin
 
+tools\g4 build\SaveLoad_t.bin^
+ assets\SaveLoad_TextBox.bmp^
+ assets\SaveLoad_Other.bmp assets\SaveLoad_Equipment.bmp^
+ assets\SaveLoad_Save.bmp assets\SaveLoad_Load.bmp^
+ assets\SaveLoad_BorderBig.bmp assets\SaveLoad_BorderSmall.bmp
+tools\lzss -evo build\SaveLoad_t.bin
+
 ::
 
 

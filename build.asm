@@ -25,5 +25,6 @@
 .include "asm\BattleMenu.asm"
 
 .include "asm\RMenu.asm"
+.include "asm\SaveLoad.asm"
 
 .close
