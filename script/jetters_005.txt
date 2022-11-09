@@ -1,0 +1,2245 @@
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #005 NAME:		5 Tokotoko
+
+// --------------------------------------
+// Define a TABLE
+#VAR(Table, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/jetters_eng.tbl", Table)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($55B000)
+// --------------------------------------
+
+//POINTER #0 @ $1C51A8 - STRING #0 @ $1C1E90
+
+#WRITE(GBA,$1C51A8)
+Listen to the Race Minigame rules?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_NO><$03><$02><$0C><$02><$05><$02><$05><$03>
+
+
+//POINTER #1 @ $1C51AC - STRING #1 @ $1C1EBC
+
+#WRITE(GBA,$1C51AC)
+Listen to the Race Minigame rules?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_NO><$03><$02><$0C><$02><$05><$02><$05><$03>
+
+
+//POINTER #2 @ $1C51B0 - STRING #2 @ $1C1EE8
+
+#WRITE(GBA,$1C51B0)
+//Race a Karabon from the start line to the<LINE>
+//the finish. Get there first to win!<WAIT>
+Race a Karabon from start to finish.<LINE>
+First to finish wins!<WAIT>
+
+//Press the A Button in accordance with<LINE>
+Press the A Button in time with<LINE>
+the on-screen gauge to dash.<WAIT>
+
+//The more the gauge is filled when you<LINE>
+//press A, the faster you'll dash!<WAIT>
+The fuller the gauge is when you<LINE>
+press A, the faster you'll dash!<WAIT>
+
+<HALF>
+Well then. On your mark... Get Set...<END>
+
+
+//POINTER #3 @ $1C51B4 - STRING #3 @ $1C1F52
+
+#WRITE(GBA,$1C51B4)
+<HALF>
+Well then. On your mark... Get Set...<END>
+
+
+//POINTER #4 @ $1C51B8 - STRING #4 @ $1C1F60
+
+#WRITE(GBA,$1C51B8)
+<JUMP_FLAG_SET><$01><$2F><$05><$C2>
+West: Deza Town, East: Sunasuna Desert<LINE>
+North: Glowing Moss Cave<END>
+
+
+//POINTER #5 @ $1C51BC - STRING #5 @ $1C1F89
+
+#WRITE(GBA,$1C51BC)
+The glowing moss growing below has<LINE>
+the power to reveal invisible objects.<WAIT>
+
+But it's unusable as is. You must<LINE>
+combine it with something first.<WAIT>
+
+If you run out of glowing moss, you<LINE>
+can always come back for more.<END>
+
+
+//POINTER #6 @ $1C51C0 - STRING #6 @ $1C1FEF
+
+#WRITE(GBA,$1C51C0)
+Hey, stop right there!<LINE>
+You can't pass through here.<END>
+
+
+//POINTER #7 @ $1C51C4 - STRING #7 @ $1C200C
+
+#WRITE(GBA,$1C51C4)
+I've never seen you before.<LINE>
+Did you come from another planet?<WAIT>
+
+This is planet Tokotoko. It's known<LINE>
+for its vast desert!<WAIT>
+
+If you go a little to the east from <LINE>
+here, you'll reach Sando Village.<WAIT>
+
+Also, have you seen the slopes around<LINE>
+here? You can't climb up them.<WAIT>
+
+Make sure you know what you're doing<LINE>
+before you choose to slide down.<END>
+
+
+//POINTER #8 @ $1C51C8 - STRING #8 @ $1C2092
+
+#WRITE(GBA,$1C51C8)
+<JUMP_FLAG_SET><$02><$24><$05><$0A>
+<JUMP_FLAG_SET><$02><$23><$05><$09>
+Ahh... Would you mind listening to<LINE>
+my problem?<WAIT>
+
+I want to propose to my girlfriend,<LINE>
+but I don't have an engagement ring...<WAIT>
+
+And there aren't any rings on sale<LINE>
+in the stores near here...<WAIT>
+
+Ahh...<LINE>
+I wonder where I could find a ring...<END>
+
+
+//POINTER #9 @ $1C51CC - STRING #9 @ $1C210F
+
+#WRITE(GBA,$1C51CC)
+Ah!<LINE>
+That's a blue crystal ring!<WAIT>
+
+If you don't mind...<LINE>
+Do you think I could have it?<WAIT>
+
+........................<LINE>
+........................<WAIT>
+
+What? You'll give it to me? Thank you!<LINE>
+Now I can finally propose!<WAIT>
+
+And to think, I was just about to give<LINE>
+this junk to my girlfriend instead.<WAIT>
+
+<HALF>
+<SFX><$0C>Bomberman got a Nut!<SET_FLAG><$01><$29><SET_FLAG><$02><$24><END>
+
+
+//POINTER #10 @ $1C51D0 - STRING #10 @ $1C21C3
+
+#WRITE(GBA,$1C51D0)
+Now I can finally propose!<LINE>
+Thank you!<END>
+
+
+//POINTER #11 @ $1C51D4 - STRING #11 @ $1C21DC
+
+#WRITE(GBA,$1C51D4)
+<JUMP_FLAG_SET><$02><$24><$05><$0C>
+Ugh, my boyfriend...<LINE>
+He still hasn't proposed!<WAIT>
+
+The truth is that even without a ring,<LINE>
+I would still be happy...<WAIT>
+
+But if he did propose with a ring, one<LINE>
+with a blue crystal would be great.<END>
+
+
+//POINTER #12 @ $1C51D8 - STRING #12 @ $1C2230
+
+#WRITE(GBA,$1C51D8)
+Ugh, my boyfriend...<LINE>
+He still hasn't proposed!<WAIT>
+
+How many hints do I need to send?<LINE>
+I've been waiting forever!<END>
+
+
+//POINTER #13 @ $1C51DC - STRING #13 @ $1C226A
+
+#WRITE(GBA,$1C51DC)
+In the upper left part of this town<LINE>
+there's a warehouse.<WAIT>
+
+However, it's surrounded by a cliff<LINE>
+so no one's able to get in.<WAIT>
+
+It makes you wonder if maybe there's<LINE>
+something important in there...<END>
+
+
+//POINTER #14 @ $1C51E0 - STRING #14 @ $1C22BE
+
+#WRITE(GBA,$1C51E0)
+<JUMP_FLAG_SET><$02><$29><$05><$10>
+The man that operates the gate to<LINE>
+the eastern desert<WAIT>
+
+has sadly fallen ill and passed out.<WAIT>
+
+Until he gets better, no one will be<LINE>
+able to pass through the gate.<END>
+
+
+//POINTER #15 @ $1C51E4 - STRING #15 @ $1C2311
+
+#WRITE(GBA,$1C51E4)
+Lately, there have been some strange<LINE>
+guys hanging around the desert.<WAIT>
+
+Be careful out there.<END>
+
+
+//POINTER #16 @ $1C51E8 - STRING #16 @ $1C2337
+
+#WRITE(GBA,$1C51E8)
+<JUMP_FULL_HEALTH><$05><$0F>
+Lately, there have been some strange<LINE>
+guys hanging around the desert.<WAIT>
+
+Oh! You're not hurt, are you?<LINE>
+Hold still a second...<WAIT>
+
+<HEAL><SFX><$30>
+Alright, that should be good!<LINE>
+Be careful out there.<END>
+
+
+//POINTER #17 @ $1C51EC - STRING #17 @ $1C238E
+
+#WRITE(GBA,$1C51EC)
+Recently a strange building suddenly<LINE>
+appeared in the desert to the east.<WAIT>
+
+There's something that looks like a<LINE>
+cannon on the roof. It's a little scary.<END>
+
+
+//POINTER #18 @ $1C51F0 - STRING #18 @ $1C23D8
+
+#WRITE(GBA,$1C51F0)
+I knew it! That building in the desert<LINE>
+was built by the Hige Hige Bandits.<END>
+
+
+//POINTER #19 @ $1C51F4 - STRING #19 @ $1C23FA
+
+#WRITE(GBA,$1C51F4)
+In the cave that leads to the desert<LINE>
+there is a room with glowing moss.<WAIT>
+
+Glowing moss is really mysterious.<LINE>
+It can reveal invisible objects.<WAIT>
+
+If you craft a bomb out of it, you may<LINE>
+be able to harness its power!<END>
+
+
+//POINTER #20 @ $1C51F8 - STRING #20 @ $1C2465
+
+#WRITE(GBA,$1C51F8)
+In the eastern desert, there are<LINE>
+several dried up wells.<WAIT>
+
+They're the ancient remains of human<LINE>
+settlements that once lived there.<WAIT>
+
+In the past, the desert was once<LINE>
+covered with lush greenery.<END>
+
+
+//POINTER #21 @ $1C51FC - STRING #21 @ $1C24CD
+
+#WRITE(GBA,$1C51FC)
+<JUMP_FLAG_SET><$02><$1E><$05><$16>
+A few days ago the village's big well<LINE>
+suddenly dried up...<WAIT>
+
+If something isn't done about it<LINE>
+quickly, it could be really bad.<WAIT>
+
+Recently a strange spaceship landed<LINE>
+in the desert to the south.<WAIT>
+
+Do you think that might have<LINE>
+something to do with it?<END>
+
+
+//POINTER #22 @ $1C5200 - STRING #22 @ $1C2549
+
+#WRITE(GBA,$1C5200)
+Water has returned to the well!<LINE>
+Thanks, Bomberman!<WAIT>
+
+So it was the underground waterway<LINE>
+that was causing the problem huh?<END>
+
+
+//POINTER #23 @ $1C5204 - STRING #23 @ $1C2585
+
+#WRITE(GBA,$1C5204)
+Welcome, Mr. Bomberman.<LINE>
+This is Sando Village!<WAIT>
+
+Deza Town and a vast desert are to<LINE>
+the south of here.<END>
+
+
+//POINTER #24 @ $1C5208 - STRING #24 @ $1C25C4
+
+#WRITE(GBA,$1C5208)
+<JUMP_FLAG_SET><$02><$1E><$05><$19>
+The well here is filled with water<LINE>
+//taken from an underground waterway.<WAIT>
+fed by an underground waterway.<WAIT>
+
+So if the well is dried up, then the<LINE>
+problem must be underground.<WAIT>
+
+Perhaps something happened and<LINE>
+caused a blockage...<END>
+
+
+//POINTER #25 @ $1C520C - STRING #25 @ $1C261E
+
+#WRITE(GBA,$1C520C)
+Oh! Water has returned to the well.<LINE>
+Now everything won't dry up!<END>
+
+
+//POINTER #26 @ $1C5210 - STRING #26 @ $1C2642
+
+#WRITE(GBA,$1C5210)
+There's a man who sells medicine in<LINE>
+the shop in this village.<WAIT>
+
+No matter what kind of illness,<LINE>
+his medicine is sure to cure it!<END>
+
+
+//POINTER #27 @ $1C5214 - STRING #27 @ $1C2685
+
+#WRITE(GBA,$1C5214)
+If you win the Karabon Race that's<LINE>
+held at the sports gym next door<WAIT>
+
+you'll receive the Karabon who<LINE>
+specializes in dashing, Pan!<WAIT>
+
+But no matter how many times I've<LINE>
+tried, I just can't win...<WAIT>
+
+With Pan, you'll be able to travel<LINE>
+to places super quickly!<WAIT>
+
+It really would be convenient...<END>
+
+
+//POINTER #28 @ $1C5218 - STRING #28 @ $1C26FE
+
+#WRITE(GBA,$1C5218)
+<JUMP_FULL_HEALTH><$05><$C0>
+Ah, Mr. Bomberman. You're injured!<LINE>
+Hold on just a bit.<WAIT>
+
+<HEAL><SFX><$30>
+Hehehe, the medicine man's treatment<LINE>
+method really works. There you go!<END>
+
+
+//POINTER #29 @ $1C521C - STRING #29 @ $1C2749
+
+#WRITE(GBA,$1C521C)
+<JUMP_FLAG_SET><$02><$28><$05><$1F>
+<JUMP_FLAG_SET><$02><$1E><$05><$1E>
+Hm? You want a Miracle Cure?<WAIT>
+
+Well, in order to make that I'm going<LINE>
+to need some fresh water.<WAIT>
+
+Right now the well is dry, so it's<LINE>
+impossible for me to make you one.<END>
+
+
+//POINTER #30 @ $1C5220 - STRING #30 @ $1C27A7
+
+#WRITE(GBA,$1C5220)
+So you want a Miracle Cure, hm?<WAIT>
+
+One drink of it, and you'll be cured<LINE>
+of anything that ails you!<END>
+
+
+//POINTER #31 @ $1C5224 - STRING #31 @ $1C27D4
+
+#WRITE(GBA,$1C5224)
+Miracle Cure is sold out. If you need<LINE>
+another one, you'll have to make it.<END>
+
+
+//POINTER #32 @ $1C5228 - STRING #32 @ $1C27F2
+
+#WRITE(GBA,$1C5228)
+<JUMP_FLAG_SET><$02><$1E><$05><$21>
+There's an underground waterway in<LINE>
+a cave just a little south of here.<WAIT>
+
+The well in Sando Village draws all<LINE>
+of its water from there.<WAIT>
+
+If you go there, you'd be able to<LINE>
+investigate the waterway directly.<WAIT>
+
+Perhaps you could discover the reason<LINE>
+why the well dried up!<END>
+
+
+//POINTER #33 @ $1C522C - STRING #33 @ $1C2864
+
+#WRITE(GBA,$1C522C)
+So the underground waterway really<LINE>
+was the source of the problem...<END>
+
+
+//POINTER #34 @ $1C5230 - STRING #34 @ $1C287E
+
+#WRITE(GBA,$1C5230)
+There're some enemies that may drop<LINE>
+treasure chests once defeated.<WAIT>
+
+Seems that there're some synthesis<LINE>
+ingredients that can only be found<WAIT>
+
+from the chests dropped by defeated<LINE>
+enemies.<END>
+
+
+//POINTER #35 @ $1C5234 - STRING #35 @ $1C28D2
+
+#WRITE(GBA,$1C5234)
+<JUMP_FLAG_SET><$02><$1E><$05><$24>
+I just had a look at the waterway<LINE>
+that's up ahead. However...<WAIT>
+
+It looks like a huge boulder has<LINE>
+blocked the water flow!<WAIT>
+
+It's much too big for an ordinary<LINE>
+person to move. What should we do?<WAIT>
+
+If only we had something like a bomb<LINE>
+that could clear away the blockage...<END>
+
+
+//POINTER #36 @ $1C5238 - STRING #36 @ $1C2945
+
+#WRITE(GBA,$1C5238)
+What!? You cleared away that boulder<LINE>
+all by yourself?<WAIT>
+
+That's amazing! How did you ever<LINE>
+manage to break it?<END>
+
+
+//POINTER #37 @ $1C523C - STRING #37 @ $1C297F
+
+#WRITE(GBA,$1C523C)
+<JUMP_FULL_HEALTH><$05><$C1>
+Ah, you appear to be injured.<LINE>
+Please hold still for a moment...<WAIT>
+
+<HEAL><SFX><$30>
+There you go, all better.<LINE>
+It's hot out there, so be careful.<END>
+
+
+//POINTER #38 @ $1C5240 - STRING #38 @ $1C29CB
+
+#WRITE(GBA,$1C5240)
+Rumor has it that on this planet<LINE>
+there's a sanctuary for signposts.<WAIT>
+
+Personally I'm not really sure what<LINE>
+that means but...<WAIT>
+
+Apparently it's just a place with lots<LINE>
+of signposts everywhere.<END>
+
+
+//POINTER #39 @ $1C5244 - STRING #39 @ $1C2A28
+
+#WRITE(GBA,$1C5244)
+A long time ago, the town that was<LINE>
+here was consumed by the desert.<WAIT>
+
+Those who didn't move to Deza Town<LINE>
+instead decided to live underground.<WAIT>
+
+My ancestors made such a decision.<WAIT>
+
+Once you get used to it, living<LINE>
+underground really isn't so bad.<END>
+
+
+//POINTER #40 @ $1C5248 - STRING #40 @ $1C2A87
+
+#WRITE(GBA,$1C5248)
+Oh, you're from the surface!<LINE>
+It's rare to have guests.<WAIT>
+
+Compared to the desert above, it's<LINE>
+actually nice and cool down here!<WAIT>
+
+//I wonder why the people on the surface<LINE>
+//don't also move underground...<END>
+I wonder why the people above<LINE>
+don't also move underground...<END>
+
+
+//POINTER #41 @ $1C524C - STRING #41 @ $1C2ADF
+
+#WRITE(GBA,$1C524C)
+//Ah, you're one of the Jetters! Recently<LINE>
+//a building appeared in the desert.<WAIT>
+
+You're one of the Jetters! Recently<LINE>
+a building appeared in the desert.<WAIT>
+
+I was curious, so I snuck over and<LINE>
+took a peek inside.<WAIT>
+
+From what I saw, the place is full of<LINE>
+infrared sensor traps!<END>
+
+
+//POINTER #42 @ $1C5250 - STRING #42 @ $1C2B49
+
+#WRITE(GBA,$1C5250)
+Do you know of the Karabon named<LINE>
+Eel? If you utilize Eel's power,<WAIT>
+
+infrared sensors won't detect you so<LINE>
+you can advance without being caught.<END>
+
+
+//POINTER #43 @ $1C5254 - STRING #43 @ $1C2B94
+
+#WRITE(GBA,$1C5254)
+In the middle of this lake a beautiful<LINE>
+red flower blooms.<WAIT>
+
+If you add the red flower to a bottle,<LINE>
+you can make a powerful medicine!<END>
+
+
+//POINTER #44 @ $1C5258 - STRING #44 @ $1C2BD3
+
+#WRITE(GBA,$1C5258)
+<JUMP_FLAG_SET><$02><$23><$05><$2F>
+<JUMP_FLAG_SET><$02><$22><$05><$2E>
+<JUMP_FLAG_SET><$02><$21><$05><$2D>
+Hey, do you have some time? If you<LINE>
+could, please listen to my request...<WAIT>
+
+I want you to give this letter to a<LINE>
+woman that lives south of here.<WAIT>
+
+Bomberman obtained the<LINE>
+Letter!<SFX><$0C>
+<SET_FLAG><$01><$26>
+<SET_FLAG><$02><$21><WAIT>
+
+Could you do that for me? Please let<LINE>
+me know once you've handed it over.<WAIT>
+
+......I'm so nervous......<END>
+
+
+//POINTER #45 @ $1C525C - STRING #45 @ $1C2C70
+
+#WRITE(GBA,$1C525C)
+Have you fulfilled my request? Please<LINE>
+give that letter to a woman who lives<WAIT>
+
+south of here... Gulp...<END>
+
+
+//POINTER #46 @ $1C5260 - STRING #46 @ $1C2CA6
+
+#WRITE(GBA,$1C5260)
+Have you handed over the letter?<LINE>
+........................<WAIT>
+
+Oh! You have a reply for me?<LINE>
+Thanks!<WAIT>
+
+........................<LINE>
+........................<WAIT>
+
+Ah, that didn't go as planned...<LINE>
+Sigh....................<WAIT>
+
+Anyway. Thank you, Bomberman!<LINE>
+Please accept this as thanks.<WAIT>
+
+I guess it's not something that I<LINE>
+really need anymore...<WAIT>
+
+Bomberman obtained<LINE>
+the Ring!<SFX><$0C>
+<CLEAR_FLAG><$01><$27>
+<SET_FLAG><$01><$28>
+<SET_FLAG><$02><$23><WAIT>
+
+Hopefully you find a use for it...<END>
+
+
+//POINTER #47 @ $1C5264 - STRING #47 @ $1C2D89
+
+#WRITE(GBA,$1C5264)
+Hopefully you find a use for it...<END>
+
+
+//POINTER #48 @ $1C5268 - STRING #48 @ $1C2D9B
+
+#WRITE(GBA,$1C5268)
+<JUMP_FLAG_SET><$02><$22><$05><$32>
+<JUMP_FLAG_SET><$02><$21><$05><$31>
+Oh, hello there!<WAIT>
+
+It's been a long time since I've had<LINE>
+a visitor from the surface.<END>
+
+
+//POINTER #49 @ $1C526C - STRING #49 @ $1C2DCC
+
+#WRITE(GBA,$1C526C)
+Oh, you have a letter for me?<LINE>
+Thank you... Ah... Oh...<WAIT>
+
+Please wait just a minute.<LINE>
+I'm going to write my response now...<WAIT>
+
+........................<LINE>
+........................<WAIT>
+
+Thanks for waiting. Please give my<LINE>
+response to him for me.<WAIT>
+
+Bomberman got the<LINE>
+Response Letter!<SFX><$0C>
+<CLEAR_FLAG><$01><$26>
+<SET_FLAG><$01><$27>
+<SET_FLAG><$02><$22><END>
+
+
+//POINTER #50 @ $1C5270 - STRING #50 @ $1C2E6A
+
+#WRITE(GBA,$1C5270)
+It's not that he's a bad guy...<LINE>
+But...<END>
+
+
+//POINTER #51 @ $1C5274 - STRING #51 @ $1C2E7F
+
+#WRITE(GBA,$1C5274)
+<JUMP_FLAG_SET><$01><$2F><$05><$34>
+Welcome to Deza Town!<END>
+
+
+//POINTER #52 @ $1C5278 - STRING #52 @ $1C2E91
+
+#WRITE(GBA,$1C5278)
+Welcome to Deza Town!<WAIT>
+
+If you own the Signpost Spectacles you<LINE>
+should go to the desert's northeast.<END>
+
+
+//POINTER #53 @ $1C527C - STRING #53 @ $1C2EC3
+
+#WRITE(GBA,$1C527C)
+<JUMP_FLAG_SET><$01><$2F><$05><$36>
+Through here is the desert area. It's <LINE>
+dangerous, so enter at your own risk!<END>
+
+
+//POINTER #54 @ $1C5280 - STRING #54 @ $1C2EE2
+
+#WRITE(GBA,$1C5280)
+Through here is the desert area. It's<LINE>
+dangerous, so enter at your own risk!<WAIT>
+
+Although since the gate is open,<LINE>
+I'm sure you plan to enter anyway...<END>
+
+
+//POINTER #55 @ $1C5284 - STRING #55 @ $1C2F13
+
+#WRITE(GBA,$1C5284)
+<JUMP_FLAG_SET><$01><$2F><$05><$38>
+Welcome to Sando Village!<END>
+
+
+//POINTER #56 @ $1C5288 - STRING #56 @ $1C2F20
+
+#WRITE(GBA,$1C5288)
+Sando Village<WAIT>
+
+Wow, it really is hot today.<LINE>
+It sure would be nice if it rained...<END>
+
+
+//POINTER #57 @ $1C528C - STRING #57 @ $1C2F45
+
+#WRITE(GBA,$1C528C)
+........................?<END>
+
+
+//POINTER #58 @ $1C5290 - STRING #58 @ $1C2F53
+
+#WRITE(GBA,$1C5290)
+........................<LINE>
+Bomberman built a Signpost!<END>
+
+
+//POINTER #59 @ $1C5294 - STRING #59 @ $1C2F72
+
+#WRITE(GBA,$1C5294)
+<JUMP_FLAG_SET><$01><$2F><$05><$3C>
+Here you can find the underground<LINE>
+waterway. Up ahead is Deza Town.<END>
+
+
+//POINTER #60 @ $1C5298 - STRING #60 @ $1C2F94
+
+#WRITE(GBA,$1C5298)
+Here you can find the underground<LINE>
+waterway. Up ahead is Deza Town.<WAIT>
+
+Ah, Mr. Bomberman.<LINE>
+Thank you so much for your help!<END>
+
+
+//POINTER #61 @ $1C529C - STRING #61 @ $1C2FCE
+
+#WRITE(GBA,$1C529C)
+<JUMP_FLAG_SET><$02><$3F><$05><$3E>
+This is the land of the signposts.<LINE>
+The Signpost Kingdom!<WAIT>
+
+And I am the king of this kingdom.<LINE>
+Signpost Woodrow the IIIrd.<WAIT>
+
+Welcome, Bomberman. Since that day<<LINE>
+long ago when you began helping<WAIT>
+
+Ibsy on the planet Nonbiri, it became<LINE>
+destiny that we would meet here.<WAIT>
+
+For fulfilling Ibsy's request and<LINE>
+sharing signposts with the world<WAIT>
+
+you have our deepest gratitude.<LINE>
+To show our appreciation for your<WAIT>
+
+dedication, please accept this gift<LINE>
+as a sign of thanks.<WAIT>
+
+Bomberman received a<LINE>
+<SFX_EQUIPMENT><$5C>
+<ADD_MAX_HP><$01><HEAL>
+<SET_FLAG><$02><$3F>Big Heart!<END>
+
+
+//POINTER #62 @ $1C52A0 - STRING #62 @ $1C30CD
+
+#WRITE(GBA,$1C52A0)
+We ensure that bad guys stay far away<LINE>
+from our kingdom.<WAIT>
+
+There isn't too much here, but please<LINE>
+stay and rest as long as you like.<END>
+
+
+//POINTER #63 @ $1C52A4 - STRING #63 @ $1C3100
+
+#WRITE(GBA,$1C52A4)
+Legends of your arrival have been<LINE>
+passed down for generations.<WAIT>
+
+It is said that a Bomberman would<LINE>
+one day visit our kingdom.<END>
+
+
+//POINTER #64 @ $1C52A8 - STRING #64 @ $1C313C
+
+#WRITE(GBA,$1C52A8)
+For us signposts, the legendary<WAIT>
+
+singpost builder Ibsy is treated<LINE>
+as a god. As his disciple, your deeds<WAIT>
+
+have long since been passed down<LINE>
+through legend as well.<END>
+
+
+//POINTER #65 @ $1C52AC - STRING #65 @ $1C3190
+
+#WRITE(GBA,$1C52AC)
+It seems the Hige Hige Bandits are<LINE>
+causing trouble in the outside world.<WAIT>
+
+But since this is a secret place, we<LINE>
+don't have anything to worry about!<END>
+
+
+//POINTER #66 @ $1C52B0 - STRING #66 @ $1C31CB
+
+#WRITE(GBA,$1C52B0)
+Oh, are you Bomberman?<LINE>
+Come come, the king has been waiting!<END>
+
+
+//POINTER #67 @ $1C52B4 - STRING #67 @ $1C31ED
+
+#WRITE(GBA,$1C52B4)
+This is the king's room.<END>
+
+
+//POINTER #68 @ $1C52B8 - STRING #68 @ $1C31FD
+
+#WRITE(GBA,$1C52B8)
+<JUMP_FLAG_SET><$02><$40><$05><$45>
+<SET_FLAG><$02><$40>
+It's nice to meet you, Bomberman.<LINE>
+Many generations ago, my ancestors<WAIT>
+
+on the planet Nonbiri were scattered<LINE>
+across the universe.<WAIT>
+
+The king's room is to the west.<LINE>
+The gatekeeper can open the door.<END>
+
+
+//POINTER #69 @ $1C52BC - STRING #69 @ $1C326B
+
+#WRITE(GBA,$1C52BC)
+<JUMP_FULL_HEALTH><$05><$46>
+Oh my! You're injured, aren't you?<LINE>
+Let me heal you...<WAIT>
+
+<HEAL><SFX><$30>
+There, you should be fine now.<LINE>
+Be more careful in the future!<END>
+
+
+//POINTER #70 @ $1C52C0 - STRING #70 @ $1C32A9
+
+#WRITE(GBA,$1C52C0)
+Please build signposts on other planets<LINE>
+as well. That would make me happy!<END>
+
+
+//POINTER #71 @ $1C52C4 - STRING #71 @ $1C32D0
+
+#WRITE(GBA,$1C52C4)
+If you look at the history of signposts<LINE>
+throughout the world, our roots<WAIT>
+
+all trace back to the signposts Ibsy<LINE>
+built on Nonbiri many generations ago.<END>
+
+
+//POINTER #72 @ $1C52C8 - STRING #72 @ $1C3311
+
+#WRITE(GBA,$1C52C8)
+How about a song from the<LINE>
+Signpost Chorus?<END>
+
+
+//POINTER #73 @ $1C52CC - STRING #73 @ $1C3329
+
+#WRITE(GBA,$1C52CC)
+This is the queen's room.<END>
+
+
+//POINTER #74 @ $1C52D0 - STRING #74 @ $1C333B
+
+#WRITE(GBA,$1C52D0)
+<JUMP_FLAG_SET><$02><$44><$05><$BC>
+Ahead is the King's Chamber.<LINE>
+However, entering isn't so simple.<WAIT>
+
+Of all the signposts that are lined up<LINE>
+to the left, only one of them<WAIT>
+
+possesses the ability to open the<LINE>
+door to the King's Chamber.<WAIT>
+
+Speak with that signpost, and the<LINE>
+door shall open.<WAIT>
+
+You might want to start by chatting<LINE>
+with the singpost beside me.
+<SET_FLAG><$02><$47>
+<CLEAR_FLAG><$02><$48><CLEAR_FLAG><$02><$49>
+<CLEAR_FLAG><$02><$4A><CLEAR_FLAG><$02><$4B>
+<CLEAR_FLAG><$02><$4C><CLEAR_FLAG><$02><$4D>
+<CLEAR_FLAG><$02><$4E><CLEAR_FLAG><$02><$4F>
+<CLEAR_FLAG><$02><$50><CLEAR_FLAG><$02><$51>
+<CLEAR_FLAG><$02><$52><END>
+
+
+//POINTER #75 @ $1C52D4 - STRING #75 @ $1C3408
+
+#WRITE(GBA,$1C52D4)
+<JUMP_FLAG_SET><$02><$25><$05><$4C>
+Are you looking for a challenge?<LINE>
+If you can win the Karabon Race<WAIT>
+
+then you'll be awarded with Pan,<LINE>
+the super fast dashing Karabon!<WAIT>
+
+The participation fee is<LINE>
+10 Gold per try.<WAIT>
+
+Enter the Karabon Race?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$05><$4D><$05><$4F>
+
+
+//POINTER #76 @ $1C52D8 - STRING #76 @ $1C348A
+
+#WRITE(GBA,$1C52D8)
+Do you want to enter the race using<LINE>
+the gym's Karabon Pan?<WAIT>
+
+It's 10 Gold per try.<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$05><$4D><$05><$4F>
+
+
+//POINTER #77 @ $1C52DC - STRING #77 @ $1C34D4
+
+#WRITE(GBA,$1C52DC)
+<JUMP_GOLD><$00><$0A><$05><$50>
+<SUB_GOLD><$0A>
+<ANIMATE><$01>Alright then, get ready to race!<LINE>
+<END>
+
+
+//POINTER #78 @ $1C52E0 - STRING #78 @ $1C34DD
+
+#WRITE(GBA,$1C52E0)
+<ANIMATE><$01>
+Alright then, get ready to race!<LINE>
+<END>
+
+
+//POINTER #79 @ $1C52E4 - STRING #79 @ $1C34F9
+
+#WRITE(GBA,$1C52E4)
+<ANIMATE><$02>
+Is that so? If you feel like giving<LINE>
+it a try, just come back!<END>
+
+
+//POINTER #80 @ $1C52E8 - STRING #80 @ $1C3515
+
+#WRITE(GBA,$1C52E8)
+<ANIMATE><$02>
+Oops, you don't have enough money!<LINE>
+Without 10 Gold, you can't participate.<END>
+
+
+//POINTER #81 @ $1C52EC - STRING #81 @ $1C353C
+
+#WRITE(GBA,$1C52EC)
+The victory is yours!<LINE>
+You did quite well out there.<WAIT>
+
+You and Pan were completely in sync.<LINE>
+It was wonderful!<WAIT>
+
+I have no doubt that you will raise<LINE>
+Pan with great care.<END>
+
+
+//POINTER #82 @ $1C52F0 - STRING #82 @ $1C3595
+
+#WRITE(GBA,$1C52F0)
+Bomberman became friends with<LINE>
+Karabon Pan!<SFX_LOAD><$00><SFX><$5C><WAIT>
+
+My ability is Dash!<LINE>
+While holding down the B Button<WAIT>
+
+you'll be able to dash very quickly.<LINE>
+Let's give it our all from now on!<WAIT>
+
+Set me as the active Karabon?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_SWAP_NO><$03><$02><$0C><$02><$05><$53><$05><$54>
+
+
+//POINTER #83 @ $1C52F4 - STRING #83 @ $1C360E
+
+#WRITE(GBA,$1C52F4)
+<EQUIP_KARABON><$04><CLOSE>
+
+
+//POINTER #84 @ $1C52F8 - STRING #84 @ $1C3611
+
+#WRITE(GBA,$1C52F8)
+<CLOSE>
+
+
+//POINTER #85 @ $1C52FC - STRING #85 @ $1C3612
+
+#WRITE(GBA,$1C52FC)
+Wahaha... You still have ways to go!<WAIT>
+
+With skills like that, there's no way<LINE>
+I could entrust Pan to you.<WAIT>
+
+The key to winning is to be in sync<LINE>
+with the rhythm of your Karabon.<WAIT>
+
+Keep trying and you'll figure it out.<LINE>
+I'll be waiting!<END>
+
+
+//POINTER #86 @ $1C5300 - STRING #86 @ $1C367B
+
+#WRITE(GBA,$1C5300)
+A new record! Congratulations!<LINE>
+The prize for that is 50 Gold.<WAIT>
+
+<HALF>
+Bomberman receives 50 Gold!<SFX><$0C><ADD_GOLD><$32><WAIT>
+
+Give it another shot and aim for<LINE>
+an even better score!<END>
+
+
+//POINTER #87 @ $1C5304 - STRING #87 @ $1C36D6
+
+#WRITE(GBA,$1C5304)
+Keep trying until you set a new<LINE>
+high score!<END>
+
+
+//POINTER #88 @ $1C5308 - STRING #88 @ $1C36EF
+
+#WRITE(GBA,$1C5308)
+<JUMP_FLAG_SET><$02><$29><$05><$5F>
+<SET_FLAG><$02><$2A>
+Ugh... *cough* *cough*<LINE>
+Hm...? You want to... enter the desert?<WAIT>
+
+I'm the one who... has the ability to<LINE>
+open the gate... *cough*<WAIT>
+
+But with how sick I am right now...<LINE>
+I can't do anything... Ugh...<END>
+
+
+//POINTER #89 @ $1C530C - STRING #89 @ $1C3758
+
+#WRITE(GBA,$1C530C)
+<JUMP_FLAG_SET><$02><$29><$05><$60>
+<JUMP_FLAG_SET><$02><$28><$05><$5E>
+<JUMP_FLAG_SET><$02><$27><$05><$5A>
+<SET_FLAG><$02><$27>
+Ah, you're one of the Jetters!<LINE>
+Please, help my grandfather...<WAIT>
+
+He's really sick, although thankfully<LINE>
+it doesn't seem life threatening...<WAIT>
+
+The medicine man in Sando Village<LINE>
+makes a medicine called Miracle Cure.<WAIT>
+
+Apparently it's really powerful and<LINE>
+can cure almost anything!<WAIT>
+
+I'm begging you, please go to Sando<LINE>
+Village and get a Miracle Cure.<WAIT>
+
+To help cover the cost of the<LINE>
+medicine, please take this.<WAIT>
+
+<HALF>
+Bomberman receives 100 Gold!
+<SFX><$0C><ADD_GOLD><$64><WAIT>
+
+I'm sorry for troubling you.<END>
+
+
+//POINTER #90 @ $1C5310 - STRING #90 @ $1C3849
+
+#WRITE(GBA,$1C5310)
+The medicine man lives inside the<LINE>
+shop in Sando Village.<WAIT>
+
+I'm sorry for troubling you,<LINE>
+but I really appreciate your help!<END>
+
+
+//POINTER #91 @ $1C5314 - STRING #91 @ $1C3882
+
+#WRITE(GBA,$1C5314)
+<JUMP_FLAG_CLEAR><$02><$2A><$05><$61>
+*cough* Ugh... Isn't that...<LINE>
+Isn't that a Miracle Cure?<WAIT>
+
+Did you go get that... *cough*<LINE>
+for my sake? Sorry for the trouble...<WAIT>
+
+Ugh... Ah... Hm... Guh...<LINE>
+........................Oh!<END>
+
+
+//POINTER #92 @ $1C5318 - STRING #92 @ $1C38DF
+
+#WRITE(GBA,$1C5318)
+Huzzah! I'm cured!<LINE>
+I've never felt better!<WAIT>
+
+It was because of you that I was able<LINE>
+to get better. Thank you!<WAIT>
+
+You can have the empty medicine<LINE>
+bottle. You may find a use for it.<WAIT>
+
+Bomberman receives the<LINE>
+<SFX><$0C><SET_FLAG><$01><$25>
+Empty Bottle!<WAIT>
+
+While that illness wasn't life<LINE>
+threatening, it sure was painful...<WAIT>
+
+Now that I'm better, I will open the<LINE>
+door to the desert for you.<END>
+
+
+//POINTER #93 @ $1C531C - STRING #93 @ $1C3994
+
+#WRITE(GBA,$1C531C)
+Lately there have been some strange<LINE>
+guys hanging around the desert.<WAIT>
+
+Be careful out there!<END>
+
+
+//POINTER #94 @ $1C5320 - STRING #94 @ $1C39BD
+
+#WRITE(GBA,$1C5320)
+<JUMP_FLAG_CLEAR><$02><$27><$05><$62>
+Ah! You went and got the Miracle Cure!<LINE>
+Thank you!<WAIT>
+
+Quickly, give it to my grandfather!<LINE>
+<END>
+
+
+//POINTER #95 @ $1C5324 - STRING #95 @ $1C39FA
+
+#WRITE(GBA,$1C5324)
+//Oh, thanks for earlier! I've felt really<LINE>
+Thanks for earlier! I've felt really<LINE>
+great since taking that medicine!<END>
+
+
+//POINTER #96 @ $1C5328 - STRING #96 @ $1C3A21
+
+#WRITE(GBA,$1C5328)
+Thank you, Bomberman.<LINE>
+My grandfather is back to normal!<WAIT>
+
+That Miracle Cure really is an<LINE>
+incredible medicine!<WAIT>
+
+I wonder what goes into making<LINE>
+a medicine like that...<END>
+
+
+//POINTER #97 @ $1C532C - STRING #97 @ $1C3A78
+
+#WRITE(GBA,$1C532C)
+*cough* *cough* What's that...?<LINE>
+You want to... go to the desert?<WAIT>
+
+I'm the one... who operates the gate...<LINE>
+leading to it... Ugh... *cough*<WAIT>
+
+Isn't that... *cough*<LINE>
+Isn't that a Miracle Cure? *cough*<WAIT>
+
+Hm? You're... giving it to me?<LINE>
+*cough* *cough*<WAIT>
+
+Ugh... Ah... Hm... Guh...<LINE>
+........................Oh!<END>
+
+
+//POINTER #98 @ $1C5330 - STRING #98 @ $1C3B13
+
+#WRITE(GBA,$1C5330)
+<SET_FLAG><$02><$27>
+Ah, you're one of the Jetters!<LINE>
+Please, help my grandfather...<WAIT>
+
+In order to cure my grandfather's<LINE>
+illness, he needs the medicine called<WAIT>
+
+Miracle Cure that is sold in<LINE>
+Sando Village.<WAIT>
+
+Hey! That's a Miracle Cure!<LINE>
+Please give it to my grandfather!<END>
+
+
+//POINTER #99 @ $1C5334 - STRING #99 @ $1C3B92
+
+#WRITE(GBA,$1C5334)
+Oh, you found me!<LINE>
+You're pretty observant.<WAIT>
+
+I usually have some fun by messing<LINE>
+with people who pass by.<WAIT>
+
+But lately not many people have been<LINE>
+walking by here, so it's been boring.<WAIT>
+
+Anyway, since I have free time I'll<LINE>
+come with you! It'll be fun, right?<END>
+
+
+//POINTER #100 @ $1C5338 - STRING #100 @ $1C3C04
+
+#WRITE(GBA,$1C5338)
+Bomberman became friends with<LINE>
+Karabon Eel!<SFX_LOAD><$00><SFX><$5C><WAIT>
+
+My ability is Transparency!<WAIT>
+
+When you press the B Button, you will<LINE>
+disappear for a short time.<WAIT>
+
+However, you won't become invincible<LINE>
+so you will still take damage.<WAIT>
+
+Set me as the active Karabon?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_SWAP_NO><$03><$02><$0C><$02><$05><$65><$05><$66>
+
+
+//POINTER #101 @ $1C533C - STRING #101 @ $1C3C96
+
+#WRITE(GBA,$1C533C)
+<EQUIP_KARABON><$05><CLOSE>
+
+
+//POINTER #102 @ $1C5340 - STRING #102 @ $1C3C99
+
+#WRITE(GBA,$1C5340)
+<CLOSE>
+
+
+//POINTER #103 @ $1C5344 - STRING #103 @ $1C3C9A
+
+#WRITE(GBA,$1C5344)
+Gah! Mighty!<LINE>
+You sure are a persistent pest!<WAIT>
+
+Every time I find a good place to hide,<LINE>
+you show up and cause trouble!<WAIT>
+
+The Beam Cannon just needed a little<LINE>
+more time before being ready to fire.<WAIT>
+
+//Well, it's fine. You'll be defeated here!<LINE>
+Whatever. You'll be defeated here!<LINE>
+Come forth, Net Spider!<END>
+
+
+//POINTER #104 @ $1C5348 - STRING #104 @ $1C3D0E
+
+#WRITE(GBA,$1C5348)
+And now to continue preparing the<LINE>
+Beam Cannon!<END>
+
+
+//POINTER #105 @ $1C534C - STRING #105 @ $1C3D2B
+
+#WRITE(GBA,$1C534C)
+So you already defeated Net Spider?<LINE>
+That was quite a show, Mighty.<WAIT>
+
+//But too bad for you, the Beam Cannon's<LINE>
+Too bad for you, the Beam Cannon's<LINE>
+preparations are complete!<WAIT>
+
+As a test, should we see what happens<LINE>
+if we shoot at Deza Town?<WAIT>
+
+Beam Cannon, fire!<END>
+
+
+//POINTER #106 @ $1C5350 - STRING #106 @ $1C3D92
+
+#WRITE(GBA,$1C5350)
+W...w-w-what happened!?<LINE>
+But... it was set up perfectly...<END>
+
+
+//POINTER #107 @ $1C5354 - STRING #107 @ $1C3DBA
+
+#WRITE(GBA,$1C5354)
+Perhaps... Am I too late...?<LINE>
+The Beam Cannon is supposed to draw<WAIT>
+
+energy from a control crystal in<LINE>
+order to power its attack.<WAIT>
+
+But the crystal is missing, and<LINE>
+without it the cannon won't work.<WAIT>
+
+If the crystal isn't installed, this<LINE>
+//thing is nothing but a hunk of garbage!<END>
+thing is nothing but a hunk of junk!<END>
+
+
+//POINTER #108 @ $1C5358 - STRING #108 @ $1C3E29
+
+#WRITE(GBA,$1C5358)
+Curses! What moron would take such a<LINE>
+thing, and where did they take it?<WAIT>
+
+//I think the best thing to do would be<LINE>
+//to travel back in time to the planet<WAIT>
+
+I think the best thing to do is to<LINE>
+travel back in time to the planet<WAIT>
+
+Nonbiri from centuries ago, and steal<LINE>
+the crystal from the cannon then!<WAIT>
+
+Well, there's no reason to hang around<LINE>
+here anymore. Later, Mighty!<END>
+
+
+//POINTER #109 @ $1C535C - STRING #109 @ $1C3EA7
+
+#WRITE(GBA,$1C535C)
+<JUMP_FLAG_SET><$01><$2F><$05><$6E>
+Sorry, this is a dead end.<LINE>
+Nothing to see here!<END>
+
+
+//POINTER #110 @ $1C5360 - STRING #110 @ $1C3EBD
+
+#WRITE(GBA,$1C5360)
+<JUMP_FLAG_SET><$02><$41><$05><$6F>
+Sorry, this is a dead end.<LINE>
+Nothing to see here!<WAIT>
+
+Hey... Wait a second! Are those the<LINE>
+Signpost Spectacles!?<WAIT>
+
+Then... Are you that legendary<LINE>
+Bomberman the legends speak of?<WAIT>
+
+Well that changes everything! I'll<LINE>
+open the passage for you right away!<WAIT>
+
+<EVENT><$00><SET_FLAG><$02><$41>
+The Signpost Kingdom is up ahead.<LINE>
+Please come in!<END>
+
+
+//POINTER #111 @ $1C5364 - STRING #111 @ $1C3F50
+
+#WRITE(GBA,$1C5364)
+The Signpost Kingdom is the home<LINE>
+of all signposts!<WAIT>
+
+Please enjoy your stay!<END>
+
+
+//POINTER #112 @ $1C5368 - STRING #112 @ $1C3F7A
+
+#WRITE(GBA,$1C5368)
+You're the legendary Bomberman,<LINE>
+aren't you? Welcome!<END>
+
+
+//POINTER #113 @ $1C536C - STRING #113 @ $1C3F9E
+
+#WRITE(GBA,$1C536C)
+Sorry, it's not me! Perhaps you should<LINE>
+start again from the beginning.
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #114 @ $1C5370 - STRING #114 @ $1C3FC7
+
+#WRITE(GBA,$1C5370)
+Sorry, but it's not me! You should<LINE>
+start again from the beginning.
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #115 @ $1C5374 - STRING #115 @ $1C3FEB
+
+#WRITE(GBA,$1C5374)
+<JUMP_FLAG_SET><$02><$44><$05><$B6>
+<JUMP_FLAG_CLEAR><$02><$4C><$05><$B0>
+<CLEAR_FLAG><$02><$4B><SET_FLAG><$02><$4D>
+<JUMP><$05><$B6>
+<END>
+
+//POINTER #116 @ $1C5378 - STRING #116 @ $1C4003
+
+#WRITE(GBA,$1C5378)
+<JUMP_FLAG_SET><$02><$44><$05><$75>
+<JUMP_FLAG_CLEAR><$02><$52><$05><$B0>
+<CLEAR_FLAG><$02><$51>
+<CLEAR_FLAG><$02><$52>
+<SFX_LOAD><$00>
+<SFX><$5D>
+Congratulations!<LINE>
+You did well to figure this out.<WAIT>
+
+Well then, for your reward I will open<LINE>
+the door to the King's Chamber.<WAIT>
+
+<SET_FLAG><$02><$53><NEXT>
+
+
+//POINTER #117 @ $1C537C - STRING #117 @ $1C4055
+
+#WRITE(GBA,$1C537C)
+There, the gate is now open!<LINE>
+The king is inside his chamber.<END>
+
+
+//POINTER #118 @ $1C5380 - STRING #118 @ $1C4076
+
+#WRITE(GBA,$1C5380)
+<JUMP_FLAG_SET><$02><$44><$05><$B9>
+<JUMP_FLAG_CLEAR><$02><$4F><$05><$B0>
+<CLEAR_FLAG><$02><$4E>
+<SET_FLAG><$02><$50>
+<JUMP><$05><$B9>
+
+
+//POINTER #119 @ $1C5384 - STRING #119 @ $1C408E
+
+#WRITE(GBA,$1C5384)
+Are you that legendary Bomberman?<LINE>
+That's so cool...<END>
+
+
+//POINTER #120 @ $1C5388 - STRING #120 @ $1C40AE
+
+#WRITE(GBA,$1C5388)
+Today's another hot one, huh?<END>
+
+
+//POINTER #121 @ $1C538C - STRING #121 @ $1C40B9
+
+#WRITE(GBA,$1C538C)
+<JUMP_FLAG_SET><$02><$44><$05><$B1>
+<JUMP_FLAG_CLEAR><$02><$47><$05><$B0>
+<SET_FLAG><$02><$48>
+<JUMP><$05><$B1>
+
+
+//POINTER #122 @ $1C5390 - STRING #122 @ $1C40CD
+
+#WRITE(GBA,$1C5390)
+Have you already visited the Game<LINE>
+Center on the planet Sekaseka?<WAIT>
+
+It costs 10 Gold each time you wish to<LINE>
+play a minigame.<WAIT>
+
+They also record your best scores and<LINE>
+times, so aim for the top!<END>
+
+
+//POINTER #123 @ $1C5394 - STRING #123 @ $1C4128
+
+#WRITE(GBA,$1C5394)
+<JUMP_FLAG_SET><$02><$44><$05><$B7>
+<JUMP_FLAG_CLEAR><$02><$4D><$05><$B0>
+<CLEAR_FLAG><$02><$4C>
+<SET_FLAG><$02><$4E>
+<JUMP><$05><$B7>
+
+
+//POINTER #124 @ $1C5398 - STRING #124 @ $1C4140
+
+#WRITE(GBA,$1C5398)
+Wrong! It isn't me. Collect your<LINE>
+thoughts and think about it carefully.
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #125 @ $1C539C - STRING #125 @ $1C416B
+
+#WRITE(GBA,$1C539C)
+Go 4 to the right to then talk<LINE>
+to the signpost above!<END>
+
+
+//POINTER #126 @ $1C53A0 - STRING #126 @ $1C418B
+
+#WRITE(GBA,$1C53A0)
+Oh, hello there!<LINE>
+You're Bomberman, right?<WAIT>
+
+You're even more handsome than I<LINE>
+imagined. I think I'm falling in love.♥<WAIT>
+
+Um... Anyway... Let's try this again<LINE>
+from the beginning.
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #127 @ $1C53A4 - STRING #127 @ $1C41EA
+
+#WRITE(GBA,$1C53A4)
+Hehehe... You're surrounded by girls<LINE>
+from both sides, huh?<WAIT>
+
+Which one are you going to pick?<LINE>
+Unfortunately, you can't have both.<WAIT>
+
+There just no way to get close to two<LINE>
+of them at the same time.<END>
+
+
+//POINTER #128 @ $1C53A8 - STRING #128 @ $1C4252
+
+#WRITE(GBA,$1C53A8)
+Did you also mistake the identity of<LINE>
+that person to the left?<WAIT>
+
+I thought they were Mr. Birdy from<LINE>
+the Jetters!<WAIT>
+
+//ねぇ　アナタ<LINE>
+Hey, aren't you with the Jetters?<WAIT>
+
+There's no reason that Birdy would<LINE>
+be here, right?<END>
+
+
+//POINTER #129 @ $1C53AC - STRING #129 @ $1C42B7
+
+#WRITE(GBA,$1C53AC)
+I guess I was mistaken. I should have<LINE>
+just asked them from the beginning.
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #130 @ $1C53B0 - STRING #130 @ $1C42E5
+
+#WRITE(GBA,$1C53B0)
+<JUMP_FLAG_SET><$02><$44><$05><$BA>
+<JUMP_FLAG_CLEAR><$02><$50><$05><$B0>
+<CLEAR_FLAG><$02><$4F>
+<SET_FLAG><$02><$51>
+<JUMP><$05><$BA>
+
+
+//POINTER #131 @ $1C53B4 - STRING #131 @ $1C42FD
+
+#WRITE(GBA,$1C53B4)
+Listen to what the signpost 2 to<LINE>
+my right has to say!<END>
+
+
+//POINTER #132 @ $1C53B8 - STRING #132 @ $1C431A
+
+#WRITE(GBA,$1C53B8)
+<JUMP_FLAG_SET><$02><$44><$05><$B3>
+<JUMP_FLAG_CLEAR><$02><$49><$05><$B0>
+<CLEAR_FLAG><$02><$48>
+<SET_FLAG><$02><$4A>
+<JUMP><$05><$B3>
+
+
+//POINTER #133 @ $1C53BC - STRING #133 @ $1C4332
+
+#WRITE(GBA,$1C53BC)
+Listen to what the signpost 3 to<LINE>
+my right has to say!<END>
+
+
+//POINTER #134 @ $1C53C0 - STRING #134 @ $1C434F
+
+#WRITE(GBA,$1C53C0)
+<JUMP_FLAG_SET><$02><$44><$05><$B5>
+<JUMP_FLAG_CLEAR><$02><$4B><$05><$B0>
+<CLEAR_FLAG><$02><$4A>
+<SET_FLAG><$02><$4C>
+<JUMP><$05><$B5>
+
+
+//POINTER #135 @ $1C53C4 - STRING #135 @ $1C4367
+
+#WRITE(GBA,$1C53C4)
+<JUMP_FLAG_SET><$02><$44><$05><$BB>
+<JUMP_FLAG_CLEAR><$02><$51><$05><$B0>
+<CLEAR_FLAG><$02><$50>
+<SET_FLAG><$02><$52>
+<JUMP><$05><$BB>
+
+
+//POINTER #136 @ $1C53C8 - STRING #136 @ $1C437F
+
+#WRITE(GBA,$1C53C8)
+Listen to what the signpost 5 to<LINE>
+my left has to say!<END>
+
+
+//POINTER #137 @ $1C53CC - STRING #137 @ $1C439E
+
+#WRITE(GBA,$1C53CC)
+<JUMP_FLAG_SET><$02><$44><$05><$B2>
+<JUMP_FLAG_CLEAR><$02><$48><$05><$B0>
+<CLEAR_FLAG><$02><$47>
+<SET_FLAG><$02><$49>
+<JUMP><$05><$B2>
+
+
+//POINTER #138 @ $1C53D0 - STRING #138 @ $1C43B6
+
+#WRITE(GBA,$1C53D0)
+Fuheheh...<LINE>
+W - R - O - N - G ♥<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #139 @ $1C53D4 - STRING #139 @ $1C43D7
+
+#WRITE(GBA,$1C53D4)
+Now now, calm down. Start again from<LINE>
+the beginning and think carefully.
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #140 @ $1C53D8 - STRING #140 @ $1C4401
+
+#WRITE(GBA,$1C53D8)
+<JUMP_FLAG_SET><$02><$44><$05><$B4>
+<JUMP_FLAG_CLEAR><$02><$4A><$05><$B0>
+<CLEAR_FLAG><$02><$49>
+<SET_FLAG><$02><$4B>
+<JUMP><$05><$B4>
+
+
+//POINTER #141 @ $1C53DC - STRING #141 @ $1C4419
+
+#WRITE(GBA,$1C53DC)
+You're not getting tired are you?<LINE>
+You must be getting tired by now!<WAIT>
+
+Because if you're talking to me, it<LINE>
+means you made a mistake, didn't you?
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #142 @ $1C53E0 - STRING #142 @ $1C4466
+
+#WRITE(GBA,$1C53E0)
+So you decided to talk with me?<LINE>
+I'm truly flattered.<WAIT>
+
+However, that means that you have to<LINE>
+start again from the beginning!
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #143 @ $1C53E4 - STRING #143 @ $1C44A2
+
+#WRITE(GBA,$1C53E4)
+<JUMP_FLAG_SET><$02><$44><$05><$B8>
+<JUMP_FLAG_CLEAR><$02><$4E><$05><$B0>
+<CLEAR_FLAG><$02><$4D>
+<SET_FLAG><$02><$4F>
+<JUMP><$05><$B8>
+
+
+//POINTER #144 @ $1C53E8 - STRING #144 @ $1C44BA
+
+#WRITE(GBA,$1C53E8)
+Retry~ From~ The~ Beginning~
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #145 @ $1C53EC - STRING #145 @ $1C44CB
+
+#WRITE(GBA,$1C53EC)
+How unfortunate! It's really too bad.<LINE>
+You were just off by one!
+<JUMP_FLAG_CLEAR><$02><$44><$05><$AF><END>
+
+
+//POINTER #146 @ $1C53F0 - STRING #146 @ $1C44ED
+
+#WRITE(GBA,$1C53F0)
+<JUMP_FLAG_SET><$02><$42><$05><$96>
+The Queen is just past here.<LINE>
+However, I can't just let you by.<WAIT>
+
+If you can answer this question,<LINE>
+I'll open the gate for you.<WAIT>
+
+//カンバンコーラスたいは　うたのなかで<LINE>
+//ぜんいんで　あわせて<WAIT>
+
+The Chorus has how many members?<LINE>
+    12    13    14<PROMPT_3><$00><$02><$06><$02><$0C><$02><$05><$93><$05><$93><$05><$94>
+
+
+//POINTER #147 @ $1C53F4 - STRING #147 @ $1C4586
+
+#WRITE(GBA,$1C53F4)
+Wrong!<LINE>
+You should have paid more attention...<WAIT>
+
+Now you'll have to try again!<WAIT>
+
+<EVENT><$01><NEXT>
+
+
+//POINTER #148 @ $1C53F8 - STRING #148 @ $1C45B0
+
+#WRITE(GBA,$1C53F8)
+<SFX_LOAD><$00><SFX><$5D>
+Yes, that's correct!<LINE>
+As promised, I'll open the gate.
+<SET_FLAG><$02><$45><END>
+
+
+//POINTER #149 @ $1C53FC - STRING #149 @ $1C45D7
+
+#WRITE(GBA,$1C53FC)
+//The Queen is just past here.<LINE>
+//Please be respectful in her presence.<END>
+
+
+//POINTER #150 @ $1C5400 - STRING #150 @ $1C45FE
+
+#WRITE(GBA,$1C5400)
+The Queen is just past here.<LINE>
+Please be respectful in her presence.<END>
+
+
+//POINTER #151 @ $1C5404 - STRING #151 @ $1C4625
+
+#WRITE(GBA,$1C5404)
+Uuuu~ Uuuu~<LINE>
+Sign Sign Signpost Post Post~<WAIT>
+
+We are the Signpost Chorus.<LINE>
+Today's another cheerful day!<END>
+
+
+//POINTER #152 @ $1C5408 - STRING #152 @ $1C4666
+
+#WRITE(GBA,$1C5408)
+Whether rain or shine, in blazing<LINE>
+heat or in a freezing blizzard...<WAIT>
+
+We the signposts will smile happily<LINE>
+and cheerfully!<END>
+
+
+//POINTER #153 @ $1C540C - STRING #153 @ $1C46A3
+
+#WRITE(GBA,$1C540C)
+Uuuu~ Singing signposts~<LINE>
+Sing sign sing signposts!<END>
+
+
+//POINTER #154 @ $1C5410 - STRING #154 @ $1C46C4
+
+#WRITE(GBA,$1C5410)
+Whether on the front or the sides,<LINE>
+graffiti isn't allowed in heaven!<WAIT>
+
+We relieve the worries of all people.<LINE>
+We will bring happiness to the world!<END>
+
+
+//POINTER #155 @ $1C5414 - STRING #155 @ $1C4704
+
+#WRITE(GBA,$1C5414)
+Yet again today I sing of that dream I<LINE>
+never tire of seeing~<WAIT>
+
+In a forest that overflows with green,<LINE>
+a signpost stands tall~<END>
+
+
+//POINTER #156 @ $1C5418 - STRING #156 @ $1C4742
+
+#WRITE(GBA,$1C5418)
+Signpost! Sing-sign-signpost!<LINE>
+We're the Signpost Chorus!<WAIT>
+
+Again today, we'll do our best!<LINE>
+Signpost signpost signposts~<END>
+
+
+//POINTER #157 @ $1C541C - STRING #157 @ $1C4787
+
+#WRITE(GBA,$1C541C)
+The Signpost Chorus is lined up in<LINE>
+front of the gate.<END>
+
+
+//POINTER #158 @ $1C5420 - STRING #158 @ $1C47A4
+
+#WRITE(GBA,$1C5420)
+No matter how much I listen to them,<LINE>
+I never tire of the Signpost Chorus!WAIT>
+
+Their beautiful voices just lift the<LINE>
+sorrows from every signpost~<END>
+
+
+//POINTER #159 @ $1C5424 - STRING #159 @ $1C47E2
+
+#WRITE(GBA,$1C5424)
+<JUMP_FLAG_SET><$02><$43><$05><$A1>
+<JUMP_FLAG_SET><$02><$40><$05><$A0>
+No entry~ No entry~<LINE>
+No entry for yoooou~<WAIT>
+
+Only those with the Queen's<LINE>
+permission, can enter here.<END>
+
+
+//POINTER #160 @ $1C5428 - STRING #160 @ $1C482F
+
+#WRITE(GBA,$1C5428)
+No entry~ No en-... Hm?
+You have the queen's permission?<WAIT>
+
+Well then I guess you can pass through.<LINE>
+Open sesame!<SET_FLAG><$02><$46><END>
+
+
+//POINTER #161 @ $1C542C - STRING #161 @ $1C4863
+
+#WRITE(GBA,$1C542C)
+It really has been a while since an<LINE>
+ordinary person entered this gate.<END>
+
+
+//POINTER #162 @ $1C5430 - STRING #162 @ $1C487C
+
+#WRITE(GBA,$1C5430)
+This kingdom is quiet,<LINE>
+but it's nice.<WAIT>
+
+Not many people visit here, so I don't<LINE>
+often get to chat with others.<WAIT>
+
+It gets a little lonely...<END>
+
+
+//POINTER #163 @ $1C5434 - STRING #163 @ $1C48BB
+
+#WRITE(GBA,$1C5434)
+Ah! You're a visitor from the outside!<LINE>
+It's been years since the last one.<END>
+
+
+//POINTER #164 @ $1C5438 - STRING #164 @ $1C48DB
+
+#WRITE(GBA,$1C5438)
+This is the land of the signposts.<LINE>
+The Signpost Kingdom!<END>
+
+
+//POINTER #165 @ $1C543C - STRING #165 @ $1C48F2
+
+#WRITE(GBA,$1C543C)
+You did well to find this place!<END>
+
+
+//POINTER #166 @ $1C5440 - STRING #166 @ $1C4902
+
+#WRITE(GBA,$1C5440)
+Beautiful blue flowers grow all over<LINE>
+the Signpost Kingdom.<WAIT>
+If you use them in synthesis, you may<LINE>
+be able to create something new.<WAIT>
+Exactly what though, I'm not sure...<END>
+
+
+//POINTER #167 @ $1C5444 - STRING #167 @ $1C4955
+
+#WRITE(GBA,$1C5444)
+It seems like no matter where you go<LINE>
+some people always get in your way.<WAIT>
+Huh? I'm in your way right now?<LINE>
+You can't be serious... Is that a joke?<END>
+
+
+//POINTER #168 @ $1C5448 - STRING #168 @ $1C498E
+
+#WRITE(GBA,$1C5448)
+Wow! It's been a while since someone<LINE>
+from the outside came here!<WAIT>
+Hey hey... How do you think here<LINE>
+compares to the outside world?<END>
+
+
+//POINTER #169 @ $1C544C - STRING #169 @ $1C49C1
+
+#WRITE(GBA,$1C544C)
+Ufufu... Are you surprised?<LINE>
+This is the Signpost Kingdom!<WAIT>
+
+However, perhaps the King and Queen<LINE>
+will be even more surprised...<END>
+
+
+//POINTER #170 @ $1C5450 - STRING #170 @ $1C4A02
+
+#WRITE(GBA,$1C5450)
+So a Bomberman who owns the Signpost<LINE>
+Spectacles has made it here...<WAIT>
+
+Legends say that you are the one who<LINE>
+built our ancestors long ago.<WAIT>
+
+Thank you very much!<END>
+
+
+//POINTER #171 @ $1C5454 - STRING #171 @ $1C4A55
+
+#WRITE(GBA,$1C5454)
+How's your Game Data album coming<LINE>
+along? Have you completed it?<WAIT>
+
+There are apparently some Game Data<LINE>
+that are not found through synthesis.<END>
+
+
+//POINTER #172 @ $1C5458 - STRING #172 @ $1C4A95
+
+#WRITE(GBA,$1C5458)
+Hey! Are you the Bomberman that the<LINE>
+legends mention?<WAIT>
+
+Are you the one who they say built<LINE>
+signposts many generations ago?<WAIT>
+
+But if that were the case...<LINE>
+Shouldn't you be super old?<END>
+
+
+//POINTER #173 @ $1C545C - STRING #173 @ $1C4AE9
+
+#WRITE(GBA,$1C545C)
+They say there is a legendary Karabon<LINE>
+on the planet Nonbiri.<WAIT>
+
+Apparently the dungeon that Karabon<LINE>
+is in is hidden near a place that<WAIT>
+
+has a lot of chickens...<END>
+
+
+//POINTER #174 @ $1C5460 - STRING #174 @ $1C4B35
+
+#WRITE(GBA,$1C5460)
+By the way, what do you think all<LINE>
+of us are surrounding?<END>
+
+
+//POINTER #175 @ $1C5464 - STRING #175 @ $1C4B54
+
+#WRITE(GBA,$1C5464)
+<WAIT>
+
+<EVENT><$02>
+<SET_FLAG><$02><$47>
+<CLEAR_FLAG><$02><$48>
+<CLEAR_FLAG><$02><$49>
+<CLEAR_FLAG><$02><$4A>
+<CLEAR_FLAG><$02><$4B>
+<CLEAR_FLAG><$02><$4C>
+<CLEAR_FLAG><$02><$4D>
+<CLEAR_FLAG><$02><$4E>
+<CLEAR_FLAG><$02><$4F>
+<CLEAR_FLAG><$02><$50>
+<CLEAR_FLAG><$02><$51>
+<CLEAR_FLAG><$02><$52><NEXT>
+
+
+//POINTER #176 @ $1C5468 - STRING #176 @ $1C4B89
+
+#WRITE(GBA,$1C5468)
+No no! You have to do it in the<LINE>
+proper order.<JUMP><$05><$AF>
+
+
+//POINTER #177 @ $1C546C - STRING #177 @ $1C4BA6
+
+#WRITE(GBA,$1C546C)
+Hello there! You should talk with<LINE>
+the sign post that is 2 below me.<END>
+
+
+//POINTER #178 @ $1C5470 - STRING #178 @ $1C4BCD
+
+#WRITE(GBA,$1C5470)
+Ah, it's Mr. Bomeberman!<LINE>
+Check 5 to the left of me.<END>
+
+
+//POINTER #179 @ $1C5474 - STRING #179 @ $1C4BEE
+
+#WRITE(GBA,$1C5474)
+2 above me...<LINE>
+Or rather 3 to the right...<WAIT>
+
+But there's nothing there? Perhaps<LINE>
+talk to the one below that.<END>
+
+
+//POINTER #180 @ $1C5478 - STRING #180 @ $1C4C34
+
+#WRITE(GBA,$1C5478)
+The guy above me is really forgetful.<LINE>
+He's always relying on me.<WAIT>
+
+As a signpost, you'd hope that he at<LINE>
+least directs people correctly.<WAIT>
+
+Anyway, enough of that.<LINE>
+In front of me and 2nd to the right.<END>
+
+
+//POINTER #181 @ $1C547C - STRING #181 @ $1C4C94
+
+#WRITE(GBA,$1C547C)
+Hahaha, of course he forgot that<LINE>
+it was actually 2nd to the left.<WAIT>
+
+Next, from the podium at the very<LINE>
+top, 3 to the left.<END>
+
+
+//POINTER #182 @ $1C5480 - STRING #182 @ $1C4CCD
+
+#WRITE(GBA,$1C5480)
+Talk with the one that is left and up<LINE>
+from me.<END>
+
+
+//POINTER #183 @ $1C5484 - STRING #183 @ $1C4CE6
+
+#WRITE(GBA,$1C5484)
+Next up is the one that is 3rd from the<LINE>
+left at the very bottom.<WAIT>
+
+By the way! Of the three signposts<LINE>
+with ribbons, which one do you like?<WAIT>
+
+You want to know what I think?<LINE>
+Heh heh heh... It's a secret!<END>
+
+
+//POINTER #184 @ $1C5488 - STRING #184 @ $1C4D41
+
+#WRITE(GBA,$1C5488)
+............<LINE>
+............<WAIT>
+
+.....The podium....<LINE>
+......at the top....<WAIT>
+
+....from the left...<LINE>
+............<WAIT>
+
+............<LINE>
+....5....<END>
+
+
+//POINTER #185 @ $1C548C - STRING #185 @ $1C4DE9
+
+#WRITE(GBA,$1C548C)
+Hey there! My name is Fi-Ve.<LINE>
+It's nice to meet you!<WAIT>
+
+Just like my name says, next go<LINE>
+5 to the left!<WAIT>
+
+...Actually, that was a lie!<LINE>
+Please don't be mad!<WAIT>
+
+That was just a little bit of signpost<LINE>
+humor! I couldn't resist.<WAIT>
+
+What you should actually do is go<LINE>
+4 left and 2 down!<WAIT>
+
+This time I'm telling the truth.<LINE>
+I swear!<END>
+
+
+//POINTER #186 @ $1C5490 - STRING #186 @ $1C4EA3
+
+#WRITE(GBA,$1C5490)
+The signpost that is below the flirty<LINE>
+sign surrounded by two ribbons<WAIT>
+
+is who you want to talk to!<END>
+
+
+//POINTER #187 @ $1C5494 - STRING #187 @ $1C4ED4
+
+#WRITE(GBA,$1C5494)
+Ugh... That guy above me...<LINE>
+Flirting with those two women.<WAIT>
+
+He's such a womanizer...<LINE>
+But also so lucky. I'm kind of jealous...<WAIT>
+
+Next you should head 2 to the left,<LINE>
+then all of the way up.<END>
+
+
+//POINTER #188 @ $1C5498 - STRING #188 @ $1C4F3C
+
+#WRITE(GBA,$1C5498)
+As expected of the legendary<LINE>
+Bomberman, you're doing a great job!<END>
+
+
+//POINTER #189 @ $1C549C - STRING #189 @ $1C4F58
+
+#WRITE(GBA,$1C549C)
+<ANIMATE><$0D>
+This is Birdy. Intel indicates that<LINE>
+the Hige Hige Bandits have landed<WAIT>
+
+<ANIMATE><$0D>
+on the planet Tokotoko and are<LINE>
+preparing to test the Beam Cannon.<WAIT>
+
+<ANIMATE><$0D>
+There's no time to lose. Begin your<LINE>
+search for them immediately!<WAIT>
+
+<ANIMATE><$0D>
+You must stop them from firing that<LINE>
+cannon! We're counting on you, Mighty.<PAUSE>
+
+
+//POINTER #190 @ $1C54A0 - STRING #190 @ $1C4FDE
+
+#WRITE(GBA,$1C54A0)
+<NEXT>
+
+
+//POINTER #191 @ $1C54A4 - STRING #191 @ $1C4FDF
+
+#WRITE(GBA,$1C54A4)
+<ANIMATE><$0D>
+//On that planet, there is a Karabon with<LINE>
+On Tokotoko, there's a Karabon with<LINE>
+the ability to turn you invisible.<WAIT>
+
+<ANIMATE><$0D>
+There are also some objects that<LINE>
+can't be seen with the naked eye.<WAIT>
+
+<ANIMATE><$0D>
+However, a bright flash of light<LINE>
+should make those objects appear.<WAIT>
+
+<ANIMATE><$0D>
+If you ever wish to leave the planet,<LINE>
+just return to the Moto Jetter.<WAIT>
+
+<ANIMATE><$0D>
+You can then travel back to Nonbiri.<END>
+
+
+//POINTER #192 @ $1C54A8 - STRING #192 @ $1C5084
+
+#WRITE(GBA,$1C54A8)
+My brother spent his entire allowance<LINE>
+on the Karabon Race!<WAIT>
+
+My mother was really upset with him.<LINE>
+He should stop wasting his money.<END>
+
+
+//POINTER #193 @ $1C54AC - STRING #193 @ $1C50CB
+
+#WRITE(GBA,$1C54AC)
+Long ago there was a thriving village<LINE>
+in this area.<WAIT>
+
+Lots of people lived there happily,<LINE>
+but when the land turned to desert<WAIT>
+
+most people had no choice but to move<LINE>
+away to Deza Town. However...<WAIT>
+
+There were some people who decided<LINE>
+not to move away, and instead began<WAIT>
+
+living underground. Their descendants<LINE>
+can still be found down there today!<END>
+
+
+//POINTER #194 @ $1C54B0 - STRING #194 @ $1C5160
+
+#WRITE(GBA,$1C54B0)
+West: Deza Town, East: Sunasuna Desert<LINE>
+North: Glowing Moss Cave<WAIT>
+
+As you would expect, the Miracle Cure<LINE>
+is very effective at curing illnesses!<END>
+

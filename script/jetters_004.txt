@@ -308,6 +308,8 @@ Let's go back and fix the bridge.<END>
 
 
 //POINTER #26 @ $1C1BA4 - STRING #26 @ $1BE782
+
+#WRITE(GBA,$1C1BA4)
 There, the bridge is back to normal!<LINE>
 Now everyone can finally cross again.<WAIT>
 Thank you, Bomberman. It was with<LINE>
@@ -2065,8 +2067,10 @@ Bomberman obtains the<LINE>
 Power Glove!<SFX_EQUIPMENT><$5C><WAIT>
 Press and hold the A Button on top of<LINE>
 a bomb to pick it up. Let go to throw!<WAIT>
-You can even throw bombs while riding<LINE>
-on a railcar!<END>
+//You can even throw bombs while riding<LINE>
+//on a railcar!<END>
+You can even throw bombs while<LINE>
+riding a railcar!<END>
 
 
 //POINTER #202 @ $1C1E64 - STRING #202 @ $1C18C8

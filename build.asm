@@ -26,5 +26,9 @@
 
 .include "asm\RMenu.asm"
 .include "asm\SaveLoad.asm"
+.include "asm\Radar.asm"
+.include "asm\Enc.asm"
+
+; .include "asm\debug.asm"
 
 .close

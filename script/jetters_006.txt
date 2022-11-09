@@ -1,0 +1,1598 @@
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #006 NAME:		6 Sekaseka
+
+// --------------------------------------
+// Define a TABLE
+#VAR(Table, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/jetters_eng.tbl", Table)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($565000)
+// --------------------------------------
+
+//POINTER #0 @ $1C7664 - STRING #0 @ $1C54B4
+
+#WRITE(GBA,$1C7664)
+Come in, Mighty. This is Dr. Ein.<LINE>
+On the Planet Sekaseka,<WAIT>
+
+It looks like the Hige Hige Bandits<LINE>
+have attacked Dr. Chrono's lab!<WAIT>
+
+Their aim was likely to obtain Dr.<LINE>
+Chrono's invention, the Time Driver.<WAIT>
+
+The Time Driver is the prototype of<LINE>
+an engine for a time machine!<WAIT>
+
+It's still incomplete, but it could be<LINE>
+bad if they attempt to use it.<WAIT>
+
+Hurry and help Dr. Chrono.<LINE>
+We're counting on you, Mighty!<END>
+
+
+//POINTER #1 @ $1C7668 - STRING #1 @ $1C557F
+
+#WRITE(GBA,$1C7668)
+You want to leave the parking lot?<LINE>
+I'll open up the gate. Please wait.<END>
+
+
+//POINTER #2 @ $1C766C - STRING #2 @ $1C55A7
+
+#WRITE(GBA,$1C766C)
+There we go! Alright then.<LINE>
+Be careful out there.<END>
+
+
+//POINTER #3 @ $1C7670 - STRING #3 @ $1C55BD
+
+#WRITE(GBA,$1C7670)
+There is no fee for this parking lot.<LINE>
+It's completely free!<END>
+
+
+//POINTER #4 @ $1C7674 - STRING #4 @ $1C55D7
+
+#WRITE(GBA,$1C7674)
+<JUMP_FLAG_SET><$02><$59><$06><$06>
+Please insert the Card Key.<END>
+
+
+//POINTER #5 @ $1C7678 - STRING #5 @ $1C55ED
+
+#WRITE(GBA,$1C7678)
+Card key accepted.<LINE>
+The gate will now open.<END>
+
+
+//POINTER #6 @ $1C767C - STRING #6 @ $1C5605
+
+#WRITE(GBA,$1C767C)
+Welcome to Lava City.<END>
+
+
+//POINTER #7 @ $1C7680 - STRING #7 @ $1C5611
+
+#WRITE(GBA,$1C7680)
+//Thank you very much. I was beginning<LINE>
+//to lose hope...<WAIT>
+
+//I was captured a few days ago when<LINE>
+//those Bandits suddenly showed up.<WAIT>
+
+//Everyone else is being held captive<LINE>
+//within two other buildings.<WAIT>
+
+//Please find a way to save the others!<LINE>
+//I should also tell you<WAIT>
+
+//that the person who has the ability to<LINE>
+//open the passage to Caldera Lake<WAIT>
+
+//is likely also a prisoner within one of<LINE>
+//the two buildings.<END>
+
+
+Thank god!<LINE>
+I was beginning to lose hope...<WAIT>
+
+We were captured for a few days and<LINE>
+ran out of water... We had to drink...<WAIT>
+
+You don't want to know.<LINE>
+There are others held captive.<WAIT>
+
+The one who can open up the passage<LINE>
+to Caldera Lake is likely one of them.<WAIT>
+
+You wouldn't want to imagine what<LINE>
+would happen if you were too late...<END>
+
+
+//POINTER #8 @ $1C7684 - STRING #8 @ $1C56C5
+
+#WRITE(GBA,$1C7684)
+//We're all saved! The Jetters came and<LINE>
+//rescued us!<WAIT>
+
+//Thank you! I really wasn't expecting<LINE>
+//anyone to come and help us out.<WAIT>
+
+//Hm? You're looking for the person who<LINE>
+//can open up the door to Caldera Lake?<WAIT>
+
+//Unfortunately, it doesn't appear that<LINE>
+//person is here.<WAIT>
+
+//There's still one building left where<LINE>
+//people are being held captive.<WAIT>
+
+//Perhaps that's where the person who<LINE>
+//can open the door is!<END>
+
+Thank god!<LINE>
+I was beginning to lose hope...<WAIT>
+
+We were captured for a few days and-<LINE>
+(Wait, we're the 2nd group?)<WAIT>
+
+Ahem. We're all saved!<LINE>
+The Jetters came and rescued us!<WAIT>
+
+Oh? Looking for the person that<LINE>
+opens the door to Caldera Lake?<WAIT>
+
+How inconvenient! He's not here!<LINE>
+(I wonder what's for lunch...)<END>
+
+//POINTER #9 @ $1C7688 - STRING #9 @ $1C577D
+
+#WRITE(GBA,$1C7688)
+//Thank you so much! I didn't think<LINE>
+//we'd ever get out...<WAIT>
+
+//While I wish I could say that everyone<LINE>
+//has now been saved, there<WAIT>
+
+//is actually still one person missing.<LINE>
+//The idol Akane...<WAIT>
+
+//She is being held captive inside the<LINE>
+//Television Station.<WAIT>
+
+//That's the biggest building in the<LINE>
+//East side of the city.<WAIT>
+
+//I will open up the underground path<LINE>
+//leading to Caldera Lake for you.<WAIT>
+
+//You will need the power of the Aqua<LINE>
+//Bomb to put out the fires in this city.<WAIT>
+
+//Please, hurry to the East side of<LINE>
+//Lava City!<END>
+
+I'm the one who has to open the door?<LINE>
+Let's see here, on page three...<WAIT>
+
+"Thank you so much! I didn't think<LINE>
+we'd ever get out..."<WAIT>
+
+"Hero, you were a bit too late and<LINE>
+those Bandits took Akane away..."<WAIT>
+
+How do you say this word? "Boo cake?"<LINE>
+Oh wait, wrong script...<WAIT>
+
+She's being held inside the TV Station.<LINE>
+It's the largest building in the East.<WAIT>
+
+Anyways, get the Caldera Drop...<LINE>
+Make the Aqua Bomb, and save Akane.<WAIT>
+
+I don't get paid enough for this...<LINE>
+Gotta head to the next gig...<WAIT>
+
+"Pt.2 Akane Gets Showered"?<LINE>
+Oh right. *click*<END>
+
+
+//POINTER #10 @ $1C768C - STRING #10 @ $1C5866
+
+#WRITE(GBA,$1C768C)
+You came here to rescue me?<LINE>
+Thank you!<WAIT>
+
+During the "Mayor For A Day" event,<LINE>
+we were all suddenly attacked.<WAIT>
+
+//Of all the times for this to happen...<WAIT>
+
+To top it all off, the real Mayor<LINE>
+ran away and left us all behind!<WAIT>
+
+As thanks for saving me,<LINE>
+here's my autograph!<WAIT>
+
+//I'm not sure how helpful it will be, but<LINE>
+//hopefully you will find a use for it.<WAIT>
+
+//You have my deepest gratitude.<WAIT>
+One for Doora, my biggest fan.<LINE>
+And one for Mr. Bomberman.<WAIT>
+
+Bomberman obtains<LINE>
+<SFX><$0C>Akane's Signature!<WAIT>
+
+Just so you know,<LINE>
+I use special paper and ink!<END>
+
+//POINTER #11 @ $1C7690 - STRING #11 @ $1C592C
+
+#WRITE(GBA,$1C7690)
+//Alright! Now everyone in the city has<LINE>
+//been rescued.<WAIT>
+I've been following Akane since her<LINE>
+debut. There's no way I'm selling this.<WAIT>
+
+//Bomberman, will you come with me to<LINE>
+//the Chrono Laboratory<WAIT>
+
+//and help me rescue<LINE>
+//Doctor Chrono?<WAIT>
+Now that everyone in the city is<LINE>
+saved. We need to rescue Dr. Chrono.<WAIT>
+
+//In the past I had worked there as<LINE>
+//his assistant.<WAIT>
+I may not look like it, but I helped<LINE>
+Dr. Chrono with his inventions.<WAIT>
+
+//Dr. Chrono is my friend, and it's<LINE>
+//inexcusable what the Hige Hige<WAIT>
+He's a good friend and I can't forgive<LINE>
+what the Bandits have done!<WAIT>
+
+//Bandits have done with him.<LINE>
+//We have to do something!<WAIT>
+Bomberman. Come with with me to<LINE>
+Dr. Chrono's Lab.<WAIT>
+
+There's no way we can let those<LINE>
+//Bandits take the Time Driver...<END>
+Bandits take the Time Driver!<END>
+
+
+//POINTER #12 @ $1C7694 - STRING #12 @ $1C59ED
+
+#WRITE(GBA,$1C7694)
+Let me open up the passageway to the<LINE>
+Volcano Area for you.<WAIT>
+
+Since I was the Mayor for the day,<LINE>
+I have the switch for the gate! *boop*<END>
+
+
+//POINTER #13 @ $1C7698 - STRING #13 @ $1C5A26
+
+#WRITE(GBA,$1C7698)
+//Chrono Laboratory is located at the<LINE>
+//NorthWest corner of the Volcano Area.<WAIT>
+The Lab is located in the Northwest<LINE>
+corner of the Volacano Area.<WAIT>
+
+Come on, let's hurry and go save<LINE>
+the Doctor!<END>
+
+
+//POINTER #14 @ $1C769C - STRING #14 @ $1C5A61
+
+#WRITE(GBA,$1C769C)
+<JUMP_FULL_HEALTH><$06><$65>
+h my, are you injured? Please let<LINE>
+me have a look...<WAIT>
+
+<HEAL><SFX><$30>
+There you go. All better!<LINE>
+Don't you feel good? Cha-Cha-Cha!<END>
+
+
+//POINTER #15 @ $1C76A0 - STRING #15 @ $1C5AB5
+
+#WRITE(GBA,$1C76A0)
+<JUMP_FLAG_SET><$02><$0F><$06><$10>
+The mechanism for opening the door to<LINE>
+Dr. Chrono's Laboratory is located<WAIT>
+
+inside the powerplant that that is<LINE>
+next door to the lab.<WAIT>
+
+However, it looks like the Hige Hige<LINE>
+Bandits have taken over it as well...<END>
+
+
+//POINTER #16 @ $1C76A4 - STRING #16 @ $1C5B16
+
+#WRITE(GBA,$1C76A4)
+You're here to get rid of the Hige Hige<LINE>
+Bandits, right?<WAIT>
+
+For someone so young, you really have<LINE>
+a lot of courage.<END>
+
+
+//POINTER #17 @ $1C76A8 - STRING #17 @ $1C5B4A
+
+#WRITE(GBA,$1C76A8)
+//It wasn't long ago that the Hige Hige<LINE>
+//Bandits showed up on this planet.<WAIT>
+It wasn't long ago that the Bandits<LINE>
+showed up here.<WAIT>
+
+Right after arriving they headed<LINE>
+towards Dr. Chrono's Laboratory<WAIT>
+
+and occupied Lava City which is<LINE>
+East of here!<END>
+
+
+//POINTER #18 @ $1C76AC - STRING #18 @ $1C5BA5
+
+#WRITE(GBA,$1C76AC)
+//In the North part of the Volcano Area<LINE>
+//is the place where Dr. Chrono<WAIT>
+
+//has developed many inventions.<LINE>
+//Including his latest, the Time Driver!<WAIT>
+
+//That must be the reason that the Hige<LINE>
+//Hige Bandits are targeting him...<END>
+
+The North part of the Volcano Area<LINE>
+is where Dr. Chrono developed many<WAIT>
+
+inventions. With his latest being<LINE>
+the Time Driver!<WAIT>
+
+That's probably why the Bandits<LINE>
+are targeting him...<END>
+
+
+//POINTER #19 @ $1C76B0 - STRING #19 @ $1C5BFF
+
+#WRITE(GBA,$1C76B0)
+<JUMP_FLAG_SET><$02><$62><$06><$14>
+//In the East side of Lava City, an idol<LINE>
+//named Akane was<WAIT>
+
+//attending the Mayor for a Day<LINE>
+//celebration. However,<WAIT>
+
+//it appears that she was captured<LINE>
+//inside of the Lava City TV Station.<END>
+
+Akane is captured inside the<LINE>
+Lava City TV Station!<WAIT>
+
+Please save my idol!<WAIT>
+
+I wouldn't have left Akane if<LINE>
+I was Mayor...<END>
+
+
+//POINTER #20 @ $1C76B4 - STRING #20 @ $1C5C67
+
+#WRITE(GBA,$1C76B4)
+//Somebody beat the Hige Hige Bandits<LINE>
+//and freed Lava City! Yay!<END>
+I can watch Akane's concert again!<LINE>
+Yay!<END>
+
+
+//POINTER #21 @ $1C76B8 - STRING #21 @ $1C5C8C
+
+#WRITE(GBA,$1C76B8)
+//The Mayor that ran away from Lava<LINE>
+//City is currently upstairs.<WAIT>
+
+//Even when the citizens of his own city<LINE>
+//are experiencing such a disaster...<WAIT>
+
+//How could he have the nerve to just run<LINE>
+//away all by himself?<END>
+
+That coward is hiding upstairs.<WAIT>
+
+How could he have the nerve to<LINE>
+leave Akane all alone!?<END>
+
+//POINTER #22 @ $1C76BC - STRING #22 @ $1C5CEE
+
+#WRITE(GBA,$1C76BC)
+<JUMP_FLAG_SET><$02><$91><$06><$17>
+I am the Lava City Mayor. It's true...<LINE>
+I abandoned the citizens of my city.<WAIT>
+
+Does that make me a terrible person?<LINE>
+Leaving everyone else behind...<WAIT>
+
+But then, somebody had to go and call<LINE>
+for help, right?<WAIT>
+
+Right now, the Hige Hige Bandits have<LINE>
+control of Lava City to the East.<WAIT>
+
+The remaining citizens are being held<LINE>
+captive inside the buildings.<WAIT>
+
+Please, Mr. Bomberman! Go and save<LINE>
+the captured citizens!<WAIT>
+
+In order to get into Lava City,<LINE>
+you'll need this card key.<WAIT>
+
+Bomberman obtains the<LINE>
+<SFX><$0C>
+<SET_FLAG><$02><$91>
+<SET_FLAG><$01><$2A>
+Card Key!<WAIT>
+
+//To reach Lava City, leave this building<LINE>
+//and follow the road directly East.<WAIT>
+Leave this building and follow the<LINE>
+road East to reach Lava City.<WAIT>
+
+//The Hige Hige Bandits will be waiting<LINE>
+//inside of the buildings, so be careful!<END>
+Those Bandits are waiting inside the<LINE>
+buildings so be careful!<END>
+
+
+//POINTER #23 @ $1C76C0 - STRING #23 @ $1C5E3E
+
+#WRITE(GBA,$1C76C0)
+<JUMP_FLAG_SET><$02><$62><$06><$18>
+It seems all of the citizens of Lava<LINE>
+City are not yet saved. Keep going!<END>
+
+
+//POINTER #24 @ $1C76C4 - STRING #24 @ $1C5E60
+
+#WRITE(GBA,$1C76C4)
+Ah! So you rescued all of the citizens<LINE>
+of Lava City!?<WAIT>
+
+Thank you so much!<END>
+
+
+//POINTER #25 @ $1C76C8 - STRING #25 @ $1C5E88
+
+#WRITE(GBA,$1C76C8)
+Dr. Chrono who lives in the North<LINE>
+part of the Volcano Area<WAIT>
+
+is currently conducting research<LINE>
+related to time travel.<WAIT>
+
+Recently he successfully completed an<LINE>
+invention dubbed the Time Engine.<WAIT>
+
+It's really exciting news!<END>
+
+
+//POINTER #26 @ $1C76CC - STRING #26 @ $1C5EE8
+
+#WRITE(GBA,$1C76CC)
+<JUMP_FLAG_SET><$02><$62><$06><$1B>
+L-O-V-E!<LINE>
+I love Akane!!<WAIT>
+
+My beloved Akane-chan was captured<LINE>
+by the Hige Hige Bandits!<WAIT>
+
+Ahh... I'm so worried... I'm so worried...<LINE>
+They better not hurt Akane-chan...<END>
+
+
+//POINTER #27 @ $1C76D0 - STRING #27 @ $1C5F4C
+
+#WRITE(GBA,$1C76D0)
+L-O-V-E!<LINE>
+I love Aka-...<WAIT>
+
+Ah! T-that's...? T-That's...!<LINE>
+Akane-chan's signature!<WAIT>
+
+It's so nice... So pretty...<LINE>
+I'm so jealous...<END>
+
+
+//POINTER #28 @ $1C76D4 - STRING #28 @ $1C5F8F
+
+#WRITE(GBA,$1C76D4)
+//Welcome! Please check out my<LINE>
+//merchandise!<END>
+Welcome!<LINE>
+Please check out my wares!<END>
+
+
+//POINTER #29 @ $1C76D8 - STRING #29 @ $1C5FAD
+
+#WRITE(GBA,$1C76D8)
+Planet Sekaseka is known for its<LINE>
+volcano. Be careful outside the city!<END>
+
+
+//POINTER #30 @ $1C76DC - STRING #30 @ $1C5FD5
+
+#WRITE(GBA,$1C76DC)
+<JUMP_FLAG_SET><$02><$62><$06><$1F>
+//Ah! You're the leader of the Jetters!<LINE>
+//Welcome to Ember City.<WAIT>
+Ah! You're the leader of the Jetters!<LINE>
+Welcome to Ember City!<WAIT>
+
+//Just to the East of here is the much<LINE>
+//larger Lava City.<WAIT>
+East of here is the much larger<LINE>
+Lava City.<WAIT>
+
+//However, it seems like right now<LINE>
+//something dangerous is going on there...<END>
+However, something scary is<LINE>
+going on there right now...<END>
+
+
+//POINTER #31 @ $1C76E0 - STRING #31 @ $1C603D
+
+#WRITE(GBA,$1C76E0)
+//Ah! You're the leader of the Jetters!<LINE>
+//Welcome to Ember City!<WAIT>
+
+//East of here is the much larger<LINE>
+//Lava City.<END>
+I'm a big fan! **Blush**<LINE>
+(He's even hotter IRL!)<END>
+
+
+//POINTER #32 @ $1C76E4 - STRING #32 @ $1C607E
+
+#WRITE(GBA,$1C76E4)
+<JUMP_FLAG_SET><$02><$62><$06><$21>
+//Dr. Chrono's laboratory is located in<LINE>
+//the North portion of the Volcano Area.<WAIT>
+Dr. Chrono's Lab is located in the<LINE>
+North Volcano Area.<WAIT>
+
+//He's an expert on time machines, and<LINE>
+//recently made a big breakthrough.<WAIT>
+He's the expert on Time Machines and<LINE>
+made a big breakthrough.<WAIT>
+
+//The Hige Hige Bandits must be trying<LINE>
+//to get their hands on a time machine!<END>
+The Hige Hige Bandits are trying to<LINE>
+get their hands on a Time Machine!<END>
+
+
+//POINTER #33 @ $1C76E8 - STRING #33 @ $1C60F7
+
+#WRITE(GBA,$1C76E8)
+//The Hige Hige Bandits are gone, but<LINE>
+//some monsters still roam the city.<END>
+Those Bandits are gone, but<LINE>
+monsters still roam the city...<END>
+
+
+//POINTER #34 @ $1C76EC - STRING #34 @ $1C6120
+
+#WRITE(GBA,$1C76EC)
+//Just recently, Lava City to the East<LINE>
+//was occupied by the Hige Hige Bandits!<WAIT>
+Lava City to the East is occupied<LINE>
+by the Hige Hige Bandits!<WAIT>
+
+//They've also attacked the Chrono<LINE>
+//Laboratory in the Volcano Area.<WAIT>
+They also attacked Chrono's Lab<LINE>
+in the Volcano Area.<WAIT>
+
+//Even though us here seem to be fine<LINE>
+//for now, I'm still worried...<END>
+Even though we're fine for now,<LINE>
+I'm still worried...<END>
+
+
+//POINTER #35 @ $1C76F0 - STRING #35 @ $1C618A
+
+#WRITE(GBA,$1C76F0)
+<JUMP_FLAG_SET><$02><$62><$06><$24>
+//It seems those still in Lava City are<LINE>
+//are being held captive in buildings.<END>
+//The people in Lava City are held<LINE>
+//captive in buildings.<END>
+Those Bandits are holding hostages<LINE>
+in Lava City!<END>
+
+//POINTER #36 @ $1C76F4 - STRING #36 @ $1C61B7
+
+#WRITE(GBA,$1C76F4)
+Just what was the reason that the Hige<LINE>
+Hige Bandits attacked Lava City?<END>
+
+
+//POINTER #37 @ $1C76F8 - STRING #37 @ $1C61DB
+
+#WRITE(GBA,$1C76F8)
+//There have been monsters roaming<LINE>
+//around Lava City. It seems dangerous.<END>
+There are monsters roaming around<LINE>
+Lava City. I can't go shopping now...<END>
+
+
+//POINTER #38 @ $1C76FC - STRING #38 @ $1C61FF
+
+#WRITE(GBA,$1C76FC)
+The Time Driver that Dr. Chrono<LINE>
+developed is actually an engine for<WAIT>
+
+a time machine!<END>
+
+
+//POINTER #39 @ $1C7700 - STRING #39 @ $1C6235
+
+#WRITE(GBA,$1C7700)
+Game Data are mainly obtained<LINE>
+through the process of synthesis.<WAIT>
+
+How is your album coming along? I've<LINE>
+heard some Game Data are quite rare.<END>
+
+
+//POINTER #40 @ $1C7704 - STRING #40 @ $1C6282
+
+#WRITE(GBA,$1C7704)
+//This is where the East and West sides<LINE>
+//of Lava City are separated.<WAIT>
+
+//The building to the right of here<LINE>
+//connects both sides and can usually<WAIT>
+
+//be used to cross over, but the flames<LINE>
+//have currently made it impossible...<END>
+
+//The East and West sides of Lava City<LINE>
+//are separated by a building...<WAIT>
+
+//Since the last eruption burned down the<LINE>
+//whole city, the city was split into two.<WAIT>
+
+A building now separates the<LINE>
+East and West sides of Lava City...<WAIT>
+
+The Mayor said it was to prevent fire<LINE>
+from spreading. What a load of bull.<WAIT>
+
+I have to climb up and down stairs!<LINE>
+I even have to pay a toll!<END>
+
+
+
+//POINTER #41 @ $1C7708 - STRING #41 @ $1C62F0
+
+#WRITE(GBA,$1C7708)
+//The passage North of this building<LINE>
+//leads to Caldera Lake.<WAIT>
+The passage up North leads to<LINE>
+Caldera Lake.<WAIT>
+
+//Beneath Caldera Lake there is said<LINE>
+//to be a mysterious drop of water.<WAIT>
+Researchers said they've found a<LINE>
+new phase of water there...<WAIT>
+
+//A bomb made from that water may be<LINE>
+//able to extinguish flames!<END>
+
+//Apparently a more compact fire<LINE>
+//extinguisher could be made from it...<END>
+Are you going to get the new<LINE>
+"iXtinguisher 15 Pro" next year?<END>
+
+
+//POINTER #42 @ $1C770C - STRING #42 @ $1C6353
+
+#WRITE(GBA,$1C770C)
+Welcome! Please check out<LINE>
+my merchandise!<END>
+
+
+//POINTER #43 @ $1C7710 - STRING #43 @ $1C6371
+
+#WRITE(GBA,$1C7710)
+The Hige Hige Bandits didn't attack<LINE>
+this building. It seems they missed it.<WAIT>
+
+Maybe that means there are other<LINE>
+buildings that also weren't attacked.<WAIT>
+
+I wonder how everyone else is doing...<END>
+
+
+//POINTER #44 @ $1C7714 - STRING #44 @ $1C63CE
+
+#WRITE(GBA,$1C7714)
+<JUMP_FLAG_SET><$02><$62><$06><$2D>
+The biggest building in the city's <LINE>
+East side is the TV station.<WAIT>
+
+Inside of that TV Station is a Karabon<LINE>
+with a special ability that<WAIT>
+
+can make your bombs detonate<LINE>
+very quickly.<END>
+
+
+//POINTER #45 @ $1C7718 - STRING #45 @ $1C6436
+
+#WRITE(GBA,$1C7718)
+The biggest building in the city's East<LINE>
+side is the TV station.<END>
+
+
+//POINTER #46 @ $1C771C - STRING #46 @ $1C6458
+
+#WRITE(GBA,$1C771C)
+When Dr. Chrono's lab was attacked<LINE>
+a Karabon escaped to Lava City.<WAIT>
+
+However, after reaching the city it<LINE>
+was captured by the Hige Hige Bandits.<END>
+
+
+//POINTER #47 @ $1C7720 - STRING #47 @ $1C64A9
+
+#WRITE(GBA,$1C7720)
+Some enemies possess elemental<LINE>
+attributes. Depending on the bomb<WAIT>
+
+you attack those enemies with, damage<LINE>
+dealt may increase or decrease.<WAIT>
+
+If one type of bomb doesn't deal any<LINE>
+damage, try out another type!<END>
+
+
+//POINTER #48 @ $1C7724 - STRING #48 @ $1C6517
+
+#WRITE(GBA,$1C7724)
+<JUMP_FLAG_SET><$02><$62><$06><$31>
+//It seems the captured people are being<LINE>
+//held hostage inside of three buildings.<END>
+There are hostages being held inside<LINE>
+three buildings.<END>
+
+//POINTER #49 @ $1C7728 - STRING #49 @ $1C6546
+
+#WRITE(GBA,$1C7728)
+All of the people who were captured by<LINE>
+those bandits appear to be safe!<END>
+
+
+//POINTER #50 @ $1C772C - STRING #50 @ $1C6573
+
+#WRITE(GBA,$1C772C)
+//This is Lava City's West side.<WAIT>
+This is the West side of Lava City.<WAIT>
+
+//The underground passage to the North<LINE>
+//will take you to Caldera Lake.<WAIT>
+The underground passage up North<LINE>
+will take you to Caldera Lake.<WAIT>
+
+However, the overseer of the passage<LINE>
+was captured by those Bandits...<END>
+
+
+//POINTER #51 @ $1C7730 - STRING #51 @ $1C65CD
+
+#WRITE(GBA,$1C7730)
+<JUMP_FULL_HEALTH><$06><$64>
+//Mister, it appears you've been burned.<LINE>
+//Hold still just a moment...<WAIT>
+You're on fire! Literally!<LINE>
+Let me put you out!<WAIT>
+
+<HEAL><SFX><$30>
+//Alright, you're good to go!<LINE>
+//Don't overdo it now.<END>
+I was a healer once...<LINE>
+Until I took an arrow to the knee...<END>
+
+//POINTER #52 @ $1C7734 - STRING #52 @ $1C6611
+
+#WRITE(GBA,$1C7734)
+//A passage in the West side of the city<LINE>
+//will take you to Caldera Lake.<WAIT>
+
+//You can get to the Volcano Area<LINE>
+//through a passage in the East side.<END>
+
+Going West will take you to<LINE>
+Caldera Lake.<WAIT>
+
+While going East will take you to<LINE>
+the Volcano Area.<END>
+
+
+//POINTER #53 @ $1C7738 - STRING #53 @ $1C6661
+
+#WRITE(GBA,$1C7738)
+//In order to reach Chrono Laboratory,<LINE>
+//you must traverse this lava field.<WAIT>
+
+//The lava here always flows in a<LINE>
+//set pattern.<WAIT>
+
+//So watch closely and make your<LINE>
+//movements carefully!<END>
+My daily route to Dr. Chrono's Lab<LINE>
+is so scenic. All that basalt...<WAIT>
+
+The lave here always flows in a<LINE>
+set pattern. Probably.<WAIT>
+
+I love that skin-searing heat!<END>
+
+
+//POINTER #54 @ $1C773C - STRING #54 @ $1C66BF
+
+#WRITE(GBA,$1C773C)
+<JUMP><$06><$37>
+<JUMP_FLAG_SET><$02><$66><$06><$37>
+Ah, Mr. Bomberman! Take this, it<LINE>
+should help you on your journey.♥<WAIT>
+
+Bomberman obtained a<LINE>
+<SFX><$0C>
+<SET_FLAG><$02><$66>
+<ADD_MAX_HP><$01>Big Heart!<WAIT>
+
+Please defeat the Hige Hige Bandits!<END>
+
+
+//POINTER #55 @ $1C7740 - STRING #55 @ $1C671E
+
+#WRITE(GBA,$1C7740)
+<JUMP_FULL_HEALTH><$06><$38>
+Hey! You're not injured, are you?<LINE>
+If you could sit still for a second...<WAIT>
+
+<HEAL><SFX><$30>
+And done! All better!<LINE>
+Please defeat the Hige Hige Bandits!<END>
+
+
+//POINTER #56 @ $1C7744 - STRING #56 @ $1C6775
+
+#WRITE(GBA,$1C7744)
+Ah, you're with the Jetters! Please get<LINE>
+rid of the Hige Hige Bandits.<END>
+
+
+//POINTER #57 @ $1C7748 - STRING #57 @ $1C6798
+
+#WRITE(GBA,$1C7748)
+//Why are you here at a time like this?<LINE>
+//You must have a lot of free time...<WAIT>
+Why'd you blow up the entrance!?<LINE>
+I spent countless hours piling u-!<WAIT>
+
+//...Ah! You're one of the Jetters, aren't<LINE>
+//you? Doctor Chrono's laboratory is<WAIT>
+Ah! You're one of the Jetters aintcha?<LINE>
+The Doc's Lab's Northwest.<WAIT>
+
+//located in the NorthWest portion of<LINE>
+//this Volcano Area.<WAIT>
+
+//There are many monsters here that<LINE>
+//can't be hurt by fire, so watch out!<WAIT>
+Not sure why people upgrade their<LINE>
+iXtinguishers... It's all the same...<WAIT>
+
+Supposedly the latest model can kill<LINE>
+those lizards 0.1 seconds faster...<END>
+
+
+//POINTER #58 @ $1C774C - STRING #58 @ $1C6830
+
+#WRITE(GBA,$1C774C)
+Only the Mayor can open the passage<LINE>
+leading to the Northern Volcano Area.<WAIT>
+
+//Right now the Idol Akane is the acting<LINE>
+//Mayor for a Day, so she should<WAIT>
+
+//be able to open it up for you.<END>
+
+Due to "Mayor For A Day", the<LINE>
+Idol Akane is now acting Mayor.<WAIT>
+
+She's the only one who can open it.<LINE>
+Per the Lava City Constitution...<END>
+
+
+//POINTER #59 @ $1C7750 - STRING #59 @ $1C6893
+
+#WRITE(GBA,$1C7750)
+<JUMP_FLAG_CLEAR><$02><$11><$06><$3C>
+<JUMP_FLAG_CLEAR><$01><$17><$06><$3C>
+<JUMP_FLAG_CLEAR><$01><$18><$06><$3C>
+<JUMP_FLAG_CLEAR><$01><$19><$06><$3C>
+<JUMP_FLAG_CLEAR><$01><$1A><$06><$3C>
+<JUMP_FLAG_CLEAR><$01><$1B><$06><$3C>
+Next door is the Game Center.<WAIT>
+
+There you can finally play all of<LINE>
+the Game Data you have obtained!<END>
+
+
+//POINTER #60 @ $1C7754 - STRING #60 @ $1C68E5
+
+#WRITE(GBA,$1C7754)
+//The building right next to here is the<LINE>
+//Game Center. However there are<WAIT>
+
+//some games that are unplayable. I<LINE>
+//wonder if it's possible to unlock them?<END>
+The building next door is the<LINE>
+Game Center.<WAIT>
+
+Some of the machines don't work...<LINE>
+Maybe they're future titles?<END>
+
+
+//POINTER #61 @ $1C7758 - STRING #61 @ $1C6926
+
+#WRITE(GBA,$1C7758)
+Welcome to the Game Center!<LINE>
+It costs 10 Gold to play a game.<WAIT>
+
+If you beat the high score you can<LINE>
+win a prize!<END>
+
+
+//POINTER #62 @ $1C775C - STRING #62 @ $1C696E
+
+#WRITE(GBA,$1C775C)
+Welcome to the Boss Battle floor!<LINE>
+It costs 10 Gold per try.<WAIT>
+
+You can re-fight any of the bosses who<LINE>
+you own CoroCoro Comics for.<END>
+
+
+//POINTER #63 @ $1C7760 - STRING #63 @ $1C69BF
+
+#WRITE(GBA,$1C7760)
+//Dr. Chrono's laboratory is in the North<LINE>
+//part of the Volcano Area. There you<WAIT>
+
+//can find a Karabon that can change how<LINE>
+//quickly your bombs detonate.<END>
+Dr. Chorono's Lab is in the<LINE>
+North Volcano Area.<WAIT>
+
+The Karabon there can change how fast<LINE>
+your bombs detonate.<END>
+
+
+//POINTER #64 @ $1C7764 - STRING #64 @ $1C6A00
+
+#WRITE(GBA,$1C7764)
+Ah! You came to save me?<LINE>
+Thank you!<WAIT>
+
+I can't believe you'd come to such a<LINE>
+dangerous place.<WAIT>
+
+You're really brave... I need to learn<LINE>
+to be more like that myself!<END>
+
+
+//POINTER #65 @ $1C7768 - STRING #65 @ $1C6A4B
+
+#WRITE(GBA,$1C7768)
+Became friends with the<LINE>
+<SFX_LOAD><$00><SFX><$5C>Karabon Doora!<WAIT>
+
+//My ability is the Hasty Bomb. It will<LINE>
+//cause your bombs to detonate faster.<WAIT>
+My ability is the Hasty Bomb.<LINE>
+Your bombs will detonate faster.<WAIT>
+
+Set me as the active Karabon?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_SWAP_NO><$03><$02><$0C><$02><$06><$42><$06><$43><END>
+
+
+//POINTER #66 @ $1C776C - STRING #66 @ $1C6AAE
+
+//#WRITE(GBA,$1C776C)
+//<EQUIP_KARABON><$06>
+//I was at the Chrono Laboratory when<LINE>
+//the Hige Hige Bandits attacked.<WAIT>
+
+//I was hoping to escape and run<LINE>
+//to call for help. However...<WAIT>
+
+//Unfortunately those bandits captured<LINE>
+//me and trapped me here!<WAIT>
+
+//It seems that the idol Akane is being<LINE>
+//held on the top floor of this building.<WAIT>
+
+//We should go and save her as quickly<LINE>
+//as possible!<END>
+
+
+//POINTER #67 @ $1C7770 - STRING #67 @ $1C6AB1
+
+//#WRITE(GBA,$1C7770)
+//I was at the Chrono Laboratory when<LINE>
+//the Hige Hige Bandits attacked.<WAIT>
+
+//I was hoping to escape and run<LINE>
+//to call for help. However...<WAIT>
+
+//Unfortunately those bandits captured<LINE>
+//me and trapped me here!<WAIT>
+
+//It seems that the idol Akane is being<LINE>
+//held on the top floor of this building.<WAIT>
+
+//We should go and save her as quickly<LINE>
+//as possible!<END>
+
+//POINTER #66 @ $1C776C - STRING #66 @ $1C6AAE
+
+#WRITE(GBA,$1C776C)
+<EQUIP_KARABON><$06>
+// fall through
+
+//POINTER #67 @ $1C7770 - STRING #67 @ $1C6AB1
+#WRITE(GBA,$1C7770)
+I was at Chrono's Lab when those<LINE>
+Bandits attacked.<WAIT>
+
+I was hoping to escape and call<LINE>
+for help...<WAIT>
+
+Unfortunately, they caught and<LINE>
+trapped me inside this cage.<WAIT>
+
+I saw the Idol Akane being brought<LINE>
+upstairs...<WAIT>
+
+We should go and save her as quickly<LINE>
+as possible!<END>
+
+//POINTER #68 @ $1C7774 - STRING #68 @ $1C6B49
+
+#WRITE(GBA,$1C7774)
+<JUMP_FLAG_SET><$01><$2F><$06><$45>
+Dr. Chrono's Laboratory.<LINE>
+Authorized personnel only.<END>
+
+
+//POINTER #69 @ $1C7778 - STRING #69 @ $1C6B6D
+
+#WRITE(GBA,$1C7778)
+Dr. Chrono's Laboratory.<LINE>
+Authorized personnel only.<WAIT>
+
+Do you know why the laboratory was<LINE>
+built in a place like this?<WAIT>
+
+The Doctor said it's to take advantage<LINE>
+of the geographical terrain here.<END>
+
+
+//POINTER #70 @ $1C777C - STRING #70 @ $1C6BD9
+
+#WRITE(GBA,$1C777C)
+<JUMP_FLAG_SET><$01><$2F><$06><$45>
+........................?<END>
+
+
+//POINTER #71 @ $1C7780 - STRING #71 @ $1C6BED
+
+#WRITE(GBA,$1C7780)
+........................<LINE>
+Bomberman built a Signpost!<END>
+
+
+//POINTER #72 @ $1C7784 - STRING #72 @ $1C6C0C
+
+#WRITE(GBA,$1C7784)
+<JUMP_FLAG_SET><$01><$2F><$06><$49>
+Up ahead is the Chrono Laboratory.<END>
+
+
+//POINTER #73 @ $1C7788 - STRING #73 @ $1C6C22
+
+#WRITE(GBA,$1C7788)
+Up ahead is the Chrono Laboratory.<WAIT>
+
+Phew! It's really really hot! Watch out<LINE>
+for fire that occasionally jumps up!1<END>
+
+
+//POINTER #74 @ $1C778C - STRING #74 @ $1C6C55
+
+#WRITE(GBA,$1C778C)
+<JUMP_FLAG_SET><$01><$2F><$06><$4B>
+This is Caldera Lake.<LINE>
+Danger! No swimming!<END>
+
+
+//POINTER #75 @ $1C7790 - STRING #75 @ $1C6C73
+
+#WRITE(GBA,$1C7790)
+This is Caldera Lake<LINE>
+Danger! No swimming.<WAIT>
+
+After you've defeated an area's boss,<LINE>
+and if you own their CoroCoro Comic<WAIT>
+
+You can play the Boss Battle minigame<LINE>
+at the Lava City Game Center!<END>
+
+
+//POINTER #76 @ $1C7794 - STRING #76 @ $1C6CD6
+
+#WRITE(GBA,$1C7794)
+........................?<END>
+
+
+//POINTER #77 @ $1C7798 - STRING #77 @ $1C6CE4
+
+#WRITE(GBA,$1C7798)
+........................<LINE>
+Bomberman built a Signpost!<END>
+
+
+//POINTER #78 @ $1C779C - STRING #78 @ $1C6D03
+
+#WRITE(GBA,$1C779C)
+<JUMP_FLAG_SET><$01><$2F><$06><$4F>
+Ahead is the Volcano Area. You cannot<LINE>
+enter without the Mayor's permission!<END>
+
+
+//POINTER #79 @ $1C77A0 - STRING #79 @ $1C6D2B
+
+#WRITE(GBA,$1C77A0)
+Ahead is the Volcano Area. You can't
+enter without Mayor's permission!<WAIT>
+
+...Except the Lava City Mayor ran away<LINE>
+and ditched us, didn't he?<END>
+
+
+//POINTER #80 @ $1C77A4 - STRING #80 @ $1C6D6E
+
+#WRITE(GBA,$1C77A4)
+<JUMP_FLAG_SET><$01><$2F><$06><$51>
+Ahead is Flame Pillar Road. Watch<LINE>
+out for the raising pillars of fire!<END>
+
+
+//POINTER #81 @ $1C77A8 - STRING #81 @ $1C6D90
+
+#WRITE(GBA,$1C77A8)
+Ahead is Flame Pillar Road. Watch<LINE>
+out for the raising pillars of fire!<WAIT>
+
+By the way, who would you say your<LINE>
+favorite Karabon is?<WAIT>
+
+Well, my favorite is the Elifan!<END>
+
+
+//POINTER #82 @ $1C77AC - STRING #82 @ $1C6DDD
+
+#WRITE(GBA,$1C77AC)
+<JUMP_FLAG_SET><$01><$2F><$06><$53>
+Welcome to Lava City!<END>
+
+
+//POINTER #83 @ $1C77B0 - STRING #83 @ $1C6DF0
+
+#WRITE(GBA,$1C77B0)
+Welcome to Lava City!<WAIT>
+
+Even though those bandits are gone,<LINE>
+there are still some monsters around.<END>
+
+
+//POINTER #84 @ $1C77B4 - STRING #84 @ $1C6E27
+
+#WRITE(GBA,$1C77B4)
+<JUMP_FLAG_SET><$01><$2F><$06><$55>
+Lava Television - Main Office<END>
+
+
+//POINTER #85 @ $1C77B8 - STRING #85 @ $1C6E38
+
+#WRITE(GBA,$1C77B8)
+Lava Television - Main Office<WAIT>
+
+We'll be live at 6 o'clock on Wednesday<LINE>
+with an official announcement!<END>
+
+
+//POINTER #86 @ $1C77BC - STRING #86 @ $1C6E5F
+
+#WRITE(GBA,$1C77BC)
+<JUMP_FLAG_SET><$02><$0F><$06><$69>
+Oh, you're from the Jetters!<LINE>
+Thanks, you really saved me.<WAIT>
+
+//However...<LINE>
+//You were just a little too slow.<WAIT>
+However...<LINE>
+You were just a tad too slow.<WAIT>
+
+//Those Bandits stole my invention,<LINE>
+//the Time Driver, and used it<WAIT>
+
+//to warp back in time to the Planet<LINE>
+//Nonbiri of the past!<WAIT>
+
+Those Bandits stole my invention, the<LINE>
+Time Driver, to warp back in time to<WAIT>
+
+Planet Nonbiri of the Past!<WAIT>
+
+//Most likely, their goal is to find the<LINE>
+//Beam Cannon's control crystal.<WAIT>
+Most likely their goal is to find the<LINE>
+Beam Cannon's control crystal.<WAIT>
+
+//It looks like the original prototype of<LINE>
+//the Time Driver is still here though.<WAIT>
+
+//I guess that those Bandits didn't see<LINE>
+//it and left it behind.<WAIT>
+Luckily those Bandits left behind the<LINE>
+original prototype.<WAIT>
+
+Use the prototype to chase after<LINE>
+those Bandits to Ancient Nonbiri!<WAIT>
+
+//You have to put an end to what they're<LINE>
+//plotting! Good luck!<END>
+You have to put an end to their plots!<LINE>
+Good luck!<END>
+
+
+//POINTER #87 @ $1C77C0 - STRING #87 @ $1C6F58
+
+#WRITE(GBA,$1C77C0)
+Hige! Higehige Higehigehige!<LINE>
+Higehige Higehige!<WAIT>
+
+Higehige...<LINE>
+Higeeeeeeeeeeeeeeeeee!<END>
+
+
+//POINTER #88 @ $1C77C4 - STRING #88 @ $1C6F8E
+
+#WRITE(GBA,$1C77C4)
+//Hey, Petitra!<LINE>
+//Are you alright?<LINE>
+Hey, Petitra! You alright bruh?<WAIT>
+
+Ah, Doora! Thanks, you saved me!~<LINE>
+I really didn't know what to do...<WAIT>
+
+I'm sorry it took so long to get here.<LINE>
+//Is Dr. Chrono safe?<WAIT>
+Is the Doc safe?<WAIT>
+
+I'm not sure. I've been locked up this<LINE>
+entire time...<WAIT>
+
+//I think the Doctor is being held<LINE>
+//captive somewhere in the laboratory.<WAIT>
+I think the Doc's being held captive<LINE>
+somewhere in the lab.<WAIT>
+
+//Mr. Bomberman! There is a<LINE>
+//mechanism somewhere this building<WAIT>
+
+//that can open up the front door of the<LINE>
+//Laboratory. Find it, and then<WAIT>
+
+//go and save Dr. Chrono!<LINE>
+//I'll help you out too!<END>
+Mr. Bomberman! There's a mechanism<LINE>
+nearby that opens up the front door.<WAIT>
+
+Find it and save the Doc!<LINE>
+I'll help you out too!<END>
+
+
+//POINTER #89 @ $1C77C8 - STRING #89 @ $1C7081
+
+#WRITE(GBA,$1C77C8)
+//Became friends with the Karabon<LINE>
+//<SFX_LOAD><$00><SFX><$5C>Petitra!<WAIT>
+Bomberman became friends with<LINE>
+Karabon <SFX_LOAD><$00><SFX><$5C>Petitra!<WAIT>
+
+//My ability is the Lazy Bomb. With it,<LINE>
+//bombs with take longer to detonate.<WAIT>
+My ability's the Lazy Bomb.<LINE>
+Bombs will take longer to detonate.<WAIT>
+
+Set me as the active Karabon?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_SWAP_NO><$03><$02><$0C><$02><$06><$5A><$06><$5B><END>
+
+
+//POINTER #90 @ $1C77CC - STRING #90 @ $1C70E3
+
+#WRITE(GBA,$1C77CC)
+<EQUIP_KARABON><$07><CLOSE>
+
+
+//POINTER #91 @ $1C77D0 - STRING #91 @ $1C70E6
+
+#WRITE(GBA,$1C77D0)
+<CLOSE>
+
+
+//POINTER #92 @ $1C77D4 - STRING #92 @ $1C70E7
+
+#WRITE(GBA,$1C77D4)
+//Listen to the Slot Battle explanation?<LINE>
+Hear the Slot Battle explanation?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_NO><$03><$02><$0C><$02><$06><$5D><$06><$5E><END>
+
+
+//POINTER #93 @ $1C77D8 - STRING #93 @ $1C7117
+
+#WRITE(GBA,$1C77D8)
+Press down on the D-Pad to start<LINE>
+the slots.<WAIT>
+
+Pressing the A Button will stop the<LINE>
+slots, starting from the left.<WAIT>
+
+Completing a line of Jetters icons<LINE>
+will deal damage to the opponent.<WAIT>
+
+However, a full line of Hige Hige<LINE>
+Bandits will deal damage to you.<WAIT>
+
+//You can win the minigame by defeating<LINE>
+//your opponent.<WAIT>
+Last one standing wins!<LINE>
+Do your best!<END>
+
+//Well then, do your best!<END>
+
+
+//POINTER #94 @ $1C77DC - STRING #94 @ $1C71AE
+
+#WRITE(GBA,$1C77DC)
+Well then, do your best!<END>
+
+
+//POINTER #95 @ $1C77E0 - STRING #95 @ $1C71BE
+
+#WRITE(GBA,$1C77E0)
+<ANIMATE><$0D>
+//Mighty! This is Gangu. At the outskirts<LINE>
+//of planet Nonbiri I'm detecting some<WAIT>
+Mighty! Gangu here. I'm detecting<LINE>
+space-time distortion near<WAIT>
+
+<ANIMATE><$0D>
+//space time distortion! It must be<LINE>
+//the work of the Hige Hige Bandits.<WAIT>
+Planet Nonbiri! This must be the<LINE>
+work of the Hige Hige Bandits.<WAIT>
+
+<ANIMATE><$0D>
+//If you attach the equipment Dr.<LINE>
+//Chrono gave you to the Moto Jetter<WAIT>
+Attach Dr. Chrono's Time Driver to<LINE>
+your Moto Jetter.<WAIT>
+
+<ANIMATE><$0D>
+//you should be able to warp back in time<LINE>
+//like the Hige Hige Bandits did!<WAIT>
+You should be able to follow the<LINE>
+Hige Hige Bandits back in time!<WAIT>
+
+<ANIMATE><$0D>
+//Time warp back to Ancient Nonbiri,<LINE>
+//and put a stop to their plans!<WAIT>
+Time warp back to Ancient Nonbiri,<LINE>
+and put an end to their plans!<WAIT>
+
+<ANIMATE><$0D>
+We're counting on you, Mighty!<END>
+
+
+//POINTER #96 @ $1C77E4 - STRING #96 @ $1C728A
+
+#WRITE(GBA,$1C77E4)
+<ANIMATE><$0D>
+Hello, this is Birdy. I see you've<LINE>
+//arrived on planet Sekaseka.<WAIT>
+arrived on Planet Sekaseka.<WAIT>
+
+<ANIMATE><$0D>
+It looks like the Hige Hige Bandits<LINE>
+//have attacked Dr. Chrono's lab!<WAIT>
+attacked Dr. Chrono's lab!<WAIT>
+
+<ANIMATE><$0D>
+//Their aim was likely to steal Dr.<LINE>
+//Chrono's invention, the Time Driver.<WAIT>
+They stole Dr. Chrono's invention,<LINE>
+the Time Driver.<WAIT>
+
+<ANIMATE><$0D>
+//The Time Driver is the prototype of<LINE>
+//an engine for a time machine.<WAIT>
+The Time Driver is a prototype<LINE>
+engine for the time machine.<WAIT>
+
+<ANIMATE><$0D>
+It's still incomplete, but it could be<LINE>
+bad if they attempt to use it.<WAIT>
+
+<ANIMATE><$0D>
+Hurry and help Dr. Chrono.<LINE>
+We're counting on you, Mighty!<PAUSE>
+
+
+//POINTER #97 @ $1C77E8 - STRING #97 @ $1C7369
+
+#WRITE(GBA,$1C77E8)
+<ANIMATE><$0D>
+Mighty, do you think the enemy's<LINE>
+attacks are becoming more intense?<WAIT>
+
+<ANIMATE><$0D>
+Perhaps returning to Planet Bomber<LINE>
+for some training is a good idea.<WAIT>
+
+<ANIMATE><$0D>
+//Slow and steady wins the race, right?<END>
+Slow and steady wins the race right?<END>
+
+//POINTER #98 @ $1C77EC - STRING #98 @ $1C73CC
+
+#WRITE(GBA,$1C77EC)
+<NEXT>
+
+
+//POINTER #99 @ $1C77F0 - STRING #99 @ $1C73CD
+
+#WRITE(GBA,$1C77F0)
+//An ingredient called the Caldera Drop<LINE>
+//can be found up ahead.<WAIT>
+The Caldera Drop can be found ahead.<WAIT>
+
+//However, recently a strange monster<LINE>
+//has appeared...<WAIT>
+However, a strange monster recently<LINE>
+appeared...<WAIT>
+
+It you defeat it, perhaps you will<LINE>
+find the Caldera Drop?<WAIT>
+
+//You can use the Caldera Drop in<LINE>
+//synthesis to create the Aqua Bomb.<WAIT>
+You can use the Caldera Drop to<LINE>
+synthesize the Aqua Bomb.<WAIT>
+
+The Aqua Bomb can be used to put out<LINE>
+the flames in Lava City!<END>
+
+
+//POINTER #100 @ $1C77F4 - STRING #100 @ $1C745C
+
+#WRITE(GBA,$1C77F4)
+//At Caldera Lake to the North there is<LINE>
+//an item known as the Caldera Drop.<WAIT>
+At Caldera Lake to the North there's<LINE>
+an item known as the Caldera Drop.<WAIT>
+
+//It's a mysterious type of water that<LINE>
+//can be used in the creation of items!<END>
+It's a mysterious type of water that<LINE>
+can be used to create items!<END>
+
+
+//POINTER #101 @ $1C77F8 - STRING #101 @ $1C749E
+
+#WRITE(GBA,$1C77F8)
+At Dr. Chrono's laboratory that is<LINE>
+a little bit to the North of here<WAIT>
+
+a few days ago some guys who call<LINE>
+themselves the Hige Hige Bandits<WAIT>
+
+showed up an took over the place!<LINE>
+They even captured Dr. Chrono.<WAIT>
+
+Which reminds me. When those bandits<LINE>
+attacked I saw a Karabon escape<WAIT>
+
+in the direction of the city. I wonder<LINE>
+if it got away safely...<END>
+
+
+//POINTER #102 @ $1C77FC - STRING #102 @ $1C7533
+
+#WRITE(GBA,$1C77FC)
+Listen to the Slot Battle explanation?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_NO><$03><$02><$0C><$02><$06><$67><$06><$68><END>
+
+
+//POINTER #103 @ $1C7800 - STRING #103 @ $1C7563
+
+#WRITE(GBA,$1C7800)
+Press down on the D-Pad to start<LINE>
+the slots.<WAIT>
+
+Pressing the A Button will stop the<LINE>
+slots, starting from the left.<WAIT>
+
+Completing a line of Jetters icons<LINE>
+will deal damage to the opponent.<WAIT>
+
+However, a full line of Hige Hige<LINE>
+Bandits will deal damage to you.<WAIT>
+
+Well then, do your best!<END>
+
+
+//POINTER #104 @ $1C7804 - STRING #104 @ $1C75F0
+
+#WRITE(GBA,$1C7804)
+Well then, please do your best.<END>
+
+
+//POINTER #105 @ $1C7808 - STRING #105 @ $1C75FF
+
+#WRITE(GBA,$1C7808)
+Did the prototype Time Driver that<LINE>
+I gave to you work properly?<WAIT>
+
+It was still incomplete, so I wasn't<LINE>
+completely sure what would happen.<WAIT>
+
+But it's great if it worked!<END>
+
