@@ -8,6 +8,9 @@
 .endarea
 
 ; maps
+.org 0x8041E7C
+.import "build\Enc_Arrows_m.bin"
+
 .org 0x82852B4
 .import "build\Enc_Main_m.bin"
 

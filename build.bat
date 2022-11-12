@@ -28,7 +28,9 @@ tools\g4 build\Radar_t.bin^
  assets\Radar_Text.bmp
 tools\lzss -evo build\Radar_t.bin
 
-tools\g4 build\Enc_t.bin assets\Enc_Blank.bmp assets\Enc_Main.bmp assets\Enc_Index.bmp^
+tools\g4 build\Enc_t.bin^
+ assets\Enc_Blank.bmp assets\Enc_Numbers.bmp assets\Enc_Arrows.bmp^
+ assets\Enc_Main.bmp assets\Enc_Index.bmp^
  assets\Enc_01.bmp assets\Enc_02.bmp assets\Enc_03.bmp assets\Enc_04.bmp^
  assets\Enc_05.bmp assets\Enc_06.bmp assets\Enc_07.bmp assets\Enc_08.bmp^
  assets\Enc_09.bmp assets\Enc_10.bmp assets\Enc_11.bmp assets\Enc_12.bmp^
@@ -40,25 +42,49 @@ tools\g4 build\Enc_t.bin assets\Enc_Blank.bmp assets\Enc_Main.bmp assets\Enc_Ind
  assets\Enc_Unk.bmp
 tools\lzss -evo build\Enc_t.bin
 
+tools\g4 build\Album_t.bin^
+ assets\Album_TextBox.bmp assets\Album_Numbers.bmp^
+ assets\Album_Main.bmp assets\Album_Box.bmp
+tools\lzss -evo build\Album_t.bin
+
 
 ::
 
 
 tools\armips.exe build.asm -stat
 
-::tools\Atlas jetters_eng.gba script\test_script.txt
-tools\Atlas jetters_eng.gba script\jetters_001.txt
+:: ------
+:: Script
+:: ------
+
+:: Tournament Stuff
+::tools\Atlas jetters_eng.gba script\jetters_000.txt
 ::tools\Atlas jetters_eng.gba script\jetters_002.txt
-tools\Atlas jetters_eng.gba script\jetters_008.txt
-tools\Atlas jetters_eng.gba script\jetters_011.txt
-tools\Atlas jetters_eng.gba script\jetters_012.txt
+::tools\Atlas jetters_eng.gba script\jetters_003.txt
+::tools\Atlas jetters_eng.gba script\jetters_009.txt
+::tools\Atlas jetters_eng.gba script\jetters_010.txt
 
+:: Cutscenes
+tools\Atlas jetters_eng.gba script\jetters_001.txt
 
+:: Nonbiri, Ancient Nonbiri, Item Get
 tools\Atlas jetters_eng.gba script\jetters_004.txt
+:: Tokotoko, Signpost Kingdom
 tools\Atlas jetters_eng.gba script\jetters_005.txt
+:: Sekaseka
 tools\Atlas jetters_eng.gba script\jetters_006.txt
-tools\Atlas jetters_eng.gba script\jetters_007.txt
+:: Equipment, Karabon, and Item Descriptions; System Messages
+tools\Atlas jetters_eng.gba script\jetters_008.txt
+:: Item and Karabon Names
+tools\Atlas jetters_eng.gba script\jetters_011.txt
+:: Planets, Areas, Places
+tools\Atlas jetters_eng.gba script\jetters_012.txt
+:: Karabon Names
 tools\Atlas jetters_eng.gba script\jetters_013.txt
+
+
+::tools\Atlas jetters_eng.gba script\jetters_007.txt
+
 
 tools\flips --create --ips jetters.gba jetters_eng.gba jetters_eng.ips
 tools\flips --create --bps-linear jetters.gba jetters_eng.gba jetters_eng.bps

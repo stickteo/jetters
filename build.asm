@@ -28,6 +28,7 @@
 .include "asm\SaveLoad.asm"
 .include "asm\Radar.asm"
 .include "asm\Enc.asm"
+.include "asm\Album.asm"
 
 ; .include "asm\debug.asm"
 
