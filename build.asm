@@ -29,6 +29,9 @@
 .include "asm\Radar.asm"
 .include "asm\Enc.asm"
 .include "asm\Album.asm"
+.include "asm\HUD.asm"
+.include "asm\Fusion.asm"
+.include "asm\GameOver.asm"
 
 ; .include "asm\debug.asm"
 

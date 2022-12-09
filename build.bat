@@ -47,6 +47,20 @@ tools\g4 build\Album_t.bin^
  assets\Album_Main.bmp assets\Album_Box.bmp
 tools\lzss -evo build\Album_t.bin
 
+tools\g4 build\HUD_t.bin^
+ assets\HUD_Misc.bmp assets\HUD_Bombs.bmp assets\HUD_Main.bmp^
+ assets\HUD_Boss.bmp assets\HUD_Stars.bmp^
+ assets\HUD_Flames.bmp assets\HUD_Flames2.bmp assets\HUD_Pause.bmp
+tools\lzss -evo build\HUD_t.bin
+
+tools\g4 build\Fusion_t.bin^
+ assets\Fusion_Numbers.bmp assets\Fusion_TextBox.bmp assets\Fusion_Main.bmp
+tools\lzss -evo build\Fusion_t.bin
+
+tools\g4 build\GameOver_t.bin assets\GameOver.bmp
+tools\lzss -evo build\GameOver_t.bin
+
+
 
 ::
 
