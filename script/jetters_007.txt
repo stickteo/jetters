@@ -1,0 +1,1649 @@
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #007 NAME:		7
+
+// --------------------------------------
+// Define a TABLE
+#VAR(Table, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/jetters_eng.tbl", Table)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($570000)
+// --------------------------------------
+
+//POINTER #0 @ $1CA1F8 - STRING #0 @ $1C780C
+
+#WRITE(GBA,$1CA1F8)
+You can find Ibsy's house by the<LINE>
+shore of the nearby pond.<WAIT>
+
+Everyone makes fun of the old man,<LINE>
+but I don't mind him.<END>
+
+
+//POINTER #1 @ $1CA1FC - STRING #1 @ $1C784E
+
+#WRITE(GBA,$1CA1FC)
+If the wind was blowing, the turbine<LINE>
+would turn and you could get across.<WAIT>
+
+But without wind you're out of luck.<LINE>
+If only bombs could generate wind...<END>
+
+
+//POINTER #2 @ $1CA200 - STRING #2 @ $1C78A1
+
+#WRITE(GBA,$1CA200)
+When the turbines have been activated<LINE>
+by wind you can use the moving<WAIT>
+
+platform to cross to the other side.<END>
+
+
+//POINTER #3 @ $1CA204 - STRING #3 @ $1C78DF
+
+#WRITE(GBA,$1CA204)
+Old man Ibsy often comes around here<LINE>
+to chop down trees.<WAIT>
+
+Apparently he uses the wood to make<LINE>
+sing posts or something like that.<END>
+
+
+//POINTER #4 @ $1CA208 - STRING #4 @ $1C791A
+
+#WRITE(GBA,$1CA208)
+If you go past the cliff and head north<LINE>
+you'll find where old man Ibsy lives.<WAIT>
+
+He's rather strange, and has a hobby of<LINE>
+building these things called sign posts.<WAIT>
+
+He writes words on wooden boards<LINE>
+and then stands them up in the ground.<WAIT>
+
+What would that ever be any good for?<LINE>
+He really is a weird fellow.<END>
+
+
+//POINTER #5 @ $1CA20C - STRING #5 @ $1C799C
+
+#WRITE(GBA,$1CA20C)
+My, young people today. You all wear<LINE>
+such strange clothes...<WAIT>
+
+Come to think of it, just the other day<LINE>
+by the Sun Temple to the east<WAIT>
+
+there was a group of strangely dressed<LINE>
+folks, or so I heard...<WAIT>
+
+Were they your friends?<END>
+
+
+//POINTER #6 @ $1CA210 - STRING #6 @ $1C7A0F
+
+#WRITE(GBA,$1CA210)
+Here on Nonbiri, we have two temples:<LINE>
+the Sun Temple and the Moon Temple.<WAIT>
+
+To get to the Sun Temple, head east<LINE>
+from Aqua Village and past the cliff.<WAIT>
+
+But even if you go there, only certain<LINE>
+people are allowed in.<END>
+
+
+//POINTER #7 @ $1CA214 - STRING #7 @ $1C7A7C
+
+#WRITE(GBA,$1CA214)
+Hello there! This is Aqua Village.<WAIT>
+
+Directly to the east is a place called<LINE>
+Foress Town.<END>
+
+
+//POINTER #8 @ $1CA218 - STRING #8 @ $1C7AB1
+
+#WRITE(GBA,$1CA218)
+There's an old man named Ibsy living<LINE>
+to the north.<WAIT>
+
+He makes these things called sing<LINE>
+pots or something like that.
+You've seen them too, right?<LINE>
+Just like that thing by the river!<END>
+
+
+//POINTER #9 @ $1CA21C - STRING #9 @ $1C7B0A
+
+#WRITE(GBA,$1CA21C)
+Whoa, mister! You're wearing some<LINE>
+pretty fancy clothes!<WAIT>
+
+Are you the prince of some country?<END>
+
+
+//POINTER #10 @ $1CA220 - STRING #10 @ $1C7B39
+
+#WRITE(GBA,$1CA220)
+When I grow up, I want to be the<LINE>
+priest of the Moon Temple!<END>
+
+
+//POINTER #11 @ $1CA224 - STRING #11 @ $1C7B5A
+
+#WRITE(GBA,$1CA224)
+<JUMP_FLAG_SET><$02><$10><$07><$0C>Welcome!<LINE>
+Feel free to look at my wares.<WAIT>
+
+We don't have the latest volume of<LINE>
+CoroCoro Comic yet though.<END>
+
+
+//POINTER #12 @ $1CA228 - STRING #12 @ $1C7B97
+
+#WRITE(GBA,$1CA228)
+Welcome!<LINE>
+Feel free to look at my wares.<WAIT>
+
+We just got the latest volume of<LINE>
+CoroCoro Comic in!<END>
+
+
+//POINTER #13 @ $1CA22C - STRING #13 @ $1C7BCA
+
+#WRITE(GBA,$1CA22C)
+In the northern part of this forest<LINE>
+you will find the Ice Cave.<WAIT>
+
+Inside the cave there is a massive<LINE>
+mound of ice.<WAIT>
+
+Ice from that mound seems to melt at<LINE>
+a very slow rate.<WAIT>
+
+Which reminds me, on top of the mound<LINE>
+there's some sort of red object...<END>
+
+
+//POINTER #14 @ $1CA230 - STRING #14 @ $1C7C4B
+
+#WRITE(GBA,$1CA230)
+In Foress Town, the high priest of<LINE>
+the Moon Temple is Kimidori.<WAIT>
+
+I've only once caught glimpse of her,<LINE>
+but she's quite pretty!<END>
+
+
+//POINTER #15 @ $1CA234 - STRING #15 @ $1C7C99
+
+#WRITE(GBA,$1CA234)
+The Sun Temple is a special place, so<LINE>
+average people aren't allowed in.<WAIT>
+
+Only the priest or people who have<LINE>
+been approved by them may enter.<END>
+
+
+//POINTER #16 @ $1CA238 - STRING #16 @ $1C7CEB
+
+#WRITE(GBA,$1CA238)
+A mysterious type of mushroom grows<LINE>
+in the forest that is north of here.<WAIT>
+
+If you jump on top, you can aim and<LINE>
+then hop a fair distance.<WAIT>
+
+It seems the color of the mushroom<LINE>
+determines how far you'll fly.<END>
+
+
+//POINTER #17 @ $1CA23C - STRING #17 @ $1C7D4D
+
+#WRITE(GBA,$1CA23C)
+If you want to go to Foress Town,<LINE>
+go north from the Sun Temple.<WAIT>
+
+If you go past the cliffs to the east<LINE>
+you'll find Ibsy's... Sing post?<WAIT>
+
+No, that's not it. Sign pots...? That's<LINE>
+not it either... Well anyway, you'll see.<END>
+
+
+//POINTER #18 @ $1CA240 - STRING #18 @ $1C7D4D
+
+#WRITE(GBA,$1CA240)
+If you want to go to Foress Town,<LINE>
+go north from the Sun Temple.<WAIT>
+
+If you go past the cliffs to the east<LINE>
+you'll come across Ibsy's... Sing post...?<WAIT>
+
+No, that's not it. Sign pots...? That's<LINE>
+not it either... Well anyway, you'll see.<END>
+
+
+//POINTER #19 @ $1CA244 - STRING #19 @ $1C7DBF
+
+#WRITE(GBA,$1CA244)
+<JUMP_FULL_HEALTH><$07><$6C>Oh! You aren't hurt, are you?<<LINE>
+Sit still for a second...<WAIT>
+
+<HEAL><SFX><$30>Alright, with this you should be fine.<LINE>
+Don't do anything reckless out there.<END>
+
+
+//POINTER #20 @ $1CA248 - STRING #20 @ $1C7E07
+
+#WRITE(GBA,$1CA248)
+Welcome!<LINE>
+Please look at my wares.<END>
+
+
+//POINTER #21 @ $1CA24C - STRING #21 @ $1C7E25
+
+#WRITE(GBA,$1CA24C)
+If you cross over this cliff, you'll<LINE>
+arrive at Foress Town.<END>
+
+
+//POINTER #22 @ $1CA250 - STRING #22 @ $1C7E42
+
+#WRITE(GBA,$1CA250)
+Have you seen the small buds growing<LINE>
+outside? If you water them<WAIT>
+
+they will grow into a special type<LINE>
+of ivy!<WAIT>
+
+The full grown ivy is very strong.<LINE>
+It's even durable enough to climb on!<END>
+
+
+//POINTER #23 @ $1CA254 - STRING #23 @ $1C7EB4
+
+#WRITE(GBA,$1CA254)
+An important treasure chest in the<LINE>
+temple is guarded by a devious trap.<WAIT>
+
+Apparently, there is a room that<LINE>
+moves around to different locations.<WAIT>
+
+The panels with red arrows on them<LINE>
+seem to change its position.<WAIT>
+
+There are even invisible staircases<LINE>
+hidden all over the place as well...<WAIT>
+
+How are you supposed to use something<LINE>
+like an invisible staircase anyway?<END>
+
+
+//POINTER #24 @ $1CA258 - STRING #24 @ $1C7F63
+
+#WRITE(GBA,$1CA258)
+On the way here, did you see a picture<LINE>
+of a bird drawn on the ground?<WAIT>
+
+They call that the Sun Wing. If you<LINE>
+step into the center of the picture<WAIT>
+
+it's supposed to be able to move you<LINE>
+to the center of another bird picture.<WAIT>
+
+How does something like that even<LINE>
+work? I don't get it at all.<END>
+
+
+//POINTER #25 @ $1CA25C - STRING #25 @ $1C7FEF
+
+#WRITE(GBA,$1CA25C)
+Ms. Kimidori at the Moon Temple knows<LINE>
+all about the Sun Wings.<WAIT>
+
+She usually only activates them during<LINE>
+special ceremonies.<END>
+
+
+//POINTER #26 @ $1CA260 - STRING #26 @ $1C803A
+
+#WRITE(GBA,$1CA260)
+<JUMP_FLAG_SET><$02><$74><$07><$1B>Welcome to Foress Town! The Moon<LINE>
+Temple is in the town's south end.<END>
+
+
+//POINTER #27 @ $1CA264 - STRING #27 @ $1C8064
+
+#WRITE(GBA,$1CA264)
+Welcome to Foress Town! The Moon<LINE>
+Temple is in the town's south end.<WAIT>
+
+Kimidori really is nice, isn't she?<LINE>
+Someday once I'm older...<WAIT>
+
+I want to receive a Blue Flower from<LINE>
+someone cool like you!<END>
+
+
+//POINTER #28 @ $1CA268 - STRING #28 @ $1C80CA
+
+#WRITE(GBA,$1CA268)
+The Sun Temple is to the west, and the<LINE>
+Moon Temple is here in Foress Town.<WAIT>
+
+The Sun Temple is only opened during<LINE>
+special ceremonies.<WAIT>
+
+The priest who serves god usually<LINE>
+lives within the Moon Temple.<END>
+
+
+//POINTER #29 @ $1CA26C - STRING #29 @ $1C8139
+
+#WRITE(GBA,$1CA26C)
+At the Sun Temple's peak is a magical<LINE>
+object that guards the city from evil.<WAIT>
+
+It's installed into the Beam Cannon!<END>
+
+
+//POINTER #30 @ $1CA270 - STRING #30 @ $1C8177
+
+#WRITE(GBA,$1CA270)
+Lately I've seen a number of strange<LINE>
+people enter the Sun Temple.<WAIT>
+
+The inside of that temple is full of<LINE>
+dangerous traps.<WAIT>
+
+I really wonder if those people who<LINE>
+went inside are alright...<END>
+
+
+//POINTER #31 @ $1CA274 - STRING #31 @ $1C81D8
+
+#WRITE(GBA,$1CA274)
+Ah... Work is such a pain... I wish life<LINE>
+could be all play and no work...<END>
+
+
+//POINTER #32 @ $1CA278 - STRING #32 @ $1C81FF
+
+#WRITE(GBA,$1CA278)
+After everything that happened, I was<LINE>
+scolded really badly by my mother...<WAIT>
+
+But it's my own fault. Next time I'll<LINE>
+play in Tornado Cave to the south.<WAIT>
+
+When the tornado there hits a wall, it<LINE>
+turns to the left and moves straight.<END>
+
+
+//POINTER #33 @ $1CA27C - STRING #33 @ $1C8270
+
+#WRITE(GBA,$1CA27C)
+My mother really scolded me.<LINE>
+I'll never go to the cliffs again...<END>
+
+
+//POINTER #34 @ $1CA280 - STRING #34 @ $1C829C
+
+#WRITE(GBA,$1CA280)
+The town's south gate is managed by<LINE>
+the lady who resides closest to it.<WAIT>
+
+If you want to head south, you could<LINE>
+probably ask her to open it for you!<END>
+
+
+//POINTER #35 @ $1CA284 - STRING #35 @ $1C82EA
+
+#WRITE(GBA,$1CA284)
+<JUMP_FLAG_SET><$02><$74><$07><$24>In Morimori Forest to the south there<LINE>
+is a place called Tornado Cave.<WAIT>
+
+Inside of there, a tiny tornado whirls<LINE>
+around an inner room.<WAIT>
+
+If wonder if it would be possible to<LINE>
+take that tornado with you.<END>
+
+
+//POINTER #36 @ $1CA288 - STRING #36 @ $1C8354
+
+#WRITE(GBA,$1CA288)
+Ahhh, so you decided to give Kimidori<LINE>
+that Blue Flower?<WAIT>
+
+Wahaha...<LINE>
+You're not half bad!<END>
+
+
+//POINTER #37 @ $1CA28C - STRING #37 @ $1C8389
+
+#WRITE(GBA,$1CA28C)
+<JUMP_FULL_HEALTH><$07><$6D>Please hold still for just a moment...<WAIT>
+
+<HEAL><SFX><$30>With this, you should be all better!<LINE>
+Don't go doing anything reckless now.<END>
+
+
+//POINTER #38 @ $1CA290 - STRING #38 @ $1C83BD
+
+#WRITE(GBA,$1CA290)
+The extremely powerful Beam Cannon<LINE>
+is inside of the Sun Temple.<WAIT>
+
+As a result, traps have been set up<LINE>
+all over the temple for protection.<WAIT>
+
+There's no way anyone could ever<LINE>
+get their hands on it!<END>
+
+
+//POINTER #39 @ $1CA294 - STRING #39 @ $1C8423
+
+#WRITE(GBA,$1CA294)
+For the purpose of keeping intruders<LINE>
+from infiltrating the Sun Temple<WAIT>
+
+a whole bunch of dangerous traps have<LINE>
+been set up inside. An especially<WAIT>
+
+important treasure chest is in a room<LINE>
+that sometimes changes location.<WAIT>
+
+It's pretty much impossible to reach<LINE>
+because of that.<END>
+
+
+//POINTER #40 @ $1CA298 - STRING #40 @ $1C849C
+
+#WRITE(GBA,$1CA298)
+........................?<END>
+
+
+//POINTER #41 @ $1CA29C - STRING #41 @ $1C84AA
+
+#WRITE(GBA,$1CA29C)
+........................<LINE>
+Bomberman built a Signpost!<END>
+
+
+//POINTER #42 @ $1CA2A0 - STRING #42 @ $1C84C9
+
+#WRITE(GBA,$1CA2A0)
+<JUMP_FLAG_SET><$01><$2F><$07><$2B>-Ibsy's House-<LINE>
+Builder of signposts.<END>
+
+
+//POINTER #43 @ $1CA2A4 - STRING #43 @ $1C84E1
+
+#WRITE(GBA,$1CA2A4)
+-Ibsy's House-<LINE>
+Builder of signposts.<WAIT>
+
+Thank you for building all of those<LINE>
+signposts! Ibsy is getting up there in<WAIT>
+
+years so it's not easy for him to<LINE>
+build them in far away places.<END>
+
+
+//POINTER #44 @ $1CA2A8 - STRING #44 @ $1C8531
+
+#WRITE(GBA,$1CA2A8)
+<JUMP_FLAG_SET><$01><$2F><$07><$2D>Be careful not to fall over the edge!<END>
+
+
+//POINTER #45 @ $1CA2AC - STRING #45 @ $1C854B
+
+#WRITE(GBA,$1CA2AC)
+Be careful not to fall over the edge!<WAIT>
+
+Hey, did you know? On Planet Nonbiri,<LINE>
+if you give a woman a Blue Flower<WAIT>
+
+that means you're proposing to her!<END>
+
+
+//POINTER #46 @ $1CA2B0 - STRING #46 @ $1C8592
+
+#WRITE(GBA,$1CA2B0)
+<JUMP_FLAG_SET><$01><$2F><$07><$2F>East: Aqua Village<LINE>
+North: Ibsy's House<END>
+
+
+//POINTER #47 @ $1CA2B4 - STRING #47 @ $1C85AC
+
+#WRITE(GBA,$1CA2B4)
+East: Aqua Village<LINE>
+North: Ibsy's House<WAIT>
+
+Did you fill the Karabon Encyclopedia?<LINE>
+If you manage to complete it all<WAIT>
+
+You should go back and show it to the<LINE>
+Karabon researcher.<END>
+
+
+//POINTER #48 @ $1CA2B8 - STRING #48 @ $1C8605
+
+#WRITE(GBA,$1CA2B8)
+........................?<END>
+
+
+//POINTER #49 @ $1CA2BC - STRING #49 @ $1C8613
+
+#WRITE(GBA,$1CA2BC)
+........................<LINE>
+Bomberman built a Signpost!<END>
+
+
+//POINTER #50 @ $1CA2C0 - STRING #50 @ $1C8632
+
+#WRITE(GBA,$1CA2C0)
+<JUMP_FLAG_SET><$01><$2F><$07><$33>The ice in the cave belongs to<LINE>
+everyone. Don't take too much of it!<END>
+
+
+//POINTER #51 @ $1CA2C4 - STRING #51 @ $1C865D
+
+#WRITE(GBA,$1CA2C4)
+The ice in this cave belongs to<LINE>
+everyone. Don't take too much of it!<WAIT>
+
+You may find that the enemies in some<LINE>
+areas drop items for synthesis.<END>
+
+
+//POINTER #52 @ $1CA2C8 - STRING #52 @ $1C86A9
+
+#WRITE(GBA,$1CA2C8)
+<JUMP_FLAG_SET><$01><$2F><$07><$35>If you head north, look out for the<LINE>
+mysterious Funifuni Mushrooms.<END>
+
+
+//POINTER #53 @ $1CA2CC - STRING #53 @ $1C86C5
+
+#WRITE(GBA,$1CA2CC)
+If you head north, look out for the<LINE>
+mysterious Funifuni Mushrooms<WAIT>
+
+There are three secret hearts hidden<LINE>
+about. How many have you found?<END>
+
+
+//POINTER #54 @ $1CA2D0 - STRING #54 @ $1C8700
+
+#WRITE(GBA,$1CA2D0)
+........................?<END>
+
+
+//POINTER #55 @ $1CA2D4 - STRING #55 @ $1C870E
+
+#WRITE(GBA,$1CA2D4)
+........................<LINE>
+Bomberman built a Signpost!<END>
+
+
+//POINTER #56 @ $1CA2D8 - STRING #56 @ $1C872D
+
+#WRITE(GBA,$1CA2D8)
+<JUMP_FLAG_SET><$01><$2F><$07><$39>If the Sun Wing isn't activated, you<LINE>
+can't get to the Sun Temple.<END>
+
+
+//POINTER #57 @ $1CA2DC - STRING #57 @ $1C8756
+
+#WRITE(GBA,$1CA2DC)
+If the Sun Wing isn't activated, you<LINE>
+usually can't get to the Sun Temple.<WAIT>
+
+Before you arrived, those Hige<LINE>
+Hige Bandit guys got into the<WAIT>
+
+Sun Temple by riding some kind of<LINE>
+round flying object.<WAIT>
+
+That was really sneaky!<END>
+
+
+//POINTER #58 @ $1CA2E0 - STRING #58 @ $1C87CA
+
+#WRITE(GBA,$1CA2E0)
+<JUMP_FLAG_SET><$01><$2F><$07><$3B>This cave leads to Foress Town.<END>
+
+
+//POINTER #59 @ $1CA2E4 - STRING #59 @ $1C87DD
+
+#WRITE(GBA,$1CA2E4)
+Ahead is Foress Town.<WAIT>
+
+Treasure chests in dungeons that<LINE>
+contain medicine and antidote...<WAIT>
+
+replenish each time you reenter.<LINE>
+Did you know that?<END>
+
+
+//POINTER #60 @ $1CA2E8 - STRING #60 @ $1C8830
+
+#WRITE(GBA,$1CA2E8)
+<JUMP_FLAG_SET><$01><$2F><$07><$3D>The Northern Cliffs are ahead. They're<LINE>
+dangerous so you should stay away!<END>
+
+
+//POINTER #61 @ $1CA2EC - STRING #61 @ $1C8859
+
+#WRITE(GBA,$1CA2EC)
+The northern cliffs are ahead. They're<LINE>
+dangerous so you should stay away!<WAIT>
+
+By the way... That man at synthesis<LINE>
+workshop seems pretty suspicious...<WAIT>
+
+With that shady smile and those<LINE>
+glaring eyes... Don't you agree?<END>
+
+
+//POINTER #62 @ $1CA2F0 - STRING #62 @ $1C88B8
+
+#WRITE(GBA,$1CA2F0)
+<JUMP_FLAG_SET><$01><$2F><$07><$3F>There's a place to synthesize items<LINE>
+inside the Moon Temple.<END>
+
+
+//POINTER #63 @ $1CA2F4 - STRING #63 @ $1C88D3
+
+#WRITE(GBA,$1CA2F4)
+There's a place to synthesize items<LINE>
+inside the Moon Temple.<WAIT>
+
+Each time you level up Karabons that<LINE>
+alter the timing of bomb detonations<WAIT>
+
+they become a little bit stronger!<LINE>
+<END>
+
+
+//POINTER #64 @ $1CA2F8 - STRING #64 @ $1C892C
+
+#WRITE(GBA,$1CA2F8)
+<JUMP_FLAG_SET><$01><$2F><$07><$41>Tornado Cave is ahead.<END>
+
+
+//POINTER #65 @ $1CA2FC - STRING #65 @ $1C8942
+
+#WRITE(GBA,$1CA2FC)
+Tornado Cave is ahead.<WAIT>
+
+In a slot battle, when attempting to<LINE>
+stop the movement of the<WAIT>
+
+rightmost reel, you should press the<LINE>
+button quickly when the desired<WAIT>
+
+symbol is approximately two spaces<LINE>
+away from appearing.<END>
+
+
+//POINTER #66 @ $1CA300 - STRING #66 @ $1C899E
+
+#WRITE(GBA,$1CA300)
+//Phew... I was really nervous about<LINE>
+//doing a time warp...<WAIT>
+Myu... I was really nervous about<LINE>
+doing a time warp...<WAIT>
+
+//But thankfully it appears that we've<LINE>
+//arrived without any trouble! myu~<WAIT>
+Thankfully we've arrived without<LINE>
+losing any limbs myu~!<WAIT>
+
+//So here we are, on the planet Nonbiri<LINE>
+//from centuries ago! myu~<WAIT>
+So this is Nonbiri from centuries<LINE>
+ago... The air's so fresh myu~!<WAIT>
+
+//It's likely that the Hige Hige Bandits<LINE>
+//got here just a little before we did.<WAIT>
+
+//We have to hurry to where the Beam<LINE>
+//Cannon is and halt their plans! myu~<END>
+
+Those Bandits are always a step<LINE>
+ahead of us...<WAIT>
+
+We have to hurry to the Beam Cannon<LINE>
+and halt their plans myu~!<END>
+
+
+//POINTER #67 @ $1CA304 - STRING #67 @ $1C8A40
+
+#WRITE(GBA,$1CA304)
+<JUMP_FLAG_SET><$02><$6F><$07><$44>My, what an interesting looking<LINE>
+fellow you are...<WAIT>
+
+I'm Ibsy. I make things called<LINE>
+signposts and put them in the forest.<WAIT>
+
+I do that by writing onto a piece of<LINE>
+wood and sticking it into the ground.<WAIT>
+
+I thought maybe they would help<LINE>
+prevent people from getting lost.<WAIT>
+
+From the looks of you, you must be<LINE>
+from some really far away place...<WAIT>
+
+Therefore, I have a request that I<LINE>
+would like you to fulfill for me.<WAIT>
+
+Take some of my signposts with you<LINE>
+and place them around the world.<WAIT>
+
+Look for places where you think a<LINE>
+signpost would be necessary.<WAIT>
+
+In all, I would like for you to build<LINE>
+10 of them.<WAIT>
+
+Do you think you could do that for me?<LINE>
+I'd really appreciate it!<WAIT>
+
+Bomberman received the<LINE>
+<SFX><$0C><SET_FLAG><$02><$6F><SET_FLAG><$01><$2E>Signposts!<WAIT>
+
+Once you've built them all, please<LINE>
+return and let me know.<END>
+
+
+//POINTER #68 @ $1CA308 - STRING #68 @ $1C8BE4
+
+#WRITE(GBA,$1CA308)
+<JUMP_SIGNPOST><$07><$45>How's it going? Have you found any<LINE>
+places to build signposts yet?<WAIT>
+
+Once you've built them all, please<LINE>
+return and let me know.<WAIT>
+
+I'm counting on you!<END>
+
+
+//POINTER #69 @ $1CA30C - STRING #69 @ $1C8C35
+
+#WRITE(GBA,$1CA30C)
+<JUMP_FLAG_SET><$02><$70><$07><$46>Oh! You've finished building all of the<LINE>
+signposts! Thank you so much!<WAIT>
+
+You must really understand the way of<LINE>
+the signpost. I want you to have this.<WAIT>
+
+Bomberman obtains the<LINE>
+<SFX><$0C><SET_FLAG><$02><$70><SET_FLAG><$01><$2F>Signpost Spectacles!<WAIT>
+
+With those you will be able to see<LINE>
+the true feelings of a signpost.<END>
+
+
+//POINTER #70 @ $1CA310 - STRING #70 @ $1C8CC7
+
+#WRITE(GBA,$1CA310)
+With your help, Signposts have been<LINE>
+spread far and wide.<WAIT>
+
+Thank you, Bomberman!<END>
+
+
+//POINTER #71 @ $1CA314 - STRING #71 @ $1C8CF3
+
+#WRITE(GBA,$1CA314)
+<JUMP_FLAG_SET><$02><$71><$07><$48>For many generations my family has<LINE>
+been very poor...<WAIT>
+
+Up until my father's generation,<LINE>
+everyone was nothing but lazy bums.<WAIT>
+
+They could never manage to save up<LINE>
+money. But at last, that all changes!<WAIT>
+
+It may not be much, but I've finally<LINE>
+succeeded in saving up a little bit!<WAIT>
+
+My plan is to leave those savings to<LINE>
+my descendants so they won't be poor.<WAIT>
+
+And so, I've hidden them away.<WAIT>
+
+Hmm. From the looks of you, I think<LINE>
+you seem like a trustworthy guy.<WAIT>
+
+Please, I want you to pass down my<WAIT>
+
+fortune to my descendants of a<LINE>
+generation far into the future.<WAIT>
+
+Bomberman obtained the<LINE>
+<SFX><$0C><SET_FLAG><$02><$71><SET_FLAG><$01><$2C>Inheritance Map!<WAIT>
+
+Please fulfill my wish...<END>
+
+
+//POINTER #72 @ $1CA318 - STRING #72 @ $1C8E3A
+
+#WRITE(GBA,$1CA318)
+<JUMP_FLAG_SET><$01><$2D><$07><$49>This guy here is my son. Just like his<LINE>
+ancestors were, he's super lazy...<WAIT>
+
+Even though he's an adult, he just plays<LINE>
+all day without ever doing any work.<WAIT>
+
+I'd like my money to go to a generation<LINE>
+that is more serious and hardworking.<WAIT>
+
+That's why I'm counting on you.<END>
+
+
+//POINTER #73 @ $1CA31C - STRING #73 @ $1C8EB6
+
+#WRITE(GBA,$1CA31C)
+Hey! That coin you have!<LINE>
+That's not yours to take!<WAIT>
+
+Now go put it back where you found it!<END>
+
+
+//POINTER #74 @ $1CA320 - STRING #74 @ $1C8EF1
+
+#WRITE(GBA,$1CA320)
+<JUMP_FLAG_SET><$02><$75><$07><$4C><JUMP_FLAG_SET><$02><$73><$07><$4B><SET_FLAG><$02><$72>........................<WAIT>
+
+A while ago my children went out to<LINE>
+play, but they still haven't returned...<WAIT>
+
+You don't think they might have gone<LINE>
+to the Northern Cliffs, do you?<WAIT>
+
+That area is really dangerous, so I<LINE>
+told them not to go there...<WAIT>
+
+Ah... I'm so worried...<END>
+
+
+//POINTER #75 @ $1CA324 - STRING #75 @ $1C8F86
+
+#WRITE(GBA,$1CA324)
+As I figured, they were playing near<LINE>
+the cliffs. Even after I said not to...<WAIT>
+
+Thank you so much for going out and<LINE>
+finding them for me.<WAIT>
+
+You wanted to head south, right?<LINE>
+I'll open up the gate for you.<WAIT>
+
+<EVENT><$04><END>
+
+
+//POINTER #76 @ $1CA328 - STRING #76 @ $1C8FEE
+
+#WRITE(GBA,$1CA328)
+I'm just happy I don't have to<LINE>
+worry anymore...<END>
+
+
+//POINTER #77 @ $1CA32C - STRING #77 @ $1C9009
+
+#WRITE(GBA,$1CA32C)
+<JUMP_FLAG_SET><$02><$72><$07><$4E>This is our secret hideout!<WAIT>
+
+No adults allowed!<LINE>
+We were told not to come here, but<WAIT>
+
+the cliffs are the best place to play!<END>
+
+
+//POINTER #78 @ $1CA330 - STRING #78 @ $1C9052
+
+#WRITE(GBA,$1CA330)
+Huh? Our mother is worried about us?<LINE>
+Uh oh! We better head back right away.<WAIT>
+
+<SET_FLAG><$02><$73><EVENT><$03><END>
+
+
+//POINTER #79 @ $1CA334 - STRING #79 @ $1C9081
+
+#WRITE(GBA,$1CA334)
+<JUMP_FLAG_SET><$02><$72><$07><$50>I came here with my older brother,<LINE>
+but I kind of want to go home...<END>
+
+
+//POINTER #80 @ $1CA338 - STRING #80 @ $1C90AD
+
+#WRITE(GBA,$1CA338)
+Our mother is worried about us?<LINE>
+Then we really should get going soon...<END>
+
+
+//POINTER #81 @ $1CA33C - STRING #81 @ $1C90D7
+
+#WRITE(GBA,$1CA33C)
+<JUMP_FLAG_SET><$02><$74><$07><$53>The Sun Temple to the west of Foress<LINE>
+Town is a very sacred location.<WAIT>
+
+Because of that, ordinary people such<LINE>
+as yourself can't just simply enter...<WAIT>
+
+However, if you can get your hands on<LINE>
+a Blue Flower that grows on<WAIT>
+
+the mountain that is to the west<LINE>
+of the Morimori Forest to the south<WAIT>
+
+then I can help you get into the<LINE>
+Sun Temple.<END>
+
+
+//POINTER #82 @ $1CA340 - STRING #82 @ $1C9186
+
+#WRITE(GBA,$1CA340)
+That... That's a Blue Flower!<WAIT>
+
+So, there's something you need to do<LINE>
+at the Sun Temple? In that case<WAIT>
+
+I will activate the Sun Wings for you.<END>
+
+
+//POINTER #83 @ $1CA344 - STRING #83 @ $1C91CD
+
+#WRITE(GBA,$1CA344)
+There's a rumor that some strange<LINE>
+people snuck into the Sun Temple...<WAIT>
+
+You don't think they could be after<LINE>
+the Beam Cannon, do you?<WAIT>
+
+I'm a bit worried... Perhaps you could<LINE>
+go and see what's going on?<WAIT>
+
+But the Sun Temple's interior is<LINE>
+filled with many traps...<WAIT>
+
+........................<LINE>
+Watch out, and be careful...<END>
+
+
+//POINTER #84 @ $1CA348 - STRING #84 @ $1C9281
+
+#WRITE(GBA,$1CA348)
+Stepping into the center of the glowing<LINE>
+Sun Wing will cause you to teleport!<END>
+
+
+//POINTER #85 @ $1CA34C - STRING #85 @ $1C92AE
+
+#WRITE(GBA,$1CA34C)
+Gah! Mighty!<LINE>
+I didn't expect to see you here!<WAIT>
+
+To think that you would even travel<LINE>
+through time to try and stop us...<WAIT>
+
+But since you're here, you can watch as<LINE>
+I steal the Beam Cannon's crystal!<WAIT>
+
+Here we go!<END>
+
+
+//POINTER #86 @ $1CA350 - STRING #86 @ $1C932A
+
+#WRITE(GBA,$1CA350)
+Now that I've got what I wanted, I'll<LINE>
+be returning to the present day.<WAIT>
+
+Then isn't the end, Mighty. I'll be<LINE>
+waiting for you on my battleship!<<WAIT>
+
+Mwahahahahaha......<END>
+
+
+//POINTER #87 @ $1CA354 - STRING #87 @ $1C937D
+
+#WRITE(GBA,$1CA354)
+<JUMP_FLAG_SET><$01><$2F><$07><$58>You should try to lead the small<LINE>
+tornado to the top of the pedestal.<END>
+
+
+//POINTER #88 @ $1CA358 - STRING #88 @ $1C93A0
+
+#WRITE(GBA,$1CA358)
+You should try to lead the small<LINE>
+tornado to the top of the pedestal.<WAIT>
+
+When the tornado bumps into a wall,<LINE>
+it turns left and proceeds forward!<END>
+
+
+//POINTER #89 @ $1CA35C - STRING #89 @ $1C93DF
+
+#WRITE(GBA,$1CA35C)
+Hello, this is Birdy. It appears you've<LINE>
+infiltrated the Armor Joe battleship.<WAIT>
+
+Before long we will be arriving<LINE>
+there as well.<WAIT>
+
+Until then, give the interior of the<LINE>
+battleship a look around.<WAIT>
+
+You're always handling things on your<LINE>
+own, but this time let us help!<WAIT>
+
+We won't allow you to do everything<LINE>
+yourself again!<PAUSE>
+
+
+//POINTER #90 @ $1CA360 - STRING #90 @ $1C9484
+
+#WRITE(GBA,$1CA360)
+The Cosmo Jetter is on its way<LINE>
+to the battleship now!<WAIT>
+
+Reports show that the interior of the<LINE>
+Armor Joe is split into four areas.<WAIT>
+
+It looks like Mujoe is waiting at the<<LINE>
+deepest point of the fourth area.<PAUSE>
+
+
+//POINTER #91 @ $1CA364 - STRING #91 @ $1C94EB
+
+#WRITE(GBA,$1CA364)
+I've been unable to get a good read<LINE>
+of the interior of the battleship...<WAIT>
+
+But you're entering the enemy's main<LINE>
+base, so be careful in there, Mighty!<END>
+
+
+//POINTER #92 @ $1CA368 - STRING #92 @ $1C9537
+
+#WRITE(GBA,$1CA368)
+<JUMP_FLAG_SET><$02><$8A><$07><$98>
+<SET_FLAG><$02><$8A>
+Good of you to come, Mighty.<LINE>
+Is your mission going well?<WAIT>
+
+//Listen to the Bomber Hall explanation?<LINE>
+Explain Bomber Hall?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$5D><$07><$5E><END>
+
+
+//POINTER #93 @ $1CA36C - STRING #93 @ $1C9591
+
+#WRITE(GBA,$1CA36C)
+Here you can evaluate your skill<LINE>
+in battling against enemies.<WAIT>
+
+The goal is to clear all 5 floors and<LINE>
+make it to the end.<WAIT>
+
+If you place bombs carelessly and<LINE>
+blow up items it will hurt your score.<WAIT>
+
+Defeating multiple enemies at once is<LINE>
+the key to victory!<WAIT>
+
+If you perform well enough, you will<LINE>
+be awarded a medal!<WAIT>
+
+Your high scores will be recorded on<LINE>
+the board beside the door.<WAIT>
+
+Give it a try for 20 Gold?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$5F><$07><$60><END>
+
+
+//POINTER #94 @ $1CA370 - STRING #94 @ $1C9673
+
+#WRITE(GBA,$1CA370)
+Give it a try for 20 Gold?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$5F><$07><$60><END>
+
+
+//POINTER #95 @ $1CA374 - STRING #95 @ $1C96A0
+
+#WRITE(GBA,$1CA374)
+<JUMP_GOLD><$00><$14><$07><$61><SET_FLAG><$02><$8B><SUB_GOLD><$14>Well then, head on in and get started!<END>
+
+
+//POINTER #96 @ $1CA378 - STRING #96 @ $1C96BD
+
+#WRITE(GBA,$1CA378)
+<ANIMATE><$02>
+//Is that so... Well come back if you<LINE>
+//would like to give it a try.<END>
+Is that so... Come back if you would<LINE>
+like to give it a try.<END>
+
+
+//POINTER #97 @ $1CA37C - STRING #97 @ $1C96DD
+
+#WRITE(GBA,$1CA37C)
+<ANIMATE><$02>
+Sorry, you don't have enough money.<LINE>
+Please come back once you have more.<END>
+
+
+//POINTER #98 @ $1CA380 - STRING #98 @ $1C9708
+
+#WRITE(GBA,$1CA380)
+//It appears you still have a ways to go.<LINE>
+You still have ways to go.<LINE>
+You need much more practice.<WAIT>
+
+//Polish your skills and then try again.<END>
+Polish your skills and try again.<END>
+
+
+//POINTER #99 @ $1CA384 - STRING #99 @ $1C9738
+
+#WRITE(GBA,$1CA384)
+You're getting the hang of things.<LINE>
+That last attempt wasn't too bad.<WAIT>
+
+//Polish your skills and then try again.<END>
+Polish your skills and try again.<END>
+
+
+//POINTER #100 @ $1CA388 - STRING #100 @ $1C9761
+
+#WRITE(GBA,$1CA388)
+Your movements have gotten much<LINE>
+better, but you can still improve.<WAIT>
+
+//Polish your skills and then try again.<END>
+Polish your skills and try again.<END>
+
+
+//POINTER #101 @ $1CA38C - STRING #101 @ $1C978F
+
+#WRITE(GBA,$1CA38C)
+You've really been improving,<LINE>
+but you can still do even better.<WAIT>
+
+Learning to predict your enemy's<LINE>
+movements will help you greatly.<END>
+
+
+//POINTER #102 @ $1CA390 - STRING #102 @ $1C97D7
+
+#WRITE(GBA,$1CA390)
+That really was a wonderful display<LINE>
+of skill. To think you've come so far...<WAIT>
+
+Continue working at it and you can<LINE>
+reach even greater heights!<END>
+
+
+//POINTER #103 @ $1CA394 - STRING #103 @ $1C9810
+
+#WRITE(GBA,$1CA394)
+Smooth movements like flowing water,<LINE>
+and sharp attacks like blazing flames.<WAIT>
+
+Such wonderful power! But don't let it<LINE>
+get to your head. Keep going!<END>
+
+
+//POINTER #104 @ $1CA398 - STRING #104 @ $1C9860
+
+#WRITE(GBA,$1CA398)
+At last, your efforts have paid off.<LINE>
+I have nothing left to teach you.<WAIT>
+
+From here on out, your only fight will<LINE>
+be the challenging of your own limits.<END>
+
+
+//POINTER #105 @ $1CA39C - STRING #105 @ $1C98A6
+
+#WRITE(GBA,$1CA39C)
+You've earned this medal.<WAIT>
+
+Bomberman obtained the<LINE>
+<SFX><$0C>Medal!<END>
+
+
+//POINTER #106 @ $1CA3A0 - STRING #106 @ $1C98D0
+
+#WRITE(GBA,$1CA3A0)
+You've done very well to make<LINE>
+it this far.<WAIT>
+
+I'd expect no less of you Mighty,<LINE>
+the legendary Bomberman...<WAIT>
+
+However, it will all have been for<LINE>
+nothing! Prepare to meet your end!<WAIT>
+
+Come on Machine Dragon, take him out!<END>
+
+
+//POINTER #107 @ $1CA3A4 - STRING #107 @ $1C9936
+
+#WRITE(GBA,$1CA3A4)
+Allow me to show you the true power<LINE>
+of the Control Crystal!<END>
+
+
+//POINTER #108 @ $1CA3A8 - STRING #108 @ $1C9959
+
+#WRITE(GBA,$1CA3A8)
+After exiting the north forest, pass<LINE>
+the cliffs to find the Sun Temple.<END>
+
+
+//POINTER #109 @ $1CA3AC - STRING #109 @ $1C9980
+
+#WRITE(GBA,$1CA3AC)
+We are the priests that serve the gods<LINE>
+of the Sun and Moon.<WAIT>
+
+And the one who leads us is Kimidori<LINE>
+of the Sun Temple.<END>
+
+
+//POINTER #110 @ $1CA3B0 - STRING #110 @ $1C99C8
+
+#WRITE(GBA,$1CA3B0)
+<JUMP_FLAG_SET><$00><$C4><$07><$8D>
+<NAME_CARD_RAW><$05>Mujoe
+You really are annoying! To think you<LINE>
+would follow me all of the way here...<WAIT>
+
+But with the power of my cannon, I'll<LINE>
+make sure you don't escape that room!<WAIT>
+
+Prepare to become a victim of ancient<LINE>
+Nonbiri's Beam Cannon!<END>
+
+
+//POINTER #111 @ $1CA3B4 - STRING #111 @ $1C9A40
+
+#WRITE(GBA,$1CA3B4)
+East Aqua warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #112 @ $1CA3B8 - STRING #112 @ $1C9A5A
+
+#WRITE(GBA,$1CA3B8)
+Northern Cliff warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #113 @ $1CA3BC - STRING #113 @ $1C9A75
+
+#WRITE(GBA,$1CA3BC)
+Laboratory warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #114 @ $1CA3C0 - STRING #114 @ $1C9A90
+
+#WRITE(GBA,$1CA3C0)
+Excavation Site warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #115 @ $1CA3C4 - STRING #115 @ $1C9AAB
+
+#WRITE(GBA,$1CA3C4)
+Sando Village warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #116 @ $1CA3C8 - STRING #116 @ $1C9AC5
+
+#WRITE(GBA,$1CA3C8)
+Deza Town warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #117 @ $1CA3CC - STRING #117 @ $1C9ADE
+
+#WRITE(GBA,$1CA3CC)
+Experiment Base warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #118 @ $1CA3D0 - STRING #118 @ $1C9AF8
+
+#WRITE(GBA,$1CA3D0)
+Signpost Kingdom warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #119 @ $1CA3D4 - STRING #119 @ $1C9B14
+
+#WRITE(GBA,$1CA3D4)
+Ember City warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #120 @ $1CA3D8 - STRING #120 @ $1C9B2E
+
+#WRITE(GBA,$1CA3D8)
+Lava City warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #121 @ $1CA3DC - STRING #121 @ $1C9B47
+
+#WRITE(GBA,$1CA3DC)
+Caldera Lake warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #122 @ $1CA3E0 - STRING #122 @ $1C9B60
+
+#WRITE(GBA,$1CA3E0)
+TV Station warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #123 @ $1CA3E4 - STRING #123 @ $1C9B7A
+
+#WRITE(GBA,$1CA3E4)
+Chrono Laboratory warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #124 @ $1CA3E8 - STRING #124 @ $1C9B93
+
+#WRITE(GBA,$1CA3E8)
+Aqua Town warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #125 @ $1CA3EC - STRING #125 @ $1C9BAC
+
+#WRITE(GBA,$1CA3EC)
+Northern Mountain warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #126 @ $1CA3F0 - STRING #126 @ $1C9BC7
+
+#WRITE(GBA,$1CA3F0)
+Foress Town warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #127 @ $1CA3F4 - STRING #127 @ $1C9BE2
+
+#WRITE(GBA,$1CA3F4)
+Sun Temple warp point<LINE>
+has been activated!<END>
+
+
+//POINTER #128 @ $1CA3F8 - STRING #128 @ $1C9BFE
+
+#WRITE(GBA,$1CA3F8)
+-Shell Minigame-<LINE>
+Current High Score: <NUMBER0>:<NUMBER1_2DIGIT><WAIT>
+
+Play the Shell Minigame?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #129 @ $1CA3FC - STRING #129 @ $1C9C49
+
+#WRITE(GBA,$1CA3FC)
+<JUMP_GOLD><$00><$0A><$07><$82><SUB_GOLD><$0A><ANIMATE><$01><CLOSE>
+
+
+//POINTER #130 @ $1CA400 - STRING #130 @ $1C9C56
+
+#WRITE(GBA,$1CA400)
+<ANIMATE><$02>Sorry, but you're short on money.<LINE>
+Save some up and come back!<END>
+
+
+//POINTER #131 @ $1CA404 - STRING #131 @ $1C9C7A
+
+#WRITE(GBA,$1CA404)
+<ANIMATE><$02><CLOSE>
+
+
+//POINTER #132 @ $1CA408 - STRING #132 @ $1C9C7E
+
+#WRITE(GBA,$1CA408)
+Listen to the explanation?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_NO><$03><$02><$0C><$02><$07><$85><$07><$86><END>
+
+
+//POINTER #133 @ $1CA40C - STRING #133 @ $1C9CA5
+
+#WRITE(GBA,$1CA40C)
+The goal is to dodge the objects that<LINE>
+come at you for as long as you can.<WAIT>
+
+The B Button brings up a shield which<LINE>
+can protect you from projectiles.<WAIT>
+
+The shield can't be used to defend<LINE>
+against bats or falling rocks.<WAIT>
+
+Well then, do your best!<END>
+
+
+//POINTER #134 @ $1CA410 - STRING #134 @ $1C9D1D
+
+#WRITE(GBA,$1CA410)
+Well then, do your best!<END>
+
+
+//POINTER #135 @ $1CA414 - STRING #135 @ $1C9D2C
+
+#WRITE(GBA,$1CA414)
+Attempt the challenge again and try to<LINE>
+achieve the high score.<END>
+
+
+//POINTER #136 @ $1CA418 - STRING #136 @ $1C9D49
+
+#WRITE(GBA,$1CA418)
+Well done! You set a new high score!<LINE>
+Here's your prize of 50 Gold.<WAIT>
+
+Bomberman obtained<LINE>
+<ADD_GOLD><$32><SFX><$0C>50 Gold!<WAIT>
+
+Try again and aim to achieve an even<LINE>
+better score!<END>
+
+
+//POINTER #137 @ $1CA41C - STRING #137 @ $1C9DA6
+
+#WRITE(GBA,$1CA41C)
+-Karabon Race Minigame-<LINE>
+Current High Score: <NUMBER0>.<NUMBER1><WAIT>
+
+Play the Karabon Race Minigame?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #138 @ $1CA420 - STRING #138 @ $1C9DF5
+
+#WRITE(GBA,$1CA420)
+-Slot Battle Minigame-<LINE>
+Current High Score: <NUMBER0> rounds cleared.<WAIT>
+
+Do you want to play the Slot Battle?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #139 @ $1CA424 - STRING #139 @ $1C9E43
+
+#WRITE(GBA,$1CA424)
+-Beam Cannon Minigame-<LINE>
+Current High Score: <NUMBER0>.<NUMBER1><WAIT>
+
+Play the Beam Cannon Minigame?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #140 @ $1CA428 - STRING #140 @ $1C9E94
+
+#WRITE(GBA,$1CA428)
+-Moto Jetter Minigame-<LINE>
+Current High Score: <NUMBER0><WAIT>
+
+Play the Moto Jetter Minigame?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #141 @ $1CA42C - STRING #141 @ $1C9EE4
+
+#WRITE(GBA,$1CA42C)
+Listen to the minigame instructions?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_NO><$03><$02><$0C><$02><$07><$8E><$07><$8F><END>
+
+
+//POINTER #142 @ $1CA430 - STRING #142 @ $1C9F12
+
+#WRITE(GBA,$1CA430)
+Run towards the goal while avoiding<LINE>
+attacks that rain down from above.<WAIT>
+
+The aim is to see how long you can<LINE>
+dodge the Beam Cannon's fire.<WAIT>
+
+If you take a hit your record won't be<LINE>
+recorded, so be careful!<WAIT>
+
+Well then, do your best!<END>
+
+
+//POINTER #143 @ $1CA434 - STRING #143 @ $1C9F8E
+
+#WRITE(GBA,$1CA434)
+Well then, do your best.<END>
+
+
+//POINTER #144 @ $1CA438 - STRING #144 @ $1C9F9D
+
+#WRITE(GBA,$1CA438)
+Listen to the Boss Battle instructions?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_NO><$03><$02><$0C><$02><$07><$91><$07><$92><END>
+
+
+//POINTER #145 @ $1CA43C - STRING #145 @ $1C9FCB
+
+#WRITE(GBA,$1CA43C)
+The goal is to see how quickly you can<LINE>
+defeat the boss.<WAIT>
+
+If you are defeated your time will not<LINE>
+be recorded, so be careful!<WAIT>
+
+Well then, do your best!<END>
+
+
+//POINTER #146 @ $1CA440 - STRING #146 @ $1CA019
+
+#WRITE(GBA,$1CA440)
+Well then, do your best!<END>
+
+
+//POINTER #147 @ $1CA444 - STRING #147 @ $1CA028
+
+#WRITE(GBA,$1CA444)
+-Drill Mole Boss Battle-<LINE>
+Current High Score: <NUMBER0>:<NUMBER1_2DIGIT>:<NUMBER2_2DIGIT><WAIT>
+
+Battle against Drill Mole?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #148 @ $1CA448 - STRING #148 @ $1CA07A
+
+#WRITE(GBA,$1CA448)
+-Net Spider Boss Battle-<LINE>
+Current High Score: <NUMBER0>:<NUMBER1_2DIGIT>:<NUMBER2_2DIGIT><WAIT>
+
+Battle agianst Net Spider?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #149 @ $1CA44C - STRING #149 @ $1CA0CE
+
+#WRITE(GBA,$1CA44C)
+-Blade Beetle Boss Battle-<LINE>
+Current High Score: <NUMBER0>:<NUMBER1_2DIGIT>:<NUMBER2_2DIGIT><WAIT>
+
+Battle against Blade Beetle?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #150 @ $1CA450 - STRING #150 @ $1CA122
+
+#WRITE(GBA,$1CA450)
+-Hammer Kong Boss Battle-<LINE>
+Current High Score: <NUMBER0>:<NUMBER1_2DIGIT>:<NUMBER2_2DIGIT><WAIT>
+
+Battle against Hammer Kong?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #151 @ $1CA454 - STRING #151 @ $1CA174
+
+#WRITE(GBA,$1CA454)
+--Machine Dragon Boss Battle-<LINE>
+Current High Score: <NUMBER0>:<NUMBER1_2DIGIT>:<NUMBER2_2DIGIT><WAIT>
+
+Battle against Machine Dragon?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_YES><$03><$02><$0C><$02><$07><$81><$07><$83><END>
+
+
+//POINTER #152 @ $1CA458 - STRING #152 @ $1CA1C8
+
+#WRITE(GBA,$1CA458)
+//Listen to the Bomber Hall explanation?<LINE>
+Explain Bomber Hall?<LINE>
+<S8><S8><S8><S8>Yes<S8><S8><S8><S8><S8><S8><S8>No
+<PROMPT_NO><$03><$02><$0C><$02><$07><$5D><$07><$5E><END>
+

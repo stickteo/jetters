@@ -420,3 +420,72 @@
 .create "extract\24EF68_p.bin", 0 :: .org 0 :: .import "jetters.gba", 0x24EF68, 0x40 :: .close; p81
 .create "extract\250EF0_p.bin", 0 :: .org 0 :: .import "jetters.gba", 0x250EF0, 0x60 :: .close; p82
 .create "extract\25EDB4_p.bin", 0 :: .org 0 :: .import "jetters.gba", 0x25EDB4, 0x20 :: .close; p83
+
+
+; HUD2
+.create "extract\HUD2_p.bin", 0 :: .org 0 :: .import "jetters.gba", 0x2625C4, 32*2 :: .close
+
+.create "extract\HUD2_Main_m.bin", 0
+.org 0
+.dh  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15
+
+.dh 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+
+.dh 32, 33, 34, 35, 36, 37, 38, 39, 40
+.dh 0x1029, 0x002A, 0x002B, 0x002C, 0x002D, 0x102E, 0x002F
+
+.dh 0x1030, 0x1031, 0x1032, 0x1033, 0x1034, 0x1035, 0x1036, 0x1037
+.dh 0x1038, 0x1039, 0x103A, 0x103B, 0x103C, 0x103D, 0x103E, 0x103F
+
+.dh 0x1040, 0x1041,      0,      0,      0,      0,      0,      0
+.dh      0,      0,      0,      0,      0,      0,      0,      0
+.close
+
+.create "extract\HUD2_Pause_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x262D90, 8*3*2 :: .close
+
+; BomberHall
+.create "extract\BomberHall_p.bin", 0 :: .org 0
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F; 0
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F; 1
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F; 2
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F; 3
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F
+.import "jetters.gba", 0x182E2C, 6*32
+.close
+
+.create "extract\BomberHall_Main_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x264200, 32*20*2 :: .close
+.create "extract\BomberHall_Text_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x26A4D0, 16*16*2 :: .close
+.create "extract\BomberHall_Numbers_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x26A6D0, 1*2*11*2 :: .close
+.create "extract\BomberHall_Numbers2_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x26A6FC, 2*2*7*2 :: .close
+
+; BHallCert
+.create "extract\BHallCert_p.bin", 0 :: .org 0
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F; 0
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F; 1
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F; 2
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F; 3
+.dh 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F, 0x03E0, 0x7C1F
+.import "jetters.gba", 0x264700, 6*32
+.close
+
+.create "extract\BHallCert_Main_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x267B24, 32*20*2 :: .close
+.create "extract\BHallCert_Numbers_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x2684D4, 1*2*11*2 :: .close
+.create "extract\BHallCert_Portrait_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x268254, 8*10*4*2 :: .close
+.create "extract\BHallCert_Rank_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x268024, 5*4*14*2 :: .close
+
+; BHallBoard
+.create "extract\BHallBoard_p.bin", 0 :: .org 0
+.import "jetters.gba", 0x268500, 3*32
+.close
+
+.create "extract\BHallBoard_Red_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x2693D0, 32*20*2 :: .close
+.create "extract\BHallBoard_Blue_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x269978, 32*20*2 :: .close
+.create "extract\BHallBoard_Ranks_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x269908, 2*2*14*2 :: .close
+.create "extract\BHallBoard_Numbers_m.bin", 0 :: .org 0 :: .import "jetters.gba", 0x2698D0, 1*2*14*2 :: .close
+

@@ -273,6 +273,31 @@ tools\G3 extract\249DC8_p.bin extract\24BF60_m.bin extract\249EA8_t.bin 30 20 ex
 tools\G3 extract\24D858_p.bin extract\24DB78_m.bin extract\24DA74_t.bin 32 20 extract\24DB78.bmp
 tools\G3 extract\24D858_p.bin extract\24E078_m.bin extract\24DA74_t.bin 32 20 extract\24E078.bmp
 
+:: HUD2
+tools\gbamdc.exe -e jetters.gba extract\HUD2_t.bin 262604
+tools\G3 extract\HUD2_p.bin extract\HUD2_Main_m.bin extract\HUD2_t.bin 16 5 extract\HUD2_Main.bmp
+tools\G3 extract\HUD2_p.bin extract\HUD2_Pause_m.bin extract\HUD2_t.bin 8 3 extract\HUD2_Pause.bmp
+
+:: BomberHall
+tools\gbamdc.exe -e jetters.gba extract\BomberHall_t.bin 2632B4
+tools\G3 extract\BomberHall_p.bin extract\BomberHall_Main_m.bin extract\BomberHall_t.bin 32 20 extract\BomberHall_Main.bmp
+tools\G3 extract\BomberHall_p.bin extract\BomberHall_Text_m.bin extract\BomberHall_t.bin 16 16 extract\BomberHall_Text.bmp
+tools\G3 extract\BomberHall_p.bin extract\BomberHall_Numbers_m.bin extract\BomberHall_t.bin 1 22 extract\BomberHall_Numbers.bmp
+tools\G3 extract\BomberHall_p.bin extract\BomberHall_Numbers2_m.bin extract\BomberHall_t.bin 2 14 extract\BomberHall_Numbers2.bmp
+
+:: BHallCert
+tools\gbamdc.exe -e jetters.gba extract\BHallCert_t.bin 264880
+tools\G3 extract\BHallCert_p.bin extract\BHallCert_Main_m.bin extract\BHallCert_t.bin 32 20 extract\BHallCert_Main.bmp
+tools\G3 extract\BHallCert_p.bin extract\BHallCert_Numbers_m.bin extract\BHallCert_t.bin 1 22 extract\BHallCert_Numbers.bmp
+tools\G3 extract\BHallCert_p.bin extract\BHallCert_Portrait_m.bin extract\BHallCert_t.bin 8 40 extract\BHallCert_Portrait.bmp
+tools\G3 extract\BHallCert_p.bin extract\BHallCert_Rank_m.bin extract\BHallCert_t.bin 5 56 extract\BHallCert_Rank.bmp
+
+:: BHallBoard
+tools\gbamdc.exe -e jetters.gba extract\BHallBoard_t.bin 268560
+tools\G3 extract\BHallBoard_p.bin extract\BHallBoard_Red_m.bin extract\BHallBoard_t.bin 32 20 extract\BHallBoard_Red.bmp
+tools\G3 extract\BHallBoard_p.bin extract\BHallBoard_Blue_m.bin extract\BHallBoard_t.bin 32 20 extract\BHallBoard_Blue.bmp
+tools\G3 extract\BHallBoard_p.bin extract\BHallBoard_Rank_m.bin extract\BHallBoard_t.bin 2 28 extract\BHallBoard_Rank.bmp
+tools\G3 extract\BHallBoard_p.bin extract\BHallBoard_Numbers_m.bin extract\BHallBoard_t.bin 1 28 extract\BHallBoard_Numbers.bmp
 
 
 pause

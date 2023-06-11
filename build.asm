@@ -32,6 +32,10 @@
 .include "asm\HUD.asm"
 .include "asm\Fusion.asm"
 .include "asm\GameOver.asm"
+.include "asm\HUD2.asm"
+.include "asm\BomberHall.asm"
+.include "asm\BHallCert.asm"
+.include "asm\BHallBoard.asm"
 
 ; .include "asm\debug.asm"
 

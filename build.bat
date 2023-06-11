@@ -60,7 +60,23 @@ tools\lzss -evo build\Fusion_t.bin
 tools\g4 build\GameOver_t.bin assets\GameOver.bmp
 tools\lzss -evo build\GameOver_t.bin
 
+tools\g4 build\HUD2_t.bin assets\HUD2_Main.bmp assets\HUD2_Pause.bmp
+tools\lzss -evo build\HUD2_t.bin
 
+tools\g4 build\BomberHall_t.bin^
+ assets\BomberHall_Main.bmp assets\BomberHall_Text.bmp^
+ assets\BomberHall_Numbers.bmp assets\BomberHall_Numbers2.bmp
+tools\lzss -evo build\BomberHall_t.bin
+
+tools\g4 build\BHallCert_t.bin^
+ assets\BHallCert_Main.bmp assets\BHallCert_Portrait.bmp^
+ assets\BHallCert_Numbers.bmp assets\BHallCert_Rank.bmp
+tools\lzss -evo build\BHallCert_t.bin
+
+tools\g4 build\BHallBoard_t.bin^
+ assets\BHallBoard_Red.bmp assets\BHallBoard_Blue.bmp^
+ assets\BHallBoard_Numbers.bmp assets\BHallBoard_Ranks.bmp
+tools\lzss -evo build\BHallBoard_t.bin
 
 ::
 
@@ -97,7 +113,7 @@ tools\Atlas jetters_eng.gba script\jetters_012.txt
 tools\Atlas jetters_eng.gba script\jetters_013.txt
 
 
-::tools\Atlas jetters_eng.gba script\jetters_007.txt
+tools\Atlas jetters_eng.gba script\jetters_007.txt
 
 
 tools\flips --create --ips jetters.gba jetters_eng.gba jetters_eng.ips
